@@ -1,0 +1,8 @@
+D:\BHD-HR\MASA.Blazor.Pro-main\MASA.Blazor.Pro-main\Masa.Blazor.Pro\obj\Debug\net6.0\BHD-HR.csproj.AssemblyReference.cache
+D:\BHD-HR\MASA.Blazor.Pro-main\MASA.Blazor.Pro-main\Masa.Blazor.Pro\obj\Debug\net6.0\BHD-HR.GeneratedMSBuildEditorConfig.editorconfig
+D:\BHD-HR\MASA.Blazor.Pro-main\MASA.Blazor.Pro-main\Masa.Blazor.Pro\obj\Debug\net6.0\BHD-HR.AssemblyInfoInputs.cache
+D:\BHD-HR\MASA.Blazor.Pro-main\MASA.Blazor.Pro-main\Masa.Blazor.Pro\obj\Debug\net6.0\BHD-HR.AssemblyInfo.cs
+D:\BHD-HR\MASA.Blazor.Pro-main\MASA.Blazor.Pro-main\Masa.Blazor.Pro\obj\Debug\net6.0\BHD-HR.csproj.CoreCompileInputs.cache
+D:\BHD-HR\MASA.Blazor.Pro-main\MASA.Blazor.Pro-main\Masa.Blazor.Pro\obj\Debug\net6.0\BHD-HR.MvcApplicationPartsAssemblyInfo.cache
+D:\BHD-HR\MASA.Blazor.Pro-main\MASA.Blazor.Pro-main\Masa.Blazor.Pro\obj\Debug\net6.0\BHD-HR.RazorAssemblyInfo.cache
+D:\BHD-HR\MASA.Blazor.Pro-main\MASA.Blazor.Pro-main\Masa.Blazor.Pro\obj\Debug\net6.0\BHD-HR.RazorAssemblyInfo.cs
