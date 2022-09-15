@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cTWtFCdrUR/SzIYSIrTJpYS1VE5c2ZGDqP1T+qCsl82+sdftJUOtwNn2mfs0YYop88kpoHlKnKmWZX/7If8LAg==",
+  "dgSpecHash": "RgG0Yhe8/ksR7dw9pCGrFzy9CmG2xEvluZ702WJ0xaB/MGjDtJoXyR1gv6MXFjvhBEid3q8WPZnTqxFpYU0ZwQ==",
   "success": true,
-  "projectFilePath": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\BHD-HRM.csproj",
+  "projectFilePath": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\BHD-HRM.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.5.0\\blazorcomponent.0.5.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\fluentvalidation\\11.0.3\\fluentvalidation.11.0.3.nupkg.sha512",

@@ -8,229 +8,229 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BHD-HRM
 build_property.RootNamespace = BHD-HRM
-build_property.ProjectDir = D:\BHD-HR\BHD-HR\BHD-HR\BHD-HRM\
+build_property.ProjectDir = D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\BHD-HR\BHD-HR\BHD-HR\BHD-HRM
+build_property.MSBuildProjectDirectory = D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/App.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/ECommerce/Order/Address.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/ECommerce/Order/Address.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXEVDb21tZXJjZVxPcmRlclxBZGRyZXNzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/ECommerce/Order/Cart.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/ECommerce/Order/Cart.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXEVDb21tZXJjZVxPcmRlclxDYXJ0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/ECommerce/Order/Order.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/ECommerce/Order/Order.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXEVDb21tZXJjZVxPcmRlclxPcmRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/ECommerce/Order/Payment.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/ECommerce/Order/Payment.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXEVDb21tZXJjZVxPcmRlclxQYXltZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/ECommerce/Shop/Details.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/ECommerce/Shop/Details.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXEVDb21tZXJjZVxTaG9wXERldGFpbHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/ECommerce/Shop/Shop.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/ECommerce/Shop/Shop.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXEVDb21tZXJjZVxTaG9wXFNob3AucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/Invoice/Add.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/Invoice/Add.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXEludm9pY2VcQWRkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/Invoice/Components/AddPayment.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/Invoice/Components/AddPayment.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXEludm9pY2VcQ29tcG9uZW50c1xBZGRQYXltZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/Invoice/Components/InvoiceList.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/Invoice/Components/InvoiceList.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXEludm9pY2VcQ29tcG9uZW50c1xJbnZvaWNlTGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/Invoice/Components/SendInvoice.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/Invoice/Components/SendInvoice.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXEludm9pY2VcQ29tcG9uZW50c1xTZW5kSW52b2ljZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/Invoice/Edit.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/Invoice/Edit.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXEludm9pY2VcRWRpdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/Invoice/List.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/Invoice/List.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXEludm9pY2VcTGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/Invoice/Preview.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/Invoice/Preview.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXEludm9pY2VcUHJldmlldy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/Todo/Todo.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/Todo/Todo.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXFRvZG9cVG9kby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/Todo/TodoDetail.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/Todo/TodoDetail.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXFRvZG9cVG9kb0RldGFpbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/Todo/TodoNav.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/Todo/TodoNav.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXFRvZG9cVG9kb05hdi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/User/Add.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/User/Add.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXFVzZXJcQWRkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/User/Edit.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/User/Edit.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXFVzZXJcRWRpdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/User/List.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/User/List.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXFVzZXJcTGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/App/User/View.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/User/View.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXFVzZXJcVmlldy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Authentication/Components/ForgotPassword.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Authentication/Components/ForgotPassword.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cQ29tcG9uZW50c1xGb3Jnb3RQYXNzd29yZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Authentication/Components/Login.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Authentication/Components/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cQ29tcG9uZW50c1xMb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Authentication/Components/Register.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Authentication/Components/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cQ29tcG9uZW50c1xSZWdpc3Rlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Authentication/Components/ResetPassword.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Authentication/Components/ResetPassword.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cQ29tcG9uZW50c1xSZXNldFBhc3N3b3JkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Authentication/ForgotPassword-v1.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Authentication/ForgotPassword-v1.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cRm9yZ290UGFzc3dvcmQtdjEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Authentication/ForgotPassword-v2.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Authentication/ForgotPassword-v2.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cRm9yZ290UGFzc3dvcmQtdjIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Authentication/Login-v1.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Authentication/Login-v1.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cTG9naW4tdjEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Authentication/Login-v2.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Authentication/Login-v2.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cTG9naW4tdjIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Authentication/Register-v1.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Authentication/Register-v1.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cUmVnaXN0ZXItdjEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Authentication/Register-v2.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Authentication/Register-v2.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cUmVnaXN0ZXItdjIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Authentication/ResetPassword-v1.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Authentication/ResetPassword-v1.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cUmVzZXRQYXNzd29yZC12MS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Authentication/ResetPassword-v2.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Authentication/ResetPassword-v2.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cUmVzZXRQYXNzd29yZC12Mi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Dashboard/Analytics.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Dashboard/Analytics.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXEFuYWx5dGljcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Dashboard/ECommerce.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Dashboard/ECommerce.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXEVDb21tZXJjZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Employee/EmployeeList.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Employee/EmployeeList.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVcRW1wbG95ZWVMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Home/Index.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Home/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxJbmRleC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Others/AccountSettings/AccountSettings.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Others/AccountSettings/AccountSettings.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJzXEFjY291bnRTZXR0aW5nc1xBY2NvdW50U2V0dGluZ3MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Others/Error.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Others/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJzXEVycm9yLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Others/NotAuthorized.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Others/NotAuthorized.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJzXE5vdEF1dGhvcml6ZWQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Others/NotFound.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Others/NotFound.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3RoZXJzXE5vdEZvdW5kLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Shared/Breadcrumb.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Shared/Breadcrumb.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJyZWFkY3J1bWIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Shared/EmptyLayout.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Shared/EmptyLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVtcHR5TGF5b3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Shared/Favorite.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Shared/Favorite.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZhdm9yaXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Shared/Language.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Shared/Language.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExhbmd1YWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Shared/Login.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Shared/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Shared/MainLayout.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Shared/Navigation.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Shared/Navigation.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdmlnYXRpb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Shared/PageTabs.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Shared/PageTabs.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2VUYWJzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Shared/Search.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Shared/Search.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNlYXJjaC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Shared/Settings.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Shared/Settings.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNldHRpbmdzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/_Imports.razor]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/Error.cshtml]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/_Host.cshtml]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/BHD-HR/BHD-HR/BHD-HR/BHD-HRM/Pages/_Layout.cshtml]
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

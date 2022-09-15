@@ -5908,11 +5908,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\BHD-HRM.csproj",
+      "projectUniqueName": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\BHD-HRM.csproj",
       "projectName": "BHD-HRM",
-      "projectPath": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\BHD-HRM.csproj",
+      "projectPath": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\BHD-HRM.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\obj\\",
+      "outputPath": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

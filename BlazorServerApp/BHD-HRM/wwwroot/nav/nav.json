@@ -20,32 +20,6 @@
     ]
   },
   {
-    "Id": 4,
-    "Title": "eCommerce",
-    "Icon": "mdi-cart-outline",
-    "Children": [
-      {
-        "Id": 5,
-        "Title": "Shop",
-        "Icon": "mdi-circle",
-        "Href": "app/ecommerce/shop"
-      },
-      {
-        "Id": 6,
-        "Title": "Details",
-        "Icon": "mdi-circle",
-        "Href": "app/ecommerce/details",
-        "Target": "Self"
-      },
-      {
-        "Id": 7,
-        "Title": "Order",
-        "Icon": "mdi-circle",
-        "Href": "app/ecommerce/order"
-      }
-    ]
-  },
-  {
     "Id": 8,
     "Title": "Todo",
     "Icon": "mdi-calendar-check-outline",

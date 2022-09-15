@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CiHjyr82RGEZCxZQxhiosYBgETFzU7ZZA0akCyXyxXM=",
+  "Hash": "95Oy68KiZdN8zYzN9Q639lyekcrVI16aD5qu5FtWVZQ=",
   "Source": "BHD-HRM",
   "BasePath": "_content/BHD-HRM",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "BHD-HRM\\wwwroot",
       "Source": "BHD-HRM",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "Pattern": "**"
     }
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\skiasharp.views.blazor\\2.88.0-preview.256\\staticwebassets\\SKHtmlCanvas.js"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\css\\masa-blazor-pro.css",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\css\\masa-blazor-pro.css",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "css/masa-blazor-pro.css",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\css\\masa-blazor-pro.css"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\i18n\\en-US.json",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\i18n\\en-US.json",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "i18n/en-US.json",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\i18n\\en-US.json"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\i18n\\supportedCultures.json",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\i18n\\supportedCultures.json",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "i18n/supportedCultures.json",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\i18n\\supportedCultures.json"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\i18n\\zh-CN.json",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\i18n\\zh-CN.json",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "i18n/zh-CN.json",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\i18n\\zh-CN.json"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\analytics\\json.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\analytics\\json.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/analytics/json.png",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\img\\analytics\\json.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\analytics\\left.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\analytics\\left.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/analytics/left.png",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\img\\analytics\\left.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\analytics\\right.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\analytics\\right.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/analytics/right.png",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\img\\analytics\\right.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\1.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\1.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/1.jpg",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\1.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\1.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\1.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/1.png",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\1.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\10.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\10.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/10.jpg",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\10.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\10.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\10.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/10.png",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\10.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\11.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\11.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/11.jpg",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\11.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\11.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\11.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/11.png",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\11.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\12.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\12.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/12.jpg",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\12.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\12.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\12.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/12.png",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\12.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\13.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\13.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/13.jpg",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\13.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\13.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\13.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/13.png",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\13.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\14.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\14.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/14.jpg",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\14.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\14.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\14.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/14.png",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\14.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\15.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\15.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/15.jpg",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\15.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\15.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\15.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/15.png",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\15.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\16.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\16.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/16.jpg",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\16.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\16.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\16.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/16.png",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\16.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\17.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\17.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/17.jpg",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\17.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\17.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\17.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/17.png",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\17.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\18.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\18.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/18.jpg",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\18.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\18.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\18.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/18.png",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\18.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\19.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\19.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/19.jpg",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\19.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\19.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\19.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/19.png",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\19.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\2.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\2.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/2.jpg",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\2.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\2.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\2.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/2.png",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\2.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\20.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\20.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/20.jpg",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\20.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\20.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\20.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/20.png",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\20.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\21.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\21.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/21.jpg",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\21.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\21.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\21.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/21.png",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\21.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\22.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\22.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/22.jpg",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\22.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\22.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\22.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/22.png",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\22.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\23.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\23.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/23.jpg",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\23.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\23.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\23.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/23.png",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\23.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\24.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\24.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/24.jpg",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\24.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\24.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\24.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/24.png",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\24.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\25.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\25.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/25.jpg",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\25.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\25.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\25.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/25.png",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\25.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\26.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\26.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/26.jpg",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\26.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\26.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\26.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/26.png",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\26.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\27.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\27.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/27.jpg",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\27.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\27.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\27.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/27.png",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\27.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\28.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\28.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/28.jpg",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\28.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\29.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\29.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/29.jpg",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\29.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\3.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\3.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/3.jpg",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\3.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\3.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\3.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/3.png",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\3.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\30.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\30.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/30.jpg",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\30.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\31.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\31.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/31.jpg",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\31.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\32.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\32.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/32.jpg",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\32.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\4.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\4.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/4.jpg",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\4.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\4.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\4.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/4.png",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\4.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\5.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\5.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/5.jpg",
       "AssetKind": "All",
@@ -1394,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\5.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\5.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\5.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/5.png",
       "AssetKind": "All",
@@ -1411,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\5.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\6.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\6.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/6.jpg",
       "AssetKind": "All",
@@ -1428,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\6.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\6.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\6.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/6.png",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\6.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\7.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\7.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/7.jpg",
       "AssetKind": "All",
@@ -1462,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\7.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\7.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\7.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/7.png",
       "AssetKind": "All",
@@ -1479,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\7.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\8.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\8.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/8.jpg",
       "AssetKind": "All",
@@ -1496,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\8.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\8.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\8.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/8.png",
       "AssetKind": "All",
@@ -1513,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\8.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\9.jpg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\9.jpg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/9.jpg",
       "AssetKind": "All",
@@ -1530,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\9.jpg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\9.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\apps-eCommerce\\9.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/apps-eCommerce/9.png",
       "AssetKind": "All",
@@ -1547,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\img\\apps-eCommerce\\9.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\auth\\forgot-password-v2.9faba3c1.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\auth\\forgot-password-v2.9faba3c1.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/auth/forgot-password-v2.9faba3c1.svg",
       "AssetKind": "All",
@@ -1564,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\img\\auth\\forgot-password-v2.9faba3c1.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\auth\\register-v2.0a9e487c.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\auth\\register-v2.0a9e487c.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/auth/register-v2.0a9e487c.svg",
       "AssetKind": "All",
@@ -1581,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\img\\auth\\register-v2.0a9e487c.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\avatar\\1.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\avatar\\1.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/avatar/1.svg",
       "AssetKind": "All",
@@ -1598,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\img\\avatar\\1.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\avatar\\10.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\avatar\\10.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/avatar/10.svg",
       "AssetKind": "All",
@@ -1615,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\img\\avatar\\10.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\avatar\\11.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\avatar\\11.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/avatar/11.svg",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\img\\avatar\\11.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\avatar\\12.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\avatar\\12.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/avatar/12.svg",
       "AssetKind": "All",
@@ -1649,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\img\\avatar\\12.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\avatar\\13.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\avatar\\13.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/avatar/13.svg",
       "AssetKind": "All",
@@ -1666,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\img\\avatar\\13.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\avatar\\14.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\avatar\\14.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/avatar/14.svg",
       "AssetKind": "All",
@@ -1683,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\img\\avatar\\14.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\avatar\\2.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\avatar\\2.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/avatar/2.svg",
       "AssetKind": "All",
@@ -1700,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\img\\avatar\\2.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\avatar\\3.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\avatar\\3.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/avatar/3.svg",
       "AssetKind": "All",
@@ -1717,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\img\\avatar\\3.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\avatar\\4.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\avatar\\4.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/avatar/4.svg",
       "AssetKind": "All",
@@ -1734,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\img\\avatar\\4.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\avatar\\7.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\avatar\\7.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/avatar/7.svg",
       "AssetKind": "All",
@@ -1751,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\img\\avatar\\7.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\avatar\\8.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\avatar\\8.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/avatar/8.svg",
       "AssetKind": "All",
@@ -1768,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\img\\avatar\\8.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\avatar\\9.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\avatar\\9.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/avatar/9.svg",
       "AssetKind": "All",
@@ -1785,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\img\\avatar\\9.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\eCommerce\\rectangle.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\eCommerce\\rectangle.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/eCommerce/rectangle.png",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\img\\eCommerce\\rectangle.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\eCommerce\\trophy.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\eCommerce\\trophy.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/eCommerce/trophy.png",
       "AssetKind": "All",
@@ -1819,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\img\\eCommerce\\trophy.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\login\\2873.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\login\\2873.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/login/2873.png",
       "AssetKind": "All",
@@ -1836,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\img\\login\\2873.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\login\\Gxwd.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\login\\Gxwd.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/login/Gxwd.png",
       "AssetKind": "All",
@@ -1853,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\img\\login\\Gxwd.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\login\\left.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\login\\left.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/login/left.svg",
       "AssetKind": "All",
@@ -1870,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\img\\login\\left.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\mainLayout\\logo.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\mainLayout\\logo.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/mainLayout/logo.svg",
       "AssetKind": "All",
@@ -1887,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\img\\mainLayout\\logo.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\mainLayout\\logo-en.svg",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\mainLayout\\logo-en.svg",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/mainLayout/logo-en.svg",
       "AssetKind": "All",
@@ -1904,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\img\\mainLayout\\logo-en.svg"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\status\\401.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\status\\401.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/status/401.png",
       "AssetKind": "All",
@@ -1921,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\img\\status\\401.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\status\\404.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\status\\404.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/status/404.png",
       "AssetKind": "All",
@@ -1938,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\img\\status\\404.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\img\\status\\500.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\status\\500.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "img/status/500.png",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\img\\status\\500.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\nav\\nav.json",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\nav\\nav.json",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HR\\BHD-HRM\\wwwroot\\",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
       "RelativePath": "nav/nav.json",
       "AssetKind": "All",
