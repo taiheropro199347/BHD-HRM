@@ -14,7 +14,7 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Cryptography;
 
-namespace BookStoresWebAPI.Controllers
+namespace BHDHRMWebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -52,10 +52,10 @@ namespace BookStoresWebAPI.Controllers
 
         // GET: api/Users/5
         [HttpGet("GetUserDetails/{id}")]
-        public async Task<ActionResult<BhdAccount>> GetUserDetails(int id)
+        public async Task<ActionResult<BhdAccount>> GetUserDetails(string id)
         {
-            var user = await _context.BhdAccount.Include(u => u.Roles)
-                                            .Where(u => u.Roles == id)
+            var user = await _context.BhdAccount.Include(u => u.IdGroupNavigation)
+                                            .Where(u => u.UserAd == id)
                                             .FirstOrDefaultAsync();
 
             if (user == null)
@@ -70,7 +70,7 @@ namespace BookStoresWebAPI.Controllers
         [HttpPost("Login")]
         public async Task<ActionResult<UserWithToken>> Login([FromBody] BhdAccount user)
         {
-            user = await _context.BhdAccount.Include(u => u.Roles)
+            user = await _context.BhdAccount.Include(u => u.IdGroupNavigation)
                                         .Where(u => u.UserAd == user.UserAd
                                                 && u.Pass == user.Pass).FirstOrDefaultAsync();
 
@@ -79,7 +79,7 @@ namespace BookStoresWebAPI.Controllers
             if (user != null)
             {
                 RefreshToken refreshToken = GenerateRefreshToken();
-                user.RefreshTokens.Add(refreshToken);
+                user.RefreshToken.Add(refreshToken);
                 await _context.SaveChangesAsync();
 
                 userWithToken = new UserWithToken(user);
@@ -104,7 +104,7 @@ namespace BookStoresWebAPI.Controllers
             await _context.SaveChangesAsync();
 
             //load role for registered user
-            user = await _context.BhdAccount.Include(u => u.Roles)
+            user = await _context.BhdAccount.Include(u => u.IdGroupNavigation)
                                         .Where(u => u.UserAd == user.UserAd).FirstOrDefaultAsync();
 
             UserWithToken userWithToken = null;
@@ -112,7 +112,7 @@ namespace BookStoresWebAPI.Controllers
             if (user != null)
             {
                 RefreshToken refreshToken = GenerateRefreshToken();
-                user.RefreshTokens.Add(refreshToken);
+                user.RefreshToken.Add(refreshToken);
                 await _context.SaveChangesAsync();
 
                 userWithToken = new UserWithToken(user);
@@ -142,7 +142,7 @@ namespace BookStoresWebAPI.Controllers
 
                 return userWithToken;
             }
-            
+
             return null;
         }
 
@@ -163,7 +163,7 @@ namespace BookStoresWebAPI.Controllers
         private bool ValidateRefreshToken(BhdAccount user, string refreshToken)
         {
 
-            RefreshToken refreshTokenUser =  _context.RefreshTokens.Where(rt => rt.Token == refreshToken)
+            RefreshToken refreshTokenUser = _context.RefreshToken.Where(rt => rt.Token == refreshToken)
                                                 .OrderByDescending(rt => rt.ExpiryDate)
                                                 .FirstOrDefault();
 
@@ -200,7 +200,7 @@ namespace BookStoresWebAPI.Controllers
                 {
                     var userId = principle.FindFirst(ClaimTypes.Name)?.Value;
 
-                    return await _context.BhdAccount.Include(u => u.Roles)
+                    return await _context.BhdAccount.Include(u => u.IdGroupNavigation)
                                         .Where(u => u.UserAd == userId).FirstOrDefaultAsync();
                 }
             }

@@ -16,9 +16,10 @@ namespace BHDHRMWebAPI.Models
             this.UserAd = user.UserAd;
             this.Email = user.Email;            
             this.Name = user.Name;
-            this.CinemaId = user.CinemaId;
             this.IdGroup = user.IdGroup;
             this.Roles = user.Roles;
+            this.CinemaId = user.CinemaId;
+            this.Phone = user.Phone;
         }
     }
 }

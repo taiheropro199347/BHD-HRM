@@ -223,7 +223,7 @@
     new (){ Text= "CREATE", Sortable= false, Value= nameof(PermissionDto.Create),Align="center"},
     new (){ Text= "DELETE", Sortable= false, Value= nameof(PermissionDto.Delete),Align="center"}
     };
-    private List<PermissionDto> _permissions = UserService.GetPermissionsList();
+    private List<PermissionDto> _permissions = UserServices.GetPermissionsList();
     private UserDto? _userData;
 
     [Parameter]
@@ -234,7 +234,7 @@
     {
         get
         {
-            return _userData ?? UserService.GetList().First();
+            return _userData ?? UserServices.GetList().First();
         }
         set
         {
@@ -244,6 +244,6 @@
 
     protected override void OnParametersSet()
     {
-        UserData = UserService.GetList().FirstOrDefault(u => u.Id == Id);
+        UserData = UserServices.GetList().FirstOrDefault(u => u.Id == Id);
     }
 }

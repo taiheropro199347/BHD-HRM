@@ -7,6 +7,11 @@ namespace BHDHRMWebAPI.Models
 {
     public partial class BhdAccount
     {
+        public BhdAccount()
+        {
+            RefreshToken = new HashSet<RefreshToken>();
+        }
+
         public string UserAd { get; set; }
         public string Pass { get; set; }
         public string Name { get; set; }
@@ -19,7 +24,8 @@ namespace BHDHRMWebAPI.Models
         public int? IdGroup { get; set; }
         public int? CinemaId { get; set; }
         public string UserNo { get; set; }
-        public virtual ICollection<RefreshToken> RefreshTokens { get; set; }
+
         public virtual BhdGroup IdGroupNavigation { get; set; }
+        public virtual ICollection<RefreshToken> RefreshToken { get; set; }
     }
 }

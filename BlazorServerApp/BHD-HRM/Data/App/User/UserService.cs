@@ -2,7 +2,7 @@
 
 namespace BHD_HRM.Data.App.User;
 
-public class UserService
+public class UserServices
 {
     static List<UserDto> _datas = new()
     {

@@ -1,7 +1,14 @@
-﻿namespace BHD_HRM.Pages.Authentication.Components;
+﻿using BHD_HRM.Data;
+using BHD_HRM.Data.Users;
+using Microsoft.AspNetCore.Components.Authorization;
+using System.Security.Claims;
 
+namespace BHD_HRM.Pages.Authentication.Components;
 public partial class Login
 {
+    public string _user;
+    public string _password;
+
     private bool _show;
 
     [Inject]
@@ -22,7 +29,33 @@ public partial class Login
     [Parameter]
     public string ForgotPasswordRoute { get; set; } = $"pages/authentication/forgot-password-v1";
 
-    [Parameter]
-    public EventCallback<MouseEventArgs> OnLogin { get; set; }
+    //[Parameter]
+    //public EventCallback<MouseEventArgs> OnLogin { get; set; }
+    private User user;
+    public string LoginMesssage { get; set; }
+    ClaimsPrincipal claimsPrincipal;
+
+    [CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask { get; set; }
+    private async void OnLogin()
+    {
+        user = new User();
+
+        claimsPrincipal = (await authenticationStateTask).User;
+
+        user.UserAd = _user;
+        user.Pass=_password;
+        var returnedUser = await userService.LoginAsync(user);
+
+        if (returnedUser.UserAd != null)
+        {
+            await((CustomAuthenticationStateProvider)AuthenticationStateProvider).MarkUserAsAuthenticated(returnedUser);
+            NavigationManager.NavigateTo("/dashboard/ecommerce");
+        }
+        else
+        {
+            LoginMesssage = "Invalid username or password";
+        }
+    }
 }
 

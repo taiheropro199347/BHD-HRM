@@ -11,10 +11,10 @@
         <MTextField @bind-Value="_userData.Company" Class="mb-6" Label="Company" HideDetails="@("auto")" Outlined />
         <MTextField @bind-Value="_userData.Country" Class="mb-6" Label="Country" HideDetails="@("auto")" Outlined />
         <MSelect HideDetails="@("auto")" Class="mb-6" Outlined Label="Assignee" @bind-Value=_userData.Role
-                 Items=@UserService.GetRoleList() ItemText="r => r" ItemValue="r => r">
+                 Items=@UserServices.GetRoleList() ItemText="r => r" ItemValue="r => r">
         </MSelect>
         <MSelect HideDetails="@("auto")" Class="mb-6" Outlined Label="Assignee" @bind-Value=_userData.Plan
-                 Items=@UserService.GetPlanList() ItemText="p => p" ItemValue="p => p">
+                 Items=@UserServices.GetPlanList() ItemText="p => p" ItemValue="p => p">
         </MSelect>
 
         <div style="bottom:48px;right:24px;position:absolute">
@@ -25,7 +25,7 @@
 </MNavigationDrawer>
 
 @code {
-    private UserDto _userData = new UserDto("","",DateOnly.FromDateTime(DateTime.Now),"","",UserService.GetPermissionsList());
+    private UserDto _userData = new UserDto("","",DateOnly.FromDateTime(DateTime.Now),"","",UserServices.GetPermissionsList());
 
     [Parameter]
     public bool Visible { get; set; }
@@ -38,7 +38,7 @@
 
     protected override void OnParametersSet()
     {
-        _userData = new UserDto("","",DateOnly.FromDateTime(DateTime.Now),"","",UserService.GetPermissionsList());
+        _userData = new UserDto("","",DateOnly.FromDateTime(DateTime.Now),"","",UserServices.GetPermissionsList());
     }
 
     private async Task UpdateVisible(bool visible)

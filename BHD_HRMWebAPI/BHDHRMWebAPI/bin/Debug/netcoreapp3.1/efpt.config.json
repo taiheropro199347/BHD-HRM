@@ -1,5 +1,5 @@
 ﻿{
-   "CodeGenerationMode": 2,
+   "CodeGenerationMode": 1,
    "ContextClassName": "BHDHRMContext",
    "ContextNamespace": null,
    "DefaultDacpacSchema": null,
@@ -51,6 +51,10 @@
       },
       {
          "Name": "[dbo].[MyTable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RefreshToken]",
          "ObjectType": 0
       },
       {

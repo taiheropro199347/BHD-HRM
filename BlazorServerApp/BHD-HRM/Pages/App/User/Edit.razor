@@ -58,7 +58,7 @@
                                  Color="primary"
                                  HideDetails="@("auto")"
                                  Outlined
-                                 Items="@UserService.GetStatusList()"
+                                 Items="@UserServices.GetStatusList()"
                                  ItemText="u => u"
                                  ItemValue="u => u"
                                  Label="Status">
@@ -69,7 +69,7 @@
                                  Color="primary"
                                  HideDetails="@("auto")"
                                  Outlined
-                                 Items="@UserService.GetRoleList()"
+                                 Items="@UserServices.GetRoleList()"
                                  ItemText="u => u"
                                  ItemValue="u => u"
                                  Label="Role">
@@ -146,7 +146,7 @@
                                  Color="primary"
                                  Outlined
                                  HideDetails="@("auto")"
-                                 Items="@UserService.GetLanguageList()"
+                                 Items="@UserServices.GetLanguageList()"
                                  ItemText="u => u"
                                  ItemValue="u => u"
                                  Label="Language">
@@ -245,7 +245,7 @@
     {
         get
         {
-            return _userData ?? (_userData = UserService.GetList().First());
+            return _userData ?? (_userData = UserServices.GetList().First());
         }
         set
         {
@@ -255,7 +255,7 @@
 
     protected override void OnParametersSet()
     {
-        UserData = UserService.GetList().FirstOrDefault(u => u.Id == Id);
+        UserData = UserServices.GetList().FirstOrDefault(u => u.Id == Id);
     }
 
     private List<DataTableHeader<PermissionDto>> _headers = new List<DataTableHeader<PermissionDto>>

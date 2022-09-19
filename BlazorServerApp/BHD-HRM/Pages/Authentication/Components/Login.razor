@@ -1,4 +1,13 @@
-﻿<MCard Width=510 Height=680 Class="mx-auto my-auto">
+﻿@using BHD_HRM.Data
+@using Newtonsoft.Json
+@using BHD_HRM.Services
+@using System.Security.Claims
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+@inject Blazored.LocalStorage.ILocalStorageService localStorageService
+@inject IUserService userService
+@inject IJSRuntime jsRunTime
+<MCard Width=510 Height=680 Class="mx-auto my-auto">
     <div style="height:60px;"></div>
     <div class="mt-2 mx-auto text-center" style="width:420px;">
         <MAvatar Size=80>
@@ -8,12 +17,14 @@
         <h5 class="mt-2 mb-12">Welcome to BHD_HRM! 👋</h5>
 
         <MTextField TValue="string"
-                    Label="Email"
+                    @bind-Value="@(_user)"
+                    Label="UserName"
                     Placeholder="john@example.com"
                     Outlined
                     HideDetails="@("auto")">
         </MTextField>
         <MTextField TValue="string"
+                    @bind-Value="@(_password)"
                     Class="mt-10"
                     Label="Password"
                     Type="@(_show ? "text" : "password")"
