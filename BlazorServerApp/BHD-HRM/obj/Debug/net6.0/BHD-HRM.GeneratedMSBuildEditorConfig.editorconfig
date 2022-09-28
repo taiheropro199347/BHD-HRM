@@ -107,6 +107,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cQ29tcG9uZW50c1xMb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Authentication/Components/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cQ29tcG9uZW50c1xMb2dvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Authentication/Components/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cQ29tcG9uZW50c1xSZWdpc3Rlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -153,6 +157,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Dashboard/ECommerce.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXEVDb21tZXJjZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Employee/EmployeeAddbyUsers.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVcRW1wbG95ZWVBZGRieVVzZXJzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Employee/EmployeeList.razor]

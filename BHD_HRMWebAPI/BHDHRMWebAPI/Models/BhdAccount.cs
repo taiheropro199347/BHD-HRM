@@ -9,7 +9,7 @@ namespace BHDHRMWebAPI.Models
     {
         public BhdAccount()
         {
-            RefreshToken = new HashSet<RefreshToken>();
+            RefreshTokens = new HashSet<RefreshToken>();
         }
 
         public string UserAd { get; set; }
@@ -26,6 +26,6 @@ namespace BHDHRMWebAPI.Models
         public string UserNo { get; set; }
 
         public virtual BhdGroup IdGroupNavigation { get; set; }
-        public virtual ICollection<RefreshToken> RefreshToken { get; set; }
+        public virtual ICollection<RefreshToken> RefreshTokens { get; set; }
     }
 }

@@ -7,6 +7,11 @@ namespace BHDHRMWebAPI.Models
 {
     public partial class Area
     {
+        public Area()
+        {
+            TblCongTy = new HashSet<TblCongTy>();
+        }
+
         public int Id { get; set; }
         public string Name { get; set; }
         public string CreateBy { get; set; }
@@ -14,5 +19,7 @@ namespace BHDHRMWebAPI.Models
         public DateTime? UpdateDate { get; set; }
         public string UpdateBy { get; set; }
         public bool? Isvisible { get; set; }
+
+        public virtual ICollection<TblCongTy> TblCongTy { get; set; }
     }
 }

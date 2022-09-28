@@ -2,11 +2,13 @@
 {
     public class Group
 {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string UserCreate { get; set; }
-        public string UserEdit { get; set; }
-        public string TimeModify { get; set; }
-        public string TimeCreate { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string userCreate { get; set; }
+        public object userEdit { get; set; }
+        public string timeModify { get; set; }
+        public string timeCreate { get; set; }
+        public List<object> bhdAccount { get; set; }
+        public List<object> bhdRoles { get; set; }
     }
 }

@@ -78,11 +78,11 @@ namespace BHD_HRM.Data
         {
             var claimsIdentity = new ClaimsIdentity();
 
-            if (user.UserAd != null)
+            if (user.userAd != null)
             { 
                 claimsIdentity = new ClaimsIdentity(new[]
                                 {
-                                    new Claim(ClaimTypes.Name, user.UserAd)
+                                    new Claim(ClaimTypes.Name, user.userAd)
                                 }, "apiauth_type");
             }
 

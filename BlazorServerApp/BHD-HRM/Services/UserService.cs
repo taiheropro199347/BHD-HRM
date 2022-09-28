@@ -17,6 +17,8 @@ namespace BHD_HRM.Services
         public AppSettings _appSettings { get; }
 
         public UserService(HttpClient httpClient, IOptions<AppSettings> appSettings)
+        
+        
         {
             _appSettings = appSettings.Value;
 
@@ -28,7 +30,7 @@ namespace BHD_HRM.Services
 
         public async Task<User> LoginAsync(User user)
         {
-            user.Pass = Utility.GetMd5Hash(user.Pass);
+            user.pass = Utility.GetMd5Hash(user.pass);
             string serializedUser = JsonConvert.SerializeObject(user);
 
             var requestMessage = new HttpRequestMessage(HttpMethod.Post, "Users/Login");
@@ -50,7 +52,7 @@ namespace BHD_HRM.Services
 
         public async Task<User> RegisterUserAsync(User user)
         {
-            user.Pass = Utility.GetMd5Hash(user.Pass);
+            user.pass = Utility.GetMd5Hash(user.pass);
             string serializedUser = JsonConvert.SerializeObject(user);
 
             var requestMessage = new HttpRequestMessage(HttpMethod.Post, "Users/RegisterUser");
@@ -104,11 +106,7 @@ namespace BHD_HRM.Services
             var responseStatusCode = response.StatusCode;
             var responseBody = await response.Content.ReadAsStringAsync();
             var returnedUser = new User();
-
-            if(responseBody==null)
-            {
-                returnedUser = JsonConvert.DeserializeObject<User>(responseBody);
-            }
+            returnedUser = JsonConvert.DeserializeObject<User>(responseBody);
 
             return await Task.FromResult(returnedUser);
         }

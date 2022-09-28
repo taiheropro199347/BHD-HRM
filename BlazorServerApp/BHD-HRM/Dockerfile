@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["BHD_HRM/BHD_HRM.csproj", "Masa.Blazor.Pro/"]
+COPY ["BHD_HRM/BHD_HRM.csproj", "BHD_HRM/"]
 RUN dotnet restore "BHD_HRM/BHD_HRM.csproj"
 COPY . .
 WORKDIR "/src/BHD_HRM"

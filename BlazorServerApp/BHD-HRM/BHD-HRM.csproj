@@ -42,6 +42,10 @@
     <None Include="Pages\Dashboard\ECommerce.razor" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\userupload\avatar\" />
+  </ItemGroup>
+
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

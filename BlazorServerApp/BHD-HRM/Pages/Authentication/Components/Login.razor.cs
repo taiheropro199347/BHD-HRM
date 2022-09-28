@@ -37,17 +37,29 @@ public partial class Login
 
     [CascadingParameter]
     private Task<AuthenticationState> authenticationStateTask { get; set; }
+    protected async override Task OnInitializedAsync()
+    {
+        user = new User();
+
+        claimsPrincipal = (await authenticationStateTask).User;
+
+        if (claimsPrincipal.Identity.IsAuthenticated)
+        {
+            NavigationManager.NavigateTo("/dashboard/ecommerce");
+        }
+
+    }
     private async void OnLogin()
     {
         user = new User();
 
         claimsPrincipal = (await authenticationStateTask).User;
 
-        user.UserAd = _user;
-        user.Pass=_password;
+        user.userAd = _user;
+        user.pass=_password;
         var returnedUser = await userService.LoginAsync(user);
 
-        if (returnedUser.UserAd != null)
+        if (returnedUser.userAd != null)
         {
             await((CustomAuthenticationStateProvider)AuthenticationStateProvider).MarkUserAsAuthenticated(returnedUser);
             NavigationManager.NavigateTo("/dashboard/ecommerce");

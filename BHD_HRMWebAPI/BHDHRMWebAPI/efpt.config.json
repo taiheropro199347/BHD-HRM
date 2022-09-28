@@ -1,5 +1,5 @@
 ﻿{
-   "CodeGenerationMode": 1,
+   "CodeGenerationMode": 0,
    "ContextClassName": "BHDHRMContext",
    "ContextNamespace": null,
    "DefaultDacpacSchema": null,
@@ -8,6 +8,7 @@
    "ModelNamespace": null,
    "OutputContextPath": "Models",
    "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
    "ProjectRootNamespace": "BHDHRMWebAPI",
    "Schemas": null,
    "SelectedHandlebarsLanguage": 0,
@@ -282,7 +283,7 @@
          "ObjectType": 2
       }
    ],
-   "UiHint": "DESKTOP-UGQ7IE2\\SQLEXPRESS.BHD-HRM",
+   "UiHint": "CHICILON\\SQLEXPRESS.BHD_HRM",
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": false,
    "UseDbContextSplitting": false,
@@ -299,5 +300,6 @@
    "UseNodaTime": false,
    "UseNullableReferences": false,
    "UseSchemaFolders": false,
-   "UseSpatial": false
+   "UseSpatial": false,
+   "UseT4": false
 }

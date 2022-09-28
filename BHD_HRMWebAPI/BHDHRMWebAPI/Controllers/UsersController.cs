@@ -79,7 +79,7 @@ namespace BHDHRMWebAPI.Controllers
             if (user != null)
             {
                 RefreshToken refreshToken = GenerateRefreshToken();
-                user.RefreshToken.Add(refreshToken);
+                user.RefreshTokens.Add(refreshToken);
                 await _context.SaveChangesAsync();
 
                 userWithToken = new UserWithToken(user);
@@ -112,7 +112,7 @@ namespace BHDHRMWebAPI.Controllers
             if (user != null)
             {
                 RefreshToken refreshToken = GenerateRefreshToken();
-                user.RefreshToken.Add(refreshToken);
+                user.RefreshTokens.Add(refreshToken);
                 await _context.SaveChangesAsync();
 
                 userWithToken = new UserWithToken(user);

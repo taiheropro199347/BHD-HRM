@@ -4,6 +4,8 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
+#nullable disable
+
 namespace BHDHRMWebAPI.Models
 {
     public partial class BHDHRMContext : DbContext
@@ -76,6 +78,8 @@ namespace BHDHRMWebAPI.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+
             modelBuilder.Entity<Area>(entity =>
             {
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -101,8 +105,8 @@ namespace BHDHRMWebAPI.Models
                 entity.ToTable("BHD_Account");
 
                 entity.Property(e => e.UserAd)
-                    .HasColumnName("UserAD")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("UserAD");
 
                 entity.Property(e => e.CinemaId)
                     .HasColumnName("cinemaId")
@@ -141,8 +145,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.Name).HasMaxLength(50);
 
                 entity.Property(e => e.TimeCreate)
-                    .HasColumnName("timeCreate")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("timeCreate");
 
                 entity.Property(e => e.TimeModify).HasMaxLength(50);
 
@@ -164,8 +168,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.Idpermittype).HasMaxLength(50);
 
                 entity.Property(e => e.TimeCreate)
-                    .HasColumnName("timeCreate")
-                    .HasColumnType("datetime");
+                    .HasColumnType("datetime")
+                    .HasColumnName("timeCreate");
 
                 entity.Property(e => e.TimeModify).HasColumnType("datetime");
 
@@ -215,8 +219,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.Text).HasColumnName("text");
 
                 entity.Property(e => e.TimeCreate)
-                    .HasColumnName("timeCreate")
-                    .HasColumnType("datetime");
+                    .HasColumnType("datetime")
+                    .HasColumnName("timeCreate");
             });
 
             modelBuilder.Entity<Logs>(entity =>
@@ -259,14 +263,14 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.Luongbhyt).HasColumnName("luongbhyt");
 
                 entity.Property(e => e.Maluong)
-                    .HasColumnName("maluong")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("maluong");
 
                 entity.Property(e => e.Muctoithieu).HasColumnName("muctoithieu");
 
                 entity.Property(e => e.Ngayhieuluc)
-                    .HasColumnName("ngayhieuluc")
-                    .HasColumnType("date");
+                    .HasColumnType("date")
+                    .HasColumnName("ngayhieuluc");
             });
 
             modelBuilder.Entity<Modules>(entity =>
@@ -295,8 +299,8 @@ namespace BHDHRMWebAPI.Models
             modelBuilder.Entity<MyTable>(entity =>
             {
                 entity.Property(e => e.MytableId)
-                    .HasColumnName("mytable_id")
-                    .ValueGeneratedNever();
+                    .ValueGeneratedNever()
+                    .HasColumnName("mytable_id");
             });
 
             modelBuilder.Entity<RefreshToken>(entity =>
@@ -307,22 +311,22 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.TokenId).HasColumnName("token_id");
 
                 entity.Property(e => e.ExpiryDate)
-                    .HasColumnName("expiry_date")
-                    .HasColumnType("datetime");
+                    .HasColumnType("datetime")
+                    .HasColumnName("expiry_date");
 
                 entity.Property(e => e.Token)
                     .IsRequired()
-                    .HasColumnName("token")
                     .HasMaxLength(200)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("token");
 
                 entity.Property(e => e.UserId)
                     .IsRequired()
-                    .HasColumnName("user_id")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("user_id");
 
                 entity.HasOne(d => d.User)
-                    .WithMany(p => p.RefreshToken)
+                    .WithMany(p => p.RefreshTokens)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_RefreshToken_BHD_Account");
@@ -335,16 +339,16 @@ namespace BHDHRMWebAPI.Models
                 entity.ToTable("Table_1");
 
                 entity.Property(e => e.Emails)
-                    .HasColumnName("emails")
-                    .HasMaxLength(500);
+                    .HasMaxLength(500)
+                    .HasColumnName("emails");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .ValueGeneratedOnAdd();
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("id");
 
                 entity.Property(e => e.Phone)
-                    .HasColumnName("phone")
-                    .HasMaxLength(500);
+                    .HasMaxLength(500)
+                    .HasColumnName("phone");
             });
 
             modelBuilder.Entity<Table2>(entity =>
@@ -354,12 +358,12 @@ namespace BHDHRMWebAPI.Models
                 entity.ToTable("Table_2");
 
                 entity.Property(e => e.Emails)
-                    .HasColumnName("emails")
-                    .HasMaxLength(500);
+                    .HasMaxLength(500)
+                    .HasColumnName("emails");
 
                 entity.Property(e => e.IdCard)
-                    .HasColumnName("idCard")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("idCard");
             });
 
             modelBuilder.Entity<Table3>(entity =>
@@ -371,8 +375,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Name)
-                    .HasColumnName("name")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("name");
             });
 
             modelBuilder.Entity<TableTest1>(entity =>
@@ -382,12 +386,12 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Diem)
-                    .HasColumnName("diem")
-                    .HasMaxLength(150);
+                    .HasMaxLength(150)
+                    .HasColumnName("diem");
 
                 entity.Property(e => e.MaNv)
-                    .HasColumnName("MaNV")
-                    .HasMaxLength(150);
+                    .HasMaxLength(150)
+                    .HasColumnName("MaNV");
 
                 entity.Property(e => e.Ten).HasMaxLength(150);
             });
@@ -399,12 +403,12 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Diem)
-                    .HasColumnName("diem")
-                    .HasMaxLength(150);
+                    .HasMaxLength(150)
+                    .HasColumnName("diem");
 
                 entity.Property(e => e.MaNv)
-                    .HasColumnName("MaNV")
-                    .HasMaxLength(150);
+                    .HasMaxLength(150)
+                    .HasColumnName("MaNV");
 
                 entity.Property(e => e.Ten).HasMaxLength(150);
             });
@@ -464,12 +468,12 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.Thang).HasColumnType("date");
 
                 entity.Property(e => e.Amcu)
-                    .HasColumnName("AMcu")
-                    .HasColumnType("decimal(18, 2)");
+                    .HasColumnType("decimal(18, 2)")
+                    .HasColumnName("AMcu");
 
                 entity.Property(e => e.Ammoi)
-                    .HasColumnName("AMmoi")
-                    .HasColumnType("decimal(18, 2)");
+                    .HasColumnType("decimal(18, 2)")
+                    .HasColumnName("AMmoi");
 
                 entity.Property(e => e.GioTraining).HasColumnType("decimal(18, 2)");
 
@@ -482,16 +486,16 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.PhuCapKhac).HasColumnType("money");
 
                 entity.Property(e => e.Pmcu)
-                    .HasColumnName("PMcu")
-                    .HasColumnType("decimal(18, 2)");
+                    .HasColumnType("decimal(18, 2)")
+                    .HasColumnName("PMcu");
 
                 entity.Property(e => e.Pmmoi)
-                    .HasColumnName("PMmoi")
-                    .HasColumnType("decimal(18, 2)");
+                    .HasColumnType("decimal(18, 2)")
+                    .HasColumnName("PMmoi");
 
                 entity.Property(e => e.ThueTncn)
-                    .HasColumnName("ThueTNCN")
-                    .HasColumnType("money");
+                    .HasColumnType("money")
+                    .HasColumnName("ThueTNCN");
 
                 entity.Property(e => e.Thuong).HasColumnType("money");
             });
@@ -501,8 +505,8 @@ namespace BHDHRMWebAPI.Models
                 entity.ToTable("tblChucVu");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("ID");
 
                 entity.Property(e => e.TenChucVu).HasMaxLength(50);
             });
@@ -512,24 +516,29 @@ namespace BHDHRMWebAPI.Models
                 entity.ToTable("tblCongTy");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .ValueGeneratedNever();
+                    .ValueGeneratedNever()
+                    .HasColumnName("ID");
 
                 entity.Property(e => e.AreaId).HasColumnName("AreaID");
 
                 entity.Property(e => e.DiaChi).HasMaxLength(500);
 
                 entity.Property(e => e.IdtapDoan)
-                    .HasColumnName("IDTapDoan")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("IDTapDoan");
 
                 entity.Property(e => e.SoDt)
-                    .HasColumnName("SoDT")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("SoDT");
 
                 entity.Property(e => e.TenCongTy).HasMaxLength(500);
 
                 entity.Property(e => e.TinhTrang).HasMaxLength(50);
+
+                entity.HasOne(d => d.Area)
+                    .WithMany(p => p.TblCongTy)
+                    .HasForeignKey(d => d.AreaId)
+                    .HasConstraintName("FK_tblCongTy_Area");
             });
 
             modelBuilder.Entity<TblEmail>(entity =>
@@ -549,24 +558,24 @@ namespace BHDHRMWebAPI.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.MailBcc)
-                    .HasColumnName("MailBCC")
                     .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("MailBCC");
 
                 entity.Property(e => e.MailCc)
-                    .HasColumnName("MailCC")
                     .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("MailCC");
 
                 entity.Property(e => e.MailImap)
-                    .HasColumnName("MailIMAP")
                     .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("MailIMAP");
 
                 entity.Property(e => e.MailSmtp)
-                    .HasColumnName("MailSMTP")
                     .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("MailSMTP");
 
                 entity.Property(e => e.Password)
                     .HasMaxLength(100)
@@ -600,24 +609,24 @@ namespace BHDHRMWebAPI.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.MailBcc)
-                    .HasColumnName("MailBCC")
                     .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("MailBCC");
 
                 entity.Property(e => e.MailCc)
-                    .HasColumnName("MailCC")
                     .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("MailCC");
 
                 entity.Property(e => e.MailImap)
-                    .HasColumnName("MailIMAP")
                     .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("MailIMAP");
 
                 entity.Property(e => e.MailSmtp)
-                    .HasColumnName("MailSMTP")
                     .HasMaxLength(100)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("MailSMTP");
 
                 entity.Property(e => e.Password)
                     .HasMaxLength(100)
@@ -657,8 +666,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.QuanHe).HasMaxLength(100);
 
                 entity.Property(e => e.SoDt)
-                    .HasColumnName("SoDT")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("SoDT");
             });
 
             modelBuilder.Entity<TblGroupUser>(entity =>
@@ -666,8 +675,8 @@ namespace BHDHRMWebAPI.Models
                 entity.ToTable("tblGroupUser");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("ID");
 
                 entity.Property(e => e.Descriptions).HasMaxLength(500);
 
@@ -726,8 +735,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.NoiDung).HasMaxLength(150);
 
                 entity.Property(e => e.SoQd)
-                    .HasColumnName("SoQD")
-                    .HasMaxLength(150);
+                    .HasMaxLength(150)
+                    .HasColumnName("SoQD");
 
                 entity.Property(e => e.ThoiHanApDung).HasMaxLength(150);
             });
@@ -784,20 +793,20 @@ namespace BHDHRMWebAPI.Models
                 entity.ToTable("tbl_Menu");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("ID");
 
                 entity.Property(e => e.IdMenu)
-                    .HasColumnName("ID_Menu")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("ID_Menu");
 
                 entity.Property(e => e.IdSubMenu1)
-                    .HasColumnName("ID_SubMenu1")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("ID_SubMenu1");
 
                 entity.Property(e => e.IdSubMenu2)
-                    .HasColumnName("ID_SubMenu2")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("ID_SubMenu2");
 
                 entity.Property(e => e.MenuName).HasMaxLength(500);
 
@@ -811,8 +820,8 @@ namespace BHDHRMWebAPI.Models
                 entity.ToTable("tblMenu");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("ID");
 
                 entity.Property(e => e.Descriptions).HasMaxLength(500);
 
@@ -883,8 +892,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.CardNumber).HasMaxLength(50);
 
                 entity.Property(e => e.Cccd)
-                    .HasColumnName("CCCD")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("CCCD");
 
                 entity.Property(e => e.ChieuCao).HasMaxLength(20);
 
@@ -893,8 +902,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.DanToc).HasMaxLength(50);
 
                 entity.Property(e => e.Dkhk)
-                    .HasColumnName("DKHK")
-                    .HasMaxLength(1000);
+                    .HasMaxLength(1000)
+                    .HasColumnName("DKHK");
 
                 entity.Property(e => e.Email).HasMaxLength(500);
 
@@ -905,8 +914,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.HoTen).HasMaxLength(50);
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .ValueGeneratedOnAdd();
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("ID");
 
                 entity.Property(e => e.Idcapbac).HasColumnName("idcapbac");
 
@@ -915,8 +924,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.Idnhomquyen).HasColumnName("idnhomquyen");
 
                 entity.Property(e => e.IdphongBan)
-                    .HasColumnName("IDPhongBan")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("IDPhongBan");
 
                 entity.Property(e => e.LanCuoiChinhSua).HasMaxLength(50);
 
@@ -929,8 +938,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.MaSoThue).HasMaxLength(50);
 
                 entity.Property(e => e.MembershipId)
-                    .HasColumnName("membership_id")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("membership_id");
 
                 entity.Property(e => e.NgayCap).HasColumnType("date");
 
@@ -939,34 +948,34 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.NgayVaoCongTy).HasColumnType("date");
 
                 entity.Property(e => e.Ngaynghiviec)
-                    .HasColumnName("ngaynghiviec")
-                    .HasColumnType("date");
+                    .HasColumnType("date")
+                    .HasColumnName("ngaynghiviec");
 
                 entity.Property(e => e.NhomMau).HasMaxLength(20);
 
                 entity.Property(e => e.NoiCap).HasMaxLength(500);
 
                 entity.Property(e => e.NoiDkbhxh)
-                    .HasColumnName("noiDKBHXH")
-                    .HasMaxLength(250);
+                    .HasMaxLength(250)
+                    .HasColumnName("noiDKBHXH");
 
                 entity.Property(e => e.SdtKhanCap).HasMaxLength(20);
 
                 entity.Property(e => e.SoBhxh)
-                    .HasColumnName("soBHXH")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("soBHXH");
 
                 entity.Property(e => e.SoCmnd)
-                    .HasColumnName("SoCMND")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("SoCMND");
 
                 entity.Property(e => e.SoDt)
-                    .HasColumnName("SoDT")
-                    .HasMaxLength(20);
+                    .HasMaxLength(20)
+                    .HasColumnName("SoDT");
 
                 entity.Property(e => e.SoTaiKhoanNh)
-                    .HasColumnName("SoTaiKhoanNH")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("SoTaiKhoanNH");
 
                 entity.Property(e => e.ThuongTru).HasMaxLength(500);
 
@@ -984,8 +993,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.Avatar).HasMaxLength(150);
 
                 entity.Property(e => e.HinhCmnd)
-                    .HasColumnName("HinhCMND")
-                    .HasMaxLength(150);
+                    .HasMaxLength(150)
+                    .HasColumnName("HinhCMND");
 
                 entity.Property(e => e.IdNhanVien).HasColumnName("idNhanVien");
 
@@ -999,8 +1008,8 @@ namespace BHDHRMWebAPI.Models
                 entity.ToTable("tblPermissions");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("ID");
 
                 entity.Property(e => e.Descriptions).HasMaxLength(500);
 
@@ -1016,8 +1025,8 @@ namespace BHDHRMWebAPI.Models
                 entity.ToTable("tblPhong");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("ID");
 
                 entity.Property(e => e.IdcongTy).HasColumnName("IDCongTy");
 
@@ -1031,8 +1040,8 @@ namespace BHDHRMWebAPI.Models
                 entity.ToTable("tblPhucLoi");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .ValueGeneratedNever();
+                    .ValueGeneratedNever()
+                    .HasColumnName("ID");
 
                 entity.Property(e => e.LoaiHopDong).HasMaxLength(50);
 
@@ -1094,8 +1103,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.DenNgay).HasColumnType("date");
 
                 entity.Property(e => e.DiaDiemLv)
-                    .HasColumnName("DiaDiemLV")
-                    .HasMaxLength(500);
+                    .HasMaxLength(500)
+                    .HasColumnName("DiaDiemLV");
 
                 entity.Property(e => e.GhiChu).HasMaxLength(500);
 
@@ -1119,22 +1128,22 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.GhiChu).HasMaxLength(250);
 
                 entity.Property(e => e.Kq)
-                    .HasColumnName("KQ")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("KQ");
 
                 entity.Property(e => e.Ngay).HasColumnType("date");
 
                 entity.Property(e => e.NhanXetDanhGia).HasMaxLength(150);
 
                 entity.Property(e => e.NoiDungDt)
-                    .HasColumnName("NoiDungDT")
-                    .HasMaxLength(150);
+                    .HasMaxLength(150)
+                    .HasColumnName("NoiDungDT");
 
                 entity.Property(e => e.ThoHanCamKet).HasMaxLength(150);
 
                 entity.Property(e => e.ThoiGianDt)
-                    .HasColumnName("ThoiGianDT")
-                    .HasMaxLength(500);
+                    .HasMaxLength(500)
+                    .HasColumnName("ThoiGianDT");
             });
 
             modelBuilder.Entity<TblQuaTrinhHocTap>(entity =>
@@ -1168,7 +1177,7 @@ namespace BHDHRMWebAPI.Models
 
                 entity.Property(e => e.Color)
                     .HasMaxLength(10)
-                    .IsFixedLength();
+                    .IsFixedLength(true);
 
                 entity.Property(e => e.End).HasColumnType("datetime");
 
@@ -1202,12 +1211,12 @@ namespace BHDHRMWebAPI.Models
                 entity.ToTable("tblSubMenu");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("ID");
 
                 entity.Property(e => e.IdMenu)
-                    .HasColumnName("ID_Menu")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("ID_Menu");
 
                 entity.Property(e => e.Descriptions).HasMaxLength(500);
 
@@ -1223,12 +1232,12 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.Descriptions).HasMaxLength(500);
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("ID");
 
                 entity.Property(e => e.IdSubMenu)
-                    .HasColumnName("ID_SubMenu")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("ID_SubMenu");
 
                 entity.Property(e => e.SubMenuName)
                     .IsRequired()
@@ -1250,8 +1259,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.GhiChu).HasMaxLength(500);
 
                 entity.Property(e => e.TenTs)
-                    .HasColumnName("TenTS")
-                    .HasMaxLength(500);
+                    .HasMaxLength(500)
+                    .HasColumnName("TenTS");
 
                 entity.Property(e => e.TraTaiSan).HasMaxLength(50);
             });
@@ -1309,8 +1318,8 @@ namespace BHDHRMWebAPI.Models
                 entity.ToTable("tblTapDoan");
 
                 entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnName("ID");
 
                 entity.Property(e => e.DiaChi).HasMaxLength(500);
 
@@ -1343,20 +1352,20 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.CardNumber).HasMaxLength(50);
 
                 entity.Property(e => e.Denngay)
-                    .HasColumnName("denngay")
-                    .HasColumnType("date");
+                    .HasColumnType("date")
+                    .HasColumnName("denngay");
 
                 entity.Property(e => e.Ghichu)
-                    .HasColumnName("ghichu")
-                    .HasMaxLength(255);
+                    .HasMaxLength(255)
+                    .HasColumnName("ghichu");
 
                 entity.Property(e => e.Trocapkhac).HasColumnName("trocapkhac");
 
                 entity.Property(e => e.Trocaptrachnhiem).HasColumnName("trocaptrachnhiem");
 
                 entity.Property(e => e.Tungay)
-                    .HasColumnName("tungay")
-                    .HasColumnType("date");
+                    .HasColumnType("date")
+                    .HasColumnName("tungay");
             });
 
             modelBuilder.Entity<Thietlapbaohiem>(entity =>
@@ -1378,8 +1387,8 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.Bhytnv).HasColumnName("BHYTnv");
 
                 entity.Property(e => e.Ngayhieuluc)
-                    .HasColumnName("ngayhieuluc")
-                    .HasColumnType("date");
+                    .HasColumnType("date")
+                    .HasColumnName("ngayhieuluc");
             });
 
             modelBuilder.Entity<Thietlapthue>(entity =>
@@ -1392,6 +1401,7 @@ namespace BHDHRMWebAPI.Models
             });
 
             OnModelCreatingGeneratedProcedures(modelBuilder);
+            OnModelCreatingGeneratedFunctions(modelBuilder);
             OnModelCreatingPartial(modelBuilder);
         }
 

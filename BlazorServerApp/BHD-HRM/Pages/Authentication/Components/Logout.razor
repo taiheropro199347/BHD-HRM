@@ -1,0 +1,11 @@
+﻿@page "/pages/authentication/Components/Logout"
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@code {
+    protected async override Task OnInitializedAsync()
+    {
+		await ((CustomAuthenticationStateProvider)AuthenticationStateProvider).MarkUserAsLoggedOut();
+        NavigationManager.NavigateTo("/pages/authentication/Login-v2");
+    }
+}
