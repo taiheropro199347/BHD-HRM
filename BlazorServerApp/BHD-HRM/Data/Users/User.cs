@@ -10,7 +10,9 @@ namespace BHD_HRM.Data.Users
     public partial class User
     {
         public string userAd { get; set; }
+        [Required(ErrorMessage = "Bạn phải nhập tên đăng nhập")]
         public string pass { get; set; }
+        [Required(ErrorMessage = "Bạn phải nhập mật khẩu")]
         public string name { get; set; }
         public string phone { get; set; }
         public string email { get; set; }

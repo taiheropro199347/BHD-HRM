@@ -734,9 +734,9 @@ public class UserServices
         "Pending", "Active", "Inactive",
     };
 
-    public static List<string> GetLanguageList() => new List<string>
+    public static List<string> GetEducateList() => new List<string>
     {
-        "English", "Spanish", "French", "Russian", "German", "Arabic","Sanskrit",
+        "Cao Học", "Đại học", "Cao đẳng", "Trung cấp nghề", "THPT",
     };
 
     public static List<PermissionDto> GetPermissionsList() => new List<PermissionDto>()

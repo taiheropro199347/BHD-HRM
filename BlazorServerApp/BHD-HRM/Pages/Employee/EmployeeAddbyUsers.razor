@@ -63,15 +63,33 @@
                         <MTextField @bind-Value="UserData.Email" Color="primary" Label="Email" HideDetails="@("auto")" Outlined />
                     </MCol>
                 </MRow> 
+				<MRow Class="mt-3">
+                   <MCol Md=4 Sm=12>
+                        <MTextField @bind-Value="UserData.FullName" Color="primary" Label="Số CMND/CCCD" HideDetails="@("auto")" Outlined />
+                    </MCol>
+                    <MCol Md=4 Sm=12>
+                        <MTextField @bind-Value="UserData.Mobile" Label="Nơi cấp" Color="primary" HideDetails="@("auto")" Outlined />
+                    </MCol>
+                   <MCol Md=4 Sm=12>
+                        <MMenu CloseOnContentClick="false" NudgeRight="40" Transition="scale-transition" OffsetY MinWidth="@("auto")" @bind-Value="_birthDateMenu">
+                            <ActivatorContent Context="menuContext">
+                                <MTextField @bind-Value=UserData.BirthDate Label="Ngày cấp" Color="primary" Readonly HideDetails="@("auto")" Outlined @attributes="menuContext.Attrs"></MTextField>
+                            </ActivatorContent>
+                            <ChildContent>
+                                <MDatePicker Class="task-datepicker" @bind-Value=UserData.BirthDate OnInput="()=>_birthDateMenu=false"></MDatePicker>
+                            </ChildContent>
+                        </MMenu>
+                    </MCol>
+                </MRow>
                 <MRow Class="mt-3">
                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.FullName" Color="primary" Label="" HideDetails="@("auto")" Outlined />
+                        <MTextField @bind-Value="UserData.FullName" Color="primary" Label="MST cá nhân" HideDetails="@("auto")" Outlined />
                     </MCol>
                     <MCol Md=4 Sm=12>
                         <MTextField @bind-Value="UserData.Mobile" Label="Số điện thoại" Color="primary" HideDetails="@("auto")" Outlined />
                     </MCol>
                     <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.Website" Label="Website" Color="primary" HideDetails="@("auto")" Outlined />
+                        <MTextField @bind-Value="UserData.Email" Label="Số TK VietCapital" Color="primary" HideDetails="@("auto")" Outlined />
                     </MCol>
                 </MRow>
 
@@ -81,25 +99,28 @@
                                  Color="primary"
                                  Outlined
                                  HideDetails="@("auto")"
-                                 Items="@UserServices.GetLanguageList()"
+                                 Items="@UserServices.GetEducateList()"
                                  ItemText="u => u"
                                  ItemValue="u => u"
-                                 Label="Language">
+                                 Label="Trình độ">
                         </MSelect>
                     </MCol>
                     <MCol Md=4 Sm=12>
-                        <span class="text-btn">Gender</span>
+                        <span class="text-btn">Giới tính</span>
                         <MRadioGroup @bind-Value="UserData.Gender" HideDetails="@("auto")" Color="primary" Row Class="mt-1">
-                            <MRadio Color="primary" Label="Male" Value="@("Male")"></MRadio>
-                            <MRadio Color="primary" Label="Female" Value="@("Female")"></MRadio>
+                            <MRadio Color="primary" Label="Nam" Value="@("Nam")"></MRadio>
+                            <MRadio Color="primary" Label="Nữ" Value="@("Nữ")"></MRadio>
+							<MRadio Color="primary" Label="Không xác định" Value="@("Không xác định")"></MRadio>
                         </MRadioGroup>
                     </MCol>
                     <MCol Md=4 Sm=12>
-                        <span class="text-btn">Contact Options</span>
+                        <span class="text-btn">Tình trạng hôn nhân</span>
                         <div class="d-flex mt-n2">
-                            <MCheckbox Label="Email" HideDetails="@("auto")" Color="primary"></MCheckbox>
-                            <MCheckbox Label="Message" HideDetails="@("auto")" Color="primary" Class="ml-2"></MCheckbox>
-                            <MCheckbox Label="Phone" HideDetails="@("auto")" Color="primary" Class="ml-2"></MCheckbox>
+                        <MRadioGroup @bind-Value="UserData.Gender" HideDetails="@("auto")" Color="primary" Row Class="mt-1">
+                            <MRadio Color="primary" Label="Độc thân" Value="@("Single")"></MRadio>
+                            <MRadio Color="primary" Label="Có gia đình" Value="@("Married ")"></MRadio>
+							<MRadio Color="primary" Label="Ly hôn" Value="@("Divorced")"></MRadio>
+                        </MRadioGroup>
                         </div>
 
                     </MCol>
@@ -110,10 +131,10 @@
                     <span class="text-h6">Address</span>
                     <MRow Class="mt-3">
                         <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.Address1" Label="Address Line 1" Color="primary" HideDetails="@("auto")" Outlined />
+                            <MTextField @bind-Value="UserData.Address1" Label="Địa chỉ thường trú" Color="primary" HideDetails="@("auto")" Outlined />
                         </MCol>
                         <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.Address2" Label="Address Line 2" Color="primary" HideDetails="@("auto")" Outlined />
+                            <MTextField @bind-Value="UserData.Address2" Label="Địa chỉ tạm trú" Color="primary" HideDetails="@("auto")" Outlined />
                         </MCol>
                         <MCol Md=4 Sm=12>
                             <MTextField @bind-Value="UserData.Address3" Label="Address Line 3" Color="primary" HideDetails="@("auto")" Outlined />
@@ -164,10 +185,10 @@
                                  Color="primary"
                                  Outlined
                                  HideDetails="@("auto")"
-                                 Items="@UserServices.GetLanguageList()"
+                                 Items="@UserServices.GetEducateList()"
                                  ItemText="u => u"
                                  ItemValue="u => u"
-                                 Label="Language">
+                                 Label="Trình độ">
                         </MSelect>
                     </MCol>
                     <MCol Md=4 Sm=12>
