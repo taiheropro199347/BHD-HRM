@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "95Oy68KiZdN8zYzN9Q639lyekcrVI16aD5qu5FtWVZQ=",
+  "Hash": "FlEw13BAxmdBmvnOwbp0zWNawbWk92vYHcmIJyydG7A=",
   "Source": "BHD-HRM",
   "BasePath": "_content/BHD-HRM",
   "Mode": "Default",
@@ -1970,6 +1970,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\nav\\nav.json"
+    },
+    {
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\usersupload\\avatar\\aaaaa.jpg",
+      "SourceId": "BHD-HRM",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
+      "BasePath": "_content/BHD-HRM",
+      "RelativePath": "usersupload/avatar/aaaaa.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\usersupload\\avatar\\aaaaa.jpg"
     }
   ]
 }

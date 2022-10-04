@@ -958,6 +958,18 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.NoiDkbhxh)
                     .HasMaxLength(250)
                     .HasColumnName("noiDKBHXH");
+                entity.Property(e => e.LoaiNhanVien)
+                   .HasMaxLength(50)
+                   .HasColumnName("LoaiNhanVien");
+                entity.Property(e => e.NgKhanCap)
+                  .HasMaxLength(50)
+                  .HasColumnName("NgKhanCap");
+                entity.Property(e => e.TrinhDo)
+                  .HasMaxLength(50)
+                  .HasColumnName("TrinhDo");
+                entity.Property(e => e.HonNhan)
+                  .HasMaxLength(50)
+                  .HasColumnName("HonNhan");
 
                 entity.Property(e => e.SdtKhanCap).HasMaxLength(20);
 
@@ -978,6 +990,8 @@ namespace BHDHRMWebAPI.Models
                     .HasColumnName("SoTaiKhoanNH");
 
                 entity.Property(e => e.ThuongTru).HasMaxLength(500);
+                entity.Property(e => e.TamTru).HasMaxLength(500);
+                entity.Property(e => e.AnhNhanVien).HasMaxLength(150);
 
                 entity.Property(e => e.TrangThai).HasMaxLength(50);
 

@@ -3,40 +3,25 @@
 @inherits ProCompontentBase
 
 <MCard>
-    <MCardText Class="px-6 pb-6">
-        <MTabs @bind-Value="tab" HideSlider Height=10 Color="sample-green">
-            <MTab Value="@("Account")">
-                <MIcon Size=16 Color="@(tab=="Account"?"sample-green":"fill")">mdi-circle</MIcon>
-                <span class="ml-2 text-btn @(tab=="Account"?"neutral--text":"")">Account</span>
-            </MTab>
-            <MTab Class="ml-2" Value="@("Information")">
-                <MIcon Size=16 Color="@(tab=="Information"?"sample-green":"fill")">mdi-circle</MIcon>
-                <span class="ml-2 text-btn @(tab=="Information"?"neutral--text":"")">Information</span>
-            </MTab>
-            <MTab Class="ml-2" Value="@("Social")">
-                <MIcon Size=16 Color="@(tab=="Social"?"sample-green":"fill")">mdi-circle</MIcon>
-                <span class="ml-2 text-btn @(tab=="Social"?"neutral--text":"")">Social</span>
-            </MTab>
-        </MTabs>
         <MTabsItems @bind-Value="tab" Class="mt-4">
             <MTabItem Value="@("Account")">
                 <div class="d-flex block-center mt-3">
-                    @if (string.IsNullOrEmpty(UserData.HeadImg))
+                    @if (string.IsNullOrEmpty(UserData.AnhNhanVien))
                     {
-                        string color = UserData.Color;
+                        string color = "Blue";
                         <MAvatar Size="120" Color="@($"{color}-lighten-5")">
-                            <span class="@($"{color}--text text-h3")">@UserData.SampleName</span>
+                            <span class="@($"{color}--text text-h3")">@UserData.HoTen</span>
                         </MAvatar>
                     }
                     else
                     {
                         <MAvatar Size="120">
-                            @*<MImage Contain Src="@UserData.HeadImg" />*@
-                            <img src="@UserData.HeadImg" />
+                            @*<MImage Contain Src="@UserData.AnhNhanVien" />*@
+                            <img src="@UserData.AnhNhanVien" />
                         </MAvatar>
                     }
                     <div Class="ml-6">
-                        <h5 class="mb-6">@UserData.FullName</h5>
+                        <h5 class="mb-6">@UserData.HoTen</h5>
                         <MButton Color="primary" MinWidth=80 Height=32 Class="rounded-pill"> Update </MButton>
                         <MButton Outlined MinWidth=80 Height=32 Class="ml-6 text-btn rounded-pill"> Remove </MButton>
                     </div>
@@ -47,15 +32,15 @@
                 </div>
 				  <MRow Class="my-3">
                     <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.UserName" Color="primary" Label="Họ và Tên" HideDetails="@("auto")" Outlined />
+                        <MTextField @bind-Value="UserData.HoTen" Color="primary" Label="Họ và Tên" HideDetails="@("auto")" Outlined />
                     </MCol>                    
 					<MCol Md=4 Sm=12>
                         <MMenu CloseOnContentClick="false" NudgeRight="40" Transition="scale-transition" OffsetY MinWidth="@("auto")" @bind-Value="_birthDateMenu">
                             <ActivatorContent Context="menuContext">
-                                <MTextField @bind-Value=UserData.BirthDate Label="Ngày sinh" Color="primary" Readonly HideDetails="@("auto")" Outlined @attributes="menuContext.Attrs"></MTextField>
+                                <MTextField @bind-Value=UserData.NgaySinh Label="Ngày sinh" Color="primary" Readonly HideDetails="@("auto")" Outlined @attributes="menuContext.Attrs"></MTextField>
                             </ActivatorContent>
                             <ChildContent>
-                                <MDatePicker Class="task-datepicker" @bind-Value=UserData.BirthDate OnInput="()=>_birthDateMenu=false"></MDatePicker>
+                                <MDatePicker Class="task-datepicker" @bind-Value=UserData.NgaySinh OnInput="()=>_birthDateMenu=false"></MDatePicker>
                             </ChildContent>
                         </MMenu>
                     </MCol>
@@ -65,28 +50,28 @@
                 </MRow> 
 				<MRow Class="mt-3">
                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.FullName" Color="primary" Label="Số CMND/CCCD" HideDetails="@("auto")" Outlined />
+                        <MTextField @bind-Value="UserData.SoCmnd" Color="primary" Label="Số CMND/CCCD" HideDetails="@("auto")" Outlined />
                     </MCol>
                     <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.Mobile" Label="Nơi cấp" Color="primary" HideDetails="@("auto")" Outlined />
+                        <MTextField @bind-Value="UserData.NoiCap" Label="Nơi cấp" Color="primary" HideDetails="@("auto")" Outlined />
                     </MCol>
                    <MCol Md=4 Sm=12>
-                        <MMenu CloseOnContentClick="false" NudgeRight="40" Transition="scale-transition" OffsetY MinWidth="@("auto")" @bind-Value="_birthDateMenu">
+                        <MMenu CloseOnContentClick="false" NudgeRight="40" Transition="scale-transition" OffsetY MinWidth="@("auto")" @bind-Value="_allocationDateMenu">
                             <ActivatorContent Context="menuContext">
-                                <MTextField @bind-Value=UserData.BirthDate Label="Ngày cấp" Color="primary" Readonly HideDetails="@("auto")" Outlined @attributes="menuContext.Attrs"></MTextField>
+                                <MTextField @bind-Value=UserData.NgayCap Label="Ngày cấp" Color="primary" Readonly HideDetails="@("auto")" Outlined @attributes="menuContext.Attrs"></MTextField>
                             </ActivatorContent>
                             <ChildContent>
-                                <MDatePicker Class="task-datepicker" @bind-Value=UserData.BirthDate OnInput="()=>_birthDateMenu=false"></MDatePicker>
+                                <MDatePicker Class="task-datepicker" @bind-Value=UserData.NgayCap OnInput="()=>_allocationDateMenu=false"></MDatePicker>
                             </ChildContent>
                         </MMenu>
                     </MCol>
                 </MRow>
                 <MRow Class="mt-3">
                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.FullName" Color="primary" Label="MST cá nhân" HideDetails="@("auto")" Outlined />
+                        <MTextField @bind-Value="UserData.MaSoThue" Color="primary" Label="MST cá nhân" HideDetails="@("auto")" Outlined />
                     </MCol>
                     <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.Mobile" Label="Số điện thoại" Color="primary" HideDetails="@("auto")" Outlined />
+                        <MTextField @bind-Value="UserData.SoDt" Label="Số điện thoại" Color="primary" HideDetails="@("auto")" Outlined />
                     </MCol>
                     <MCol Md=4 Sm=12>
                         <MTextField @bind-Value="UserData.Email" Label="Số TK VietCapital" Color="primary" HideDetails="@("auto")" Outlined />
@@ -95,7 +80,7 @@
 
                 <MRow Class="mt-3">
                     <MCol Md=4 Sm=12>
-                        <MSelect @bind-Value="UserData.Language"
+                        <MSelect @bind-Value="UserData.TrinhDo"
                                  Color="primary"
                                  Outlined
                                  HideDetails="@("auto")"
@@ -107,7 +92,7 @@
                     </MCol>
                     <MCol Md=4 Sm=12>
                         <span class="text-btn">Giới tính</span>
-                        <MRadioGroup @bind-Value="UserData.Gender" HideDetails="@("auto")" Color="primary" Row Class="mt-1">
+                        <MRadioGroup @bind-Value="UserData.GioiTinh" HideDetails="@("auto")" Color="primary" Row Class="mt-1">
                             <MRadio Color="primary" Label="Nam" Value="@("Nam")"></MRadio>
                             <MRadio Color="primary" Label="Nữ" Value="@("Nữ")"></MRadio>
 							<MRadio Color="primary" Label="Không xác định" Value="@("Không xác định")"></MRadio>
@@ -116,7 +101,7 @@
                     <MCol Md=4 Sm=12>
                         <span class="text-btn">Tình trạng hôn nhân</span>
                         <div class="d-flex mt-n2">
-                        <MRadioGroup @bind-Value="UserData.Gender" HideDetails="@("auto")" Color="primary" Row Class="mt-1">
+                        <MRadioGroup @bind-Value="UserData.HonNhan" HideDetails="@("auto")" Color="primary" Row Class="mt-1">
                             <MRadio Color="primary" Label="Độc thân" Value="@("Single")"></MRadio>
                             <MRadio Color="primary" Label="Có gia đình" Value="@("Married ")"></MRadio>
 							<MRadio Color="primary" Label="Ly hôn" Value="@("Divorced")"></MRadio>
@@ -131,135 +116,27 @@
                     <span class="text-h6">Address</span>
                     <MRow Class="mt-3">
                         <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.Address1" Label="Địa chỉ thường trú" Color="primary" HideDetails="@("auto")" Outlined />
+                            <MTextField @bind-Value="UserData.ThuongTru" Label="Địa chỉ thường trú" Color="primary" HideDetails="@("auto")" Outlined />
                         </MCol>
                         <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.Address2" Label="Địa chỉ tạm trú" Color="primary" HideDetails="@("auto")" Outlined />
+                            <MTextField @bind-Value="UserData.TamTru" Label="Địa chỉ tạm trú" Color="primary" HideDetails="@("auto")" Outlined />
                         </MCol>
                         <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.Address3" Label="Address Line 3" Color="primary" HideDetails="@("auto")" Outlined />
+                            <MTextField @bind-Value="UserData.TamTru" Label="Address Line 3" Color="primary" HideDetails="@("auto")" Outlined />
                         </MCol>
                     </MRow>
                     <MRow Class="mt-3">
                         <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.City" Label="City" Color="primary" HideDetails="@("auto")" Outlined />
+                            <MTextField @bind-Value="UserData.TamTru" Label="City" Color="primary" HideDetails="@("auto")" Outlined />
                         </MCol>
                         <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.State" Label="State" Color="primary" HideDetails="@("auto")" Outlined />
+                            <MTextField @bind-Value="UserData.TamTru" Label="State" Color="primary" HideDetails="@("auto")" Outlined />
                         </MCol>
                         <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.Country" Label="Country" Color="primary" HideDetails="@("auto")" Outlined />
+                            <MTextField @bind-Value="UserData.TamTru" Label="Country" Color="primary" HideDetails="@("auto")" Outlined />
                         </MCol>
                     </MRow>
                 </div>
-            </MTabItem>
-
-            <MTabItem Value="@("Information")">
-                <div class="mt-3">
-                    <MIcon Size=20 Color="sample-green" Class="mt-n1">far fa-user</MIcon>
-                    <span class="ml-1 text-h6">Personal Information</span>
-                </div>
-
-                <MRow Class="mt-3">
-                    <MCol Md=4 Sm=12>
-                        <MMenu CloseOnContentClick="false" NudgeRight="40" Transition="scale-transition" OffsetY MinWidth="@("auto")" @bind-Value="_birthDateMenu">
-                            <ActivatorContent Context="menuContext">
-                                <MTextField @bind-Value=UserData.BirthDate Label="BirthDate" Color="primary" Readonly HideDetails="@("auto")" Outlined @attributes="menuContext.Attrs"></MTextField>
-                            </ActivatorContent>
-                            <ChildContent>
-                                <MDatePicker Class="task-datepicker" @bind-Value=UserData.BirthDate OnInput="()=>_birthDateMenu=false"></MDatePicker>
-                            </ChildContent>
-                        </MMenu>
-                    </MCol>
-                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.Mobile" Label="Mobile" Color="primary" HideDetails="@("auto")" Outlined />
-                    </MCol>
-                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.Website" Label="Website" Color="primary" HideDetails="@("auto")" Outlined />
-                    </MCol>
-                </MRow>
-
-                <MRow Class="mt-3">
-                    <MCol Md=4 Sm=12>
-                        <MSelect @bind-Value="UserData.Language"
-                                 Color="primary"
-                                 Outlined
-                                 HideDetails="@("auto")"
-                                 Items="@UserServices.GetEducateList()"
-                                 ItemText="u => u"
-                                 ItemValue="u => u"
-                                 Label="Trình độ">
-                        </MSelect>
-                    </MCol>
-                    <MCol Md=4 Sm=12>
-                        <span class="text-btn">Gender</span>
-                        <MRadioGroup @bind-Value="UserData.Gender" HideDetails="@("auto")" Color="primary" Row Class="mt-1">
-                            <MRadio Color="primary" Label="Male" Value="@("Male")"></MRadio>
-                            <MRadio Color="primary" Label="Female" Value="@("Female")"></MRadio>
-                        </MRadioGroup>
-                    </MCol>
-                    <MCol Md=4 Sm=12>
-                        <span class="text-btn">Contact Options</span>
-                        <div class="d-flex mt-n2">
-                            <MCheckbox Label="Email" HideDetails="@("auto")" Color="primary"></MCheckbox>
-                            <MCheckbox Label="Message" HideDetails="@("auto")" Color="primary" Class="ml-2"></MCheckbox>
-                            <MCheckbox Label="Phone" HideDetails="@("auto")" Color="primary" Class="ml-2"></MCheckbox>
-                        </div>
-
-                    </MCol>
-                </MRow>
-
-                <div class="mt-12">
-                    <MIcon Size=20 Color="sample-green" Class="mt-n1">mdi-map-marker-outline</MIcon>
-                    <span class="text-h6">Address</span>
-                    <MRow Class="mt-3">
-                        <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.Address1" Label="Address Line 1" Color="primary" HideDetails="@("auto")" Outlined />
-                        </MCol>
-                        <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.Address2" Label="Address Line 2" Color="primary" HideDetails="@("auto")" Outlined />
-                        </MCol>
-                        <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.Address3" Label="Address Line 3" Color="primary" HideDetails="@("auto")" Outlined />
-                        </MCol>
-                    </MRow>
-                    <MRow Class="mt-3">
-                        <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.City" Label="City" Color="primary" HideDetails="@("auto")" Outlined />
-                        </MCol>
-                        <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.State" Label="State" Color="primary" HideDetails="@("auto")" Outlined />
-                        </MCol>
-                        <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.Country" Label="Country" Color="primary" HideDetails="@("auto")" Outlined />
-                        </MCol>
-                    </MRow>
-                </div>
-            </MTabItem>
-
-            <MTabItem Value="@("Social")">
-                <MRow class="mt-1">
-                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.Twitter" Label="Twitter" Color="primary" HideDetails="@("auto")" Outlined PrependInnerIcon="fab fa-twitter" />
-                    </MCol>
-                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.Facebook" Label="Facebook" Color="primary" HideDetails="@("auto")" Outlined PrependInnerIcon="mdi-facebook" />
-                    </MCol>
-                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.Instagram" Label="Instagram" Color="primary" HideDetails="@("auto")" Outlined PrependInnerIcon="fab fa-instagram" />
-                    </MCol>
-                </MRow>
-                <MRow Class="mt-3">
-                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.Github" Label="Github" Color="primary" HideDetails="@("auto")" Outlined PrependInnerIcon="fab fa-github" />
-                    </MCol>
-                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.Codepen" Label="Codepen" Color="primary" HideDetails="@("auto")" Outlined PrependInnerIcon="fab fa-codepen" />
-                    </MCol>
-                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.Slack" Label="Slack" Color="primary" HideDetails="@("auto")" Outlined PrependInnerIcon="fab fa-slack" />
-                    </MCol>
-                </MRow>
             </MTabItem>
         </MTabsItems>
 
@@ -268,23 +145,23 @@
             <MButton MinWidth=80 Height=40 Outlined Class="text-btn rounded-pill"> Reset </MButton>
             <MButton MinWidth=80 Height=40 Color="primary" Class="ml-6 rounded-pill"> Save Changes </MButton>
         </div>
-    </MCardText>
 </MCard>
 
 @code {
-    private UserDto? _userData;
+    private EmployeeDto? _userData;
     private StringNumber? tab;
     private bool _birthDateMenu;
+	private bool _allocationDateMenu;
 
     [Parameter]
     public string? Id { get; set; }
 
     [AllowNull]
-    public UserDto UserData
+    public EmployeeDto UserData
     {
         get
         {
-            return _userData ?? (_userData = UserServices.GetList().First());
+            return _userData ?? (_userData = new EmployeeDto());
         }
         set
         {
@@ -294,7 +171,7 @@
 
     protected override void OnParametersSet()
     {
-        UserData = UserServices.GetList().FirstOrDefault(u => u.Id == Id);
+        //UserData = UserServices.GetList().FirstOrDefault(u => u.Id == Id);
     }
 
     private List<DataTableHeader<PermissionDto>> _headers = new List<DataTableHeader<PermissionDto>>

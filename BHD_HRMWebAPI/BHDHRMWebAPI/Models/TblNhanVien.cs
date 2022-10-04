@@ -46,5 +46,11 @@ namespace BHDHRMWebAPI.Models
         public DateTime? Ngaynghiviec { get; set; }
         public string SoBhxh { get; set; }
         public string NoiDkbhxh { get; set; }
+        public string LoaiNhanVien { get; set; }
+        public string NgKhanCap { get; set; }
+        public string TrinhDo { get; set; }
+        public string HonNhan { get; set; }   
+        public string TamTru { get; set; }
+        public string AnhNhanVien { get; set; }
     }
 }
