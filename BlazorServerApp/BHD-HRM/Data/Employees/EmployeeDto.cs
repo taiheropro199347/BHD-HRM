@@ -15,7 +15,7 @@ namespace BHD_HRM.Data.Employee
         public int? IdcongTy { get; set; }
         public string IdphongBan { get; set; }
         public string ChucVu { get; set; }
-        public DateTime? NgaySinh { get; set; }
+        public DateOnly NgaySinh { get; set; } = DateOnly.FromDateTime(DateTime.Now);
         public string GioiTinh { get; set; }
         public string DanToc { get; set; }
         public string Dkhk { get; set; }
@@ -24,7 +24,7 @@ namespace BHD_HRM.Data.Employee
         public string Email { get; set; }
         public string Email2 { get; set; }
         public string SoCmnd { get; set; }
-        public DateTime? NgayCap { get; set; }
+        public DateOnly NgayCap { get; set; } = DateOnly.FromDateTime(DateTime.Now);
         public string NoiCap { get; set; }
         public string TrangThai { get; set; }
         public string LoaiHopDong { get; set; }
@@ -52,6 +52,6 @@ namespace BHD_HRM.Data.Employee
         public string TrinhDo { get; set; }
         public string HonNhan { get; set; }
         public string TamTru { get; set; }
-        public string AnhNhanVien { get; set; } = "/usersupload/avatar/aaaaa.jpg";
+        public string AnhNhanVien { get; set; } = "/usersupload/avatar/bhd.png";
     }
 }

@@ -12,7 +12,8 @@
           "CuriousDriveRazorLibrary": "1.0.0",
           "Masa.Blazor": "0.5.0",
           "Microsoft.Azure.SignalR": "1.18.3",
-          "Newtonsoft.Json": "13.0.1"
+          "Newtonsoft.Json": "13.0.1",
+          "Tewr.Blazor.FileReader": "3.3.1.21360"
         },
         "runtime": {
           "BHD-HRM.dll": {}
@@ -20,7 +21,7 @@
       },
       "Azure.Core/1.14.0": {
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "1.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
           "System.Buffers": "4.5.1",
           "System.Diagnostics.DiagnosticSource": "4.6.0",
           "System.Memory": "4.5.4",
@@ -319,11 +320,11 @@
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
+      "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "4.700.19.46214"
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
           }
         }
       },
@@ -1247,6 +1248,18 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "Tewr.Blazor.FileReader/3.3.1.21360": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Tewr.Blazor.FileReader.dll": {
+            "assemblyVersion": "3.3.1.21360",
+            "fileVersion": "3.3.1.21360"
+          }
+        }
+      },
       "Util.Reflection/1.0.3": {
         "runtime": {
           "lib/net6.0/Util.Reflection.dll": {
@@ -1496,12 +1509,12 @@
       "path": "microsoft.azure.signalr.protocols/1.18.3",
       "hashPath": "microsoft.azure.signalr.protocols.1.18.3.nupkg.sha512"
     },
-    "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
+    "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-K63Y4hORbBcKLWH5wnKgzyn7TOfYzevIEwIedQHBIkmkEBA9SCqgvom+XTuE+fAFGvINGkhFItaZ2dvMGdT5iw==",
-      "path": "microsoft.bcl.asyncinterfaces/1.0.0",
-      "hashPath": "microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512"
+      "sha512": "sha512-UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg==",
+      "path": "microsoft.bcl.asyncinterfaces/6.0.0",
+      "hashPath": "microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/2.1.0": {
       "type": "package",
@@ -2286,6 +2299,13 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Tewr.Blazor.FileReader/3.3.1.21360": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wBHvDqKBtuYIogCtQEAX2nqqqFDc+ZmjhCppMC+6yccDC9kjlMKjot2N8Bw/yKEbJNbgW2ilAkicK2n126xfyw==",
+      "path": "tewr.blazor.filereader/3.3.1.21360",
+      "hashPath": "tewr.blazor.filereader.3.3.1.21360.nupkg.sha512"
     },
     "Util.Reflection/1.0.3": {
       "type": "package",

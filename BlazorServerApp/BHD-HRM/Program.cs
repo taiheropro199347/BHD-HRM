@@ -18,6 +18,8 @@ using BHD_HRM.Handlers;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
+using Tewr.Blazor.FileReader;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -38,12 +40,15 @@ builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStat
 builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddHttpClient<IUserService, UserService>();
 builder.Services.AddSingleton<HttpClient>();
+builder.Services.AddFileReaderService(o => o.UseWasmSharedBuffer = true);
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("SeniorEmployee", policy =>
         policy.RequireClaim("IsUserEmployedBefore1990", "true"));
 });
+
 
 var app = builder.Build();
 
@@ -58,6 +63,7 @@ else
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
 
 app.UseHttpsRedirection();
 

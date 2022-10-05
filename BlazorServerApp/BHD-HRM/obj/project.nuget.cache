@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "L1BnCPXQEPa9SGpozWSqoyd/sOYlmMWcWTiSqQeLTjbQJz1g3K+A44HDhJ4AT7hybpUywwW27mEaXgtwtcXtEw==",
+  "dgSpecHash": "6Nk2nGJvgO10HYd9HpL7QBhlzALtQytfFwLSSGnO3UEDlDrE2rNbGy1JzUXFI1RSoDA/NrjoLzuYEZHKm/dPWA==",
   "success": true,
   "projectFilePath": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\BHD-HRM.csproj",
   "expectedPackageFiles": [
@@ -36,7 +36,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.azure.signalr\\1.18.3\\microsoft.azure.signalr.1.18.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.azure.signalr.protocols\\1.18.3\\microsoft.azure.signalr.protocols.1.18.3.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration\\2.1.0\\microsoft.extensions.configuration.2.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\2.1.1\\microsoft.extensions.configuration.abstractions.2.1.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.binder\\2.1.0\\microsoft.extensions.configuration.binder.2.1.0.nupkg.sha512",
@@ -149,6 +149,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\tewr.blazor.filereader\\3.3.1.21360\\tewr.blazor.filereader.3.3.1.21360.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\util.reflection\\1.0.3\\util.reflection.1.0.3.nupkg.sha512"
   ],
   "logs": []

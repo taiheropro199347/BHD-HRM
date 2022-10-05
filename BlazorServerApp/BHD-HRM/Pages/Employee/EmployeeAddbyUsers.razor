@@ -1,6 +1,11 @@
 ﻿@page "/employee/employeeaddbyusers"
+@using BHD_HRM.Services
+@using System.Net.Http.Headers
+@using System.IO
+@using Microsoft.AspNetCore.Hosting
 @layout EmptyLayout
 @inherits ProCompontentBase
+@inject IWebHostEnvironment Environment
 
 <MCard>
         <MTabsItems @bind-Value="tab" Class="mt-4">
@@ -11,6 +16,8 @@
                         string color = "Blue";
                         <MAvatar Size="120" Color="@($"{color}-lighten-5")">
                             <span class="@($"{color}--text text-h3")">@UserData.HoTen</span>
+							<span class="@($"{color}--text text-h5")">@UserData.NgaySinh</span>
+							<span class="@($"{color}--text text-h5")">@UserData.SoDt</span>
                         </MAvatar>
                     }
                     else
@@ -21,9 +28,12 @@
                         </MAvatar>
                     }
                     <div Class="ml-6">
-                        <h5 class="mb-6">@UserData.HoTen</h5>
-                        <MButton Color="primary" MinWidth=80 Height=32 Class="rounded-pill"> Update </MButton>
-                        <MButton Outlined MinWidth=80 Height=32 Class="ml-6 text-btn rounded-pill"> Remove </MButton>
+                        <h5 class="mb-1">@UserData.HoTen</h5>
+						<subtitle-2 class="mb-1">@UserData.Email</subtitle-2><br>
+						<subtitle-2 class="mb-1">@UserData.SoDt</subtitle-2><br>
+						<InputFile OnChange="@UploadFile"/>
+                       @* <MButton Color="primary" MinWidth=80 Height=32 Class="rounded-pill"> Update </MButton>
+                        <MButton Outlined MinWidth=80 Height=32 Class="ml-6 text-btn rounded-pill"> Remove </MButton>*@
                     </div>
                 </div>               
 				<div class="mt-3">
@@ -153,6 +163,7 @@
     private bool _birthDateMenu;
 	private bool _allocationDateMenu;
 
+
     [Parameter]
     public string? Id { get; set; }
 
@@ -168,12 +179,23 @@
             _userData = value;
         }
     }
+	 private List<Func<IBrowserFile, StringBoolean>> _rules = new List<Func<IBrowserFile, StringBoolean>>()
+        {
+            value=>(value==null||value.Size<2000000)?true:"Avatar size should be less than 2 MB!"
+        };
 
     protected override void OnParametersSet()
     {
         //UserData = UserServices.GetList().FirstOrDefault(u => u.Id == Id);
     }
+     private async Task UploadFile(InputFileChangeEventArgs e)
+    {
+        var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/avatar", e.File.Name);
 
+        await using FileStream fs = new(path, FileMode.Create);
+        await e.File.OpenReadStream().CopyToAsync(fs);
+        _userData.AnhNhanVien = Path.Combine("http://localhost:5000/", "usersupload/avatar", e.File.Name);
+    }
     private List<DataTableHeader<PermissionDto>> _headers = new List<DataTableHeader<PermissionDto>>
     {
         new (){ Text= "MODULE", Sortable= false, Value= nameof(PermissionDto.Module)},

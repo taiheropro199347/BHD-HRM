@@ -23,6 +23,7 @@
     </Content>
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)tewr.blazor.filereader\3.3.1.21360\buildTransitive\Tewr.Blazor.FileReader.props" Condition="Exists('$(NuGetPackageRoot)tewr.blazor.filereader\3.3.1.21360\buildTransitive\Tewr.Blazor.FileReader.props')" />
     <Import Project="$(NuGetPackageRoot)skiasharp.nativeassets.webassembly\2.88.0-preview.256\buildTransitive\netstandard1.0\SkiaSharp.NativeAssets.WebAssembly.props" Condition="Exists('$(NuGetPackageRoot)skiasharp.nativeassets.webassembly\2.88.0-preview.256\buildTransitive\netstandard1.0\SkiaSharp.NativeAssets.WebAssembly.props')" />
     <Import Project="$(NuGetPackageRoot)skiasharp.views.blazor\2.88.0-preview.256\buildTransitive\net6.0\SkiaSharp.Views.Blazor.props" Condition="Exists('$(NuGetPackageRoot)skiasharp.views.blazor\2.88.0-preview.256\buildTransitive\net6.0\SkiaSharp.Views.Blazor.props')" />
     <Import Project="$(NuGetPackageRoot)blazorcomponent\0.5.0\buildTransitive\BlazorComponent.props" Condition="Exists('$(NuGetPackageRoot)blazorcomponent\0.5.0\buildTransitive\BlazorComponent.props')" />
