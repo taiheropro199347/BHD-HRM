@@ -2,6 +2,6 @@
 {
     public static class FavoriteService
     {
-        public static List<int> GetDefaultFavoriteMenuList() => new() { 5, 2, 15 };
+        public static List<int> GetDefaultFavoriteMenuList() => new() { 5, 11, 16 };
     }
 }

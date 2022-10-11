@@ -1,0 +1,10 @@
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\CuriousDriveRazorLibrary\bin\Release\netstandard2.0\CuriousDriveRazorLibrary.deps.json
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\CuriousDriveRazorLibrary\bin\Release\netstandard2.0\CuriousDriveRazorLibrary.dll
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\CuriousDriveRazorLibrary\bin\Release\netstandard2.0\CuriousDriveRazorLibrary.pdb
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\CuriousDriveRazorLibrary\obj\Release\netstandard2.0\CuriousDriveRazorLibrary.csproj.AssemblyReference.cache
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\CuriousDriveRazorLibrary\obj\Release\netstandard2.0\CuriousDriveRazorLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\CuriousDriveRazorLibrary\obj\Release\netstandard2.0\CuriousDriveRazorLibrary.AssemblyInfoInputs.cache
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\CuriousDriveRazorLibrary\obj\Release\netstandard2.0\CuriousDriveRazorLibrary.AssemblyInfo.cs
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\CuriousDriveRazorLibrary\obj\Release\netstandard2.0\CuriousDriveRazorLibrary.csproj.CoreCompileInputs.cache
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\CuriousDriveRazorLibrary\obj\Release\netstandard2.0\CuriousDriveRazorLibrary.dll
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\CuriousDriveRazorLibrary\obj\Release\netstandard2.0\CuriousDriveRazorLibrary.pdb

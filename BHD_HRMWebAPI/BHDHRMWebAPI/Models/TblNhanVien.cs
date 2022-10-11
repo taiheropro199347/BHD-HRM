@@ -31,6 +31,7 @@ namespace BHDHRMWebAPI.Models
         public string TenNganHang { get; set; }
         public int? NgayPhepDauKy { get; set; }
         public DateTime? NgayVaoCongTy { get; set; }
+        public DateTime? NgayKyHDLD { get; set; }
         public string LoaiDongThue { get; set; }
         public string LanCuoiChinhSua { get; set; }
         public string MembershipId { get; set; }
@@ -52,5 +53,6 @@ namespace BHDHRMWebAPI.Models
         public string HonNhan { get; set; }   
         public string TamTru { get; set; }
         public string AnhNhanVien { get; set; }
+        public string Role { get; set; }
     }
 }

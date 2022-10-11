@@ -1,207 +1,224 @@
 ﻿@page "/employee/employeeaddbyusers"
+@layout EmptyLayout
+@inherits ProCompontentBase
+@using BHD_HRM.Data.Employees
 @using BHD_HRM.Services
 @using System.Net.Http.Headers
 @using System.IO
 @using Microsoft.AspNetCore.Hosting
-@layout EmptyLayout
-@inherits ProCompontentBase
+@using System.ComponentModel.DataAnnotations
+@using FluentValidation
+@inject NavigationManager NavManager
 @inject IWebHostEnvironment Environment
+@inject IBHD_HRMService<EmployeeData> BHD_HRMService
+@inject IJSRuntime JSRuntime
 
-<MCard>
-        <MTabsItems @bind-Value="tab" Class="mt-4">
-            <MTabItem Value="@("Account")">
-                <div class="d-flex block-center mt-3">
-                    @if (string.IsNullOrEmpty(UserData.AnhNhanVien))
-                    {
-                        string color = "Blue";
-                        <MAvatar Size="120" Color="@($"{color}-lighten-5")">
-                            <span class="@($"{color}--text text-h3")">@UserData.HoTen</span>
-							<span class="@($"{color}--text text-h5")">@UserData.NgaySinh</span>
-							<span class="@($"{color}--text text-h5")">@UserData.SoDt</span>
-                        </MAvatar>
-                    }
-                    else
-                    {
-                        <MAvatar Size="120">
-                            @*<MImage Contain Src="@UserData.AnhNhanVien" />*@
-                            <img src="@UserData.AnhNhanVien" />
-                        </MAvatar>
-                    }
-                    <div Class="ml-6">
-                        <h5 class="mb-1">@UserData.HoTen</h5>
-						<subtitle-2 class="mb-1">@UserData.Email</subtitle-2><br>
-						<subtitle-2 class="mb-1">@UserData.SoDt</subtitle-2><br>
-						<InputFile OnChange="@UploadFile"/>
-                       @* <MButton Color="primary" MinWidth=80 Height=32 Class="rounded-pill"> Update </MButton>
-                        <MButton Outlined MinWidth=80 Height=32 Class="ml-6 text-btn rounded-pill"> Remove </MButton>*@
-                    </div>
-                </div>               
-				<div class="mt-3">
-                    <MIcon Size=20 Color="sample-green" Class="mt-n1">far fa-user</MIcon>
-                    <span class="ml-1 text-h6">Thông tin cá nhân</span>
-                </div>
-				  <MRow Class="my-3">
-                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.HoTen" Color="primary" Label="Họ và Tên" HideDetails="@("auto")" Outlined />
-                    </MCol>                    
-					<MCol Md=4 Sm=12>
-                        <MMenu CloseOnContentClick="false" NudgeRight="40" Transition="scale-transition" OffsetY MinWidth="@("auto")" @bind-Value="_birthDateMenu">
-                            <ActivatorContent Context="menuContext">
-                                <MTextField @bind-Value=UserData.NgaySinh Label="Ngày sinh" Color="primary" Readonly HideDetails="@("auto")" Outlined @attributes="menuContext.Attrs"></MTextField>
-                            </ActivatorContent>
-                            <ChildContent>
-                                <MDatePicker Class="task-datepicker" @bind-Value=UserData.NgaySinh OnInput="()=>_birthDateMenu=false"></MDatePicker>
-                            </ChildContent>
-                        </MMenu>
-                    </MCol>
-                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.Email" Color="primary" Label="Email" HideDetails="@("auto")" Outlined />
-                    </MCol>
-                </MRow> 
-				<MRow Class="mt-3">
-                   <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.SoCmnd" Color="primary" Label="Số CMND/CCCD" HideDetails="@("auto")" Outlined />
-                    </MCol>
-                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.NoiCap" Label="Nơi cấp" Color="primary" HideDetails="@("auto")" Outlined />
-                    </MCol>
-                   <MCol Md=4 Sm=12>
-                        <MMenu CloseOnContentClick="false" NudgeRight="40" Transition="scale-transition" OffsetY MinWidth="@("auto")" @bind-Value="_allocationDateMenu">
-                            <ActivatorContent Context="menuContext">
-                                <MTextField @bind-Value=UserData.NgayCap Label="Ngày cấp" Color="primary" Readonly HideDetails="@("auto")" Outlined @attributes="menuContext.Attrs"></MTextField>
-                            </ActivatorContent>
-                            <ChildContent>
-                                <MDatePicker Class="task-datepicker" @bind-Value=UserData.NgayCap OnInput="()=>_allocationDateMenu=false"></MDatePicker>
-                            </ChildContent>
-                        </MMenu>
-                    </MCol>
-                </MRow>
-                <MRow Class="mt-3">
-                   <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.MaSoThue" Color="primary" Label="MST cá nhân" HideDetails="@("auto")" Outlined />
-                    </MCol>
-                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.SoDt" Label="Số điện thoại" Color="primary" HideDetails="@("auto")" Outlined />
-                    </MCol>
-                    <MCol Md=4 Sm=12>
-                        <MTextField @bind-Value="UserData.Email" Label="Số TK VietCapital" Color="primary" HideDetails="@("auto")" Outlined />
-                    </MCol>
-                </MRow>
+<MForm Model="@UserData.employeeData" EnableValidation OnValidSubmit="SaveEmployee">
+	<MContainer>
+		<div class="d-flex block-center mt-3">
+			@if (string.IsNullOrEmpty(UserData.employeeData.AnhNhanVien))
+			{
+				string color = "Blue";
+				<MAvatar Size="120" Color="@($"{color}-lighten-5")">
+					<span class="@($"{color}--text text-h3")">@UserData.employeeData.HoTen</span>
+					<span class="@($"{color}--text text-h5")">@UserData.employeeData.NgaySinh</span>
+					<span class="@($"{color}--text text-h5")">@UserData.employeeData.SoDt</span>
+				</MAvatar>
+			}
+			else
+			{
+				<MAvatar Size="120">
+					<img src="@UserData.employeeData.AnhNhanVien" />
+				</MAvatar>
+			}
+			<div Class="ml-6">
+				<h5 class="mb-1">@UserData.employeeData.HoTen</h5>
+				<subtitle-2 class="mb-1">@UserData.employeeData.Email2</subtitle-2><br>
+				<subtitle-2 class="mb-1">@UserData.employeeData.SoDt</subtitle-2><br>
+				<InputFile OnChange="@UploadFile" />
+			</div>
+		</div>
+		<div class="mt-3">
+			<MIcon Size=20 Color="sample-green" Class="mt-n1">far fa-user</MIcon>
+			<span class="ml-1 text-h6">Thông tin cá nhân</span>
+		</div>
+		<MRow Class="my-3">
+			<MCol Md=4 Sm=12>
+				<MTextField @bind-Value="UserData.employeeData.HoTen" Color="primary" Label="Họ và Tên" HideDetails="@("auto")" Outlined />
+			</MCol>
+			<MCol Md=4 Sm=12>
+				<MMenu CloseOnContentClick="false" NudgeRight="40" Transition="scale-transition" OffsetY MinWidth="@("auto")" @bind-Value="_birthDateMenu">
+					<ActivatorContent Context="menuContext">
+						<MTextField @bind-Value=UserData.NgaySinhDate Label="Ngày sinh" Color="primary" Readonly HideDetails="@("auto")" Outlined @attributes="menuContext.Attrs"></MTextField>
+					</ActivatorContent>
+					<ChildContent>
+						<MDatePicker Class="task-datepicker" @bind-Value=UserData.NgaySinhDate OnInput="()=>_birthDateMenu=false"></MDatePicker>
+					</ChildContent>
+				</MMenu>
+			</MCol>
+			<MCol Md=4 Sm=12>
+				<MTextField @bind-Value="UserData.employeeData.Email2" Color="primary" Label="Email" HideDetails="@("auto")" Outlined />
+			</MCol>
+		</MRow>
+		<MRow Class="mt-3">
+			<MCol Md=4 Sm=12>
+				<MTextField @bind-Value="UserData.employeeData.SoCmnd" Color="primary" Label="Số CMND/CCCD" HideDetails="@("auto")" Outlined />
+			</MCol>
+			<MCol Md=4 Sm=12>
+				<MTextField @bind-Value="UserData.employeeData.NoiCap" Label="Nơi cấp" Color="primary" HideDetails="@("auto")" Outlined />
+			</MCol>
+			<MCol Md=4 Sm=12>
+				<MMenu CloseOnContentClick="false" NudgeRight="40" Transition="scale-transition" OffsetY MinWidth="@("auto")" @bind-Value="_allocationDateMenu">
+					<ActivatorContent Context="menuContext">
+						<MTextField @bind-Value=UserData.NgayCapDate Label="Ngày cấp" Color="primary" Readonly HideDetails="@("auto")" Outlined @attributes="menuContext.Attrs"></MTextField>
+					</ActivatorContent>
+					<ChildContent>
+						<MDatePicker Class="task-datepicker" @bind-Value=UserData.NgayCapDate OnInput="()=>_allocationDateMenu=false"></MDatePicker>
+					</ChildContent>
+				</MMenu>
+			</MCol>
+		</MRow>
+		<MRow Class="mt-3">
+			<MCol Md=4 Sm=12>
+				<MTextField @bind-Value="UserData.employeeData.MaSoThue" Color="primary" Label="MST cá nhân" HideDetails="@("auto")" Outlined />
+			</MCol>
+			<MCol Md=4 Sm=12>
+				<MTextField @bind-Value="UserData.employeeData.SoDt" Label="Số điện thoại" Color="primary" HideDetails="@("auto")" Outlined />
+			</MCol>
+			<MCol Md=4 Sm=12>
+				<MTextField @bind-Value="UserData.employeeData.SoTaiKhoanNh" Label="Số TK VietCapital" Color="primary" HideDetails="@("auto")" Outlined />
+			</MCol>
+		</MRow>
 
-                <MRow Class="mt-3">
-                    <MCol Md=4 Sm=12>
-                        <MSelect @bind-Value="UserData.TrinhDo"
-                                 Color="primary"
-                                 Outlined
-                                 HideDetails="@("auto")"
-                                 Items="@UserServices.GetEducateList()"
-                                 ItemText="u => u"
-                                 ItemValue="u => u"
-                                 Label="Trình độ">
-                        </MSelect>
-                    </MCol>
-                    <MCol Md=4 Sm=12>
-                        <span class="text-btn">Giới tính</span>
-                        <MRadioGroup @bind-Value="UserData.GioiTinh" HideDetails="@("auto")" Color="primary" Row Class="mt-1">
-                            <MRadio Color="primary" Label="Nam" Value="@("Nam")"></MRadio>
-                            <MRadio Color="primary" Label="Nữ" Value="@("Nữ")"></MRadio>
-							<MRadio Color="primary" Label="Không xác định" Value="@("Không xác định")"></MRadio>
-                        </MRadioGroup>
-                    </MCol>
-                    <MCol Md=4 Sm=12>
-                        <span class="text-btn">Tình trạng hôn nhân</span>
-                        <div class="d-flex mt-n2">
-                        <MRadioGroup @bind-Value="UserData.HonNhan" HideDetails="@("auto")" Color="primary" Row Class="mt-1">
-                            <MRadio Color="primary" Label="Độc thân" Value="@("Single")"></MRadio>
-                            <MRadio Color="primary" Label="Có gia đình" Value="@("Married ")"></MRadio>
-							<MRadio Color="primary" Label="Ly hôn" Value="@("Divorced")"></MRadio>
-                        </MRadioGroup>
-                        </div>
+		<MRow Class="mt-3">
+			<MCol Md=4 Sm=12>
+				<MSelect @bind-Value="UserData.employeeData.TrinhDo"
+						 Color="primary"
+						 Outlined
+						 HideDetails="@("auto")"
+						 Items="@UserServices.GetEducateList()"
+						 ItemText="u => u"
+						 ItemValue="u => u"
+						 Label="Trình độ">
+				</MSelect>
+			</MCol>
+			<MCol Md=4 Sm=12>
+				<span class="text-btn">Giới tính</span>
+				<MRadioGroup @bind-Value="UserData.employeeData.GioiTinh" HideDetails="@("auto")" Color="primary" Row Class="mt-1">
+					<MRadio Color="primary" Label="Nam" Value="@("Nam")"></MRadio>
+					<MRadio Color="primary" Label="Nữ" Value="@("Nữ")"></MRadio>
+					<MRadio Color="primary" Label="Không xác định" Value="@("Không xác định")"></MRadio>
+				</MRadioGroup>
+			</MCol>
+			<MCol Md=4 Sm=12>
+				<span class="text-btn">Tình trạng hôn nhân</span>
+				<div class="d-flex mt-n2">
+					<MRadioGroup @bind-Value="UserData.employeeData.HonNhan" HideDetails="@("auto")" Color="primary" Row Class="mt-1">
+						<MRadio Color="primary" Label="Độc thân" Value="@("Single")"></MRadio>
+						<MRadio Color="primary" Label="Có gia đình" Value="@("Married ")"></MRadio>
+						<MRadio Color="primary" Label="Ly hôn" Value="@("Divorced")"></MRadio>
+					</MRadioGroup>
+				</div>
 
-                    </MCol>
-                </MRow>
+			</MCol>
+		</MRow>
 
-                <div class="mt-12">
-                    <MIcon Size=20 Color="sample-green" Class="mt-n1">mdi-map-marker-outline</MIcon>
-                    <span class="text-h6">Address</span>
-                    <MRow Class="mt-3">
-                        <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.ThuongTru" Label="Địa chỉ thường trú" Color="primary" HideDetails="@("auto")" Outlined />
-                        </MCol>
-                        <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.TamTru" Label="Địa chỉ tạm trú" Color="primary" HideDetails="@("auto")" Outlined />
-                        </MCol>
-                        <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.TamTru" Label="Address Line 3" Color="primary" HideDetails="@("auto")" Outlined />
-                        </MCol>
-                    </MRow>
-                    <MRow Class="mt-3">
-                        <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.TamTru" Label="City" Color="primary" HideDetails="@("auto")" Outlined />
-                        </MCol>
-                        <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.TamTru" Label="State" Color="primary" HideDetails="@("auto")" Outlined />
-                        </MCol>
-                        <MCol Md=4 Sm=12>
-                            <MTextField @bind-Value="UserData.TamTru" Label="Country" Color="primary" HideDetails="@("auto")" Outlined />
-                        </MCol>
-                    </MRow>
-                </div>
-            </MTabItem>
-        </MTabsItems>
+		<div class="mt-12">
+			<MIcon Size=20 Color="sample-green" Class="mt-n1">mdi-map-marker-outline</MIcon>
+			<span class="text-h6">Address</span>
+			<MRow Class="mt-3">
+				<MCol Md=4 Sm=12>
+					<MTextField @bind-Value="UserData.employeeData.ThuongTru" Label="Địa chỉ thường trú" Color="primary" HideDetails="@("auto")" Outlined />
+				</MCol>
+				<MCol Md=4 Sm=12>
+					<MTextField @bind-Value="UserData.employeeData.TamTru" Label="Địa chỉ tạm trú" Color="primary" HideDetails="@("auto")" Outlined />
+				</MCol>
+				<MCol Md=4 Sm=12>
+					<MTextField @bind-Value="UserData.employeeData.SoBhxh" Label="Mã số BHXH" Color="primary" HideDetails="@("auto")" Outlined />
+				</MCol>
+			</MRow>
+			<MRow Class="mt-3">
+				<MCol Md=4 Sm=12>
+					<MTextField @bind-Value="UserData.employeeData.NgKhanCap" Label="Tên Người liên hệ khẩn cấp" Color="primary" HideDetails="@("auto")" Outlined />
+				</MCol>
+				<MCol Md=4 Sm=12>
+					<MTextField @bind-Value="UserData.employeeData.SdtKhanCap" Label="SDT khẩn cấp" Color="primary" HideDetails="@("auto")" Outlined />
+				</MCol>
+				<MCol Md=4 Sm=12>
+					<MTextField @bind-Value="UserData.employeeData.MaSoThue" Label="Mã số thuế" Color="primary" HideDetails="@("auto")" Outlined />
+				</MCol>
+			</MRow>
+		</div>
+		<div class="mt-10 d-flex">
+			<MSpacer></MSpacer>
+			<MButton Type="submit" MinWidth=80 Height=40 Color="primary" Class="ml-6 rounded-pill"> Lưu thông tin </MButton>
+		</div>
+	</MContainer>
+</MForm>
+<MDialog @bind-Value="dialog" Persistent
+             MaxWidth="480">
+        <MCard>
+            <MCardTitle Class="text-h5">
+               BHD Star HRM xin thông báo!
+            </MCardTitle>
 
-        <div class="mt-10 d-flex">
-            <MSpacer></MSpacer>
-            <MButton MinWidth=80 Height=40 Outlined Class="text-btn rounded-pill"> Reset </MButton>
-            <MButton MinWidth=80 Height=40 Color="primary" Class="ml-6 rounded-pill"> Save Changes </MButton>
-        </div>
-</MCard>
+            <MCardText>
+				<div class="text-h6 pa-5">Chào mừng bạn tham gia BHD Star 👋<br/>Bạn đã đăng ký thông tin thành công.<br/> HR sẽ sớm cập thật thông tin.</div>
+            </MCardText>
+            <MCardActions>
+                <MSpacer></MSpacer>
+                <MButton Color="green darken-1"
+                         Text
+                         OnClick="(() => Close())">
+                    <MButton Class="ma-2"
+						 Text
+						 Icon
+						 Color="blue lighten-2">
+					<MIcon>mdi-thumb-up</MIcon>
+				</MButton>
+                </MButton>
+            </MCardActions>
+        </MCard>
+    </MDialog>
 
 @code {
-    private EmployeeDto? _userData;
-    private StringNumber? tab;
-    private bool _birthDateMenu;
+	private EmployeeDto? _userData;
+	private bool _birthDateMenu;
 	private bool _allocationDateMenu;
+	bool dialog = false;
 
+	[AllowNull]
+	public EmployeeDto UserData
+	{
+		get
+		{
+			return _userData ?? (_userData = new EmployeeDto());
+		}
+		set
+		{
+			_userData = value;
+		}
+	}
+	private async Task UploadFile(InputFileChangeEventArgs e)
+	{
+		var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/avatar", e.File.Name);
 
-    [Parameter]
-    public string? Id { get; set; }
-
-    [AllowNull]
-    public EmployeeDto UserData
+		await using FileStream fs = new(path, FileMode.Create);
+		await e.File.OpenReadStream().CopyToAsync(fs);
+		_userData.employeeData.AnhNhanVien = Path.Combine("http://localhost:5000/", "usersupload/avatar", e.File.Name);
+	}
+	private async Task SaveEmployee()
+	{
+		_userData.employeeData.TrangThai="Chờ Update";
+		_userData.employeeData.CardNumber = DateTime.Now.ToString("MMddyyyyHHmmssss.fffffffK");
+		_userData.employeeData.NgaySinh = _userData.NgaySinhDate.ToDateTime(TimeOnly.Parse("00:00 AM"));
+		_userData.employeeData.NgayCap = _userData.NgayCapDate.ToDateTime(TimeOnly.Parse("00:00 AM"));
+		await BHD_HRMService.SaveAsync("TblNhanViens", _userData.employeeData);
+		dialog = true;
+	}
+	private void Close()
     {
-        get
-        {
-            return _userData ?? (_userData = new EmployeeDto());
-        }
-        set
-        {
-            _userData = value;
-        }
+        dialog = false;
+		NavManager.NavigateTo("https://www.bhdstar.vn/");
     }
-	 private List<Func<IBrowserFile, StringBoolean>> _rules = new List<Func<IBrowserFile, StringBoolean>>()
-        {
-            value=>(value==null||value.Size<2000000)?true:"Avatar size should be less than 2 MB!"
-        };
-
-    protected override void OnParametersSet()
-    {
-        //UserData = UserServices.GetList().FirstOrDefault(u => u.Id == Id);
-    }
-     private async Task UploadFile(InputFileChangeEventArgs e)
-    {
-        var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/avatar", e.File.Name);
-
-        await using FileStream fs = new(path, FileMode.Create);
-        await e.File.OpenReadStream().CopyToAsync(fs);
-        _userData.AnhNhanVien = Path.Combine("http://localhost:5000/", "usersupload/avatar", e.File.Name);
-    }
-    private List<DataTableHeader<PermissionDto>> _headers = new List<DataTableHeader<PermissionDto>>
-    {
-        new (){ Text= "MODULE", Sortable= false, Value= nameof(PermissionDto.Module)},
-        new (){ Text= "READ", Sortable= false, Value= nameof(PermissionDto.Read),Align="center"},
-        new (){ Text= "WRITE", Sortable= false, Value= nameof(PermissionDto.Write),Align="center"},
-        new (){ Text= "CREATE", Sortable= false, Value= nameof(PermissionDto.Create),Align="center"},
-        new (){ Text= "DELETE", Sortable= false, Value= nameof(PermissionDto.Delete),Align="center"}
-    };
 }

@@ -31,7 +31,7 @@ namespace BHDHRMWebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<TblNhanVien>> GetTblNhanVien(string id)
         {
-            var tblNhanVien = await _context.TblNhanVien.FindAsync(id);
+            var tblNhanVien = await _context.TblNhanVien.Where(t=>t.Id==int.Parse(id)).FirstAsync();
 
             if (tblNhanVien == null)
             {
@@ -40,6 +40,7 @@ namespace BHDHRMWebAPI.Controllers
 
             return tblNhanVien;
         }
+
 
         // PUT: api/TblNhanViens/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
@@ -72,6 +73,20 @@ namespace BHDHRMWebAPI.Controllers
 
             return NoContent();
         }
+        // GET: api/Users/5
+        [HttpGet("GetNhanVienbyStatus/{id}")]
+        public async Task<ActionResult<IEnumerable<TblNhanVien>>> GetNhanVienbyStatus(string id)
+
+        {
+            var nhanvien = await _context.TblNhanVien.Where(t=>t.TrangThai==id).ToListAsync();
+
+            if (nhanvien == null)
+            {
+                return NotFound();
+            }
+
+            return nhanvien;
+        } 
 
         // POST: api/TblNhanViens
         // To protect from overposting attacks, enable the specific properties you want to bind to, for

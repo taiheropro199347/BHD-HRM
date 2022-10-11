@@ -1,57 +1,32 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BHD_HRM.Data.Employee;
 
-namespace BHD_HRM.Data.Employee
-{    public partial class EmployeeDto
+namespace BHD_HRM.Data.Employees
+{
+    public class EmployeeDto
     {
-        public int Id { get; set; }
-        public string MaSoThue { get; set; }
-        public string CardNumber { get; set; }
-        public string HoTen { get; set; }
-        public int? IdcongTy { get; set; }
-        public string IdphongBan { get; set; }
-        public string ChucVu { get; set; }
-        public DateOnly NgaySinh { get; set; } = DateOnly.FromDateTime(DateTime.Now);
-        public string GioiTinh { get; set; }
-        public string DanToc { get; set; }
-        public string Dkhk { get; set; }
-        public string ThuongTru { get; set; }
-        public string SoDt { get; set; }
-        public string Email { get; set; }
-        public string Email2 { get; set; }
-        public string SoCmnd { get; set; }
-        public DateOnly NgayCap { get; set; } = DateOnly.FromDateTime(DateTime.Now);
-        public string NoiCap { get; set; }
-        public string TrangThai { get; set; }
-        public string LoaiHopDong { get; set; }
-        public string SoTaiKhoanNh { get; set; }
-        public string TenNganHang { get; set; }
-        public int? NgayPhepDauKy { get; set; }
-        public DateTime? NgayVaoCongTy { get; set; }
-        public string LoaiDongThue { get; set; }
-        public string LanCuoiChinhSua { get; set; }
-        public string MembershipId { get; set; }
-        public string Cccd { get; set; }
-        public string SdtKhanCap { get; set; }
-        public string NhomMau { get; set; }
-        public string ChieuCao { get; set; }
-        public int? Idcapbac { get; set; }
-        public int? Idnhomquyen { get; set; }
-        public int? Luongthoathuan { get; set; }
-        public string Vitri { get; set; }
-        public int? Luonggop { get; set; }
-        public DateTime? Ngaynghiviec { get; set; }
-        public string SoBhxh { get; set; }
-        public string NoiDkbhxh { get; set; }
-        public string LoaiNhanVien { get; set; }
-        public string NgKhanCap { get; set; }
-        public string TrinhDo { get; set; }
-        public string HonNhan { get; set; }
-        public string TamTru { get; set; }
-        public string AnhNhanVien { get; set; } = "/usersupload/avatar/bhd.png";
+        public EmployeeData employeeData { get; set; } = new EmployeeData();
+        public DateOnly NgayCapDate { get; set; } = DateOnly.FromDateTime(DateTime.Now);
+        public DateOnly NgaySinhDate { get; set; } = DateOnly.FromDateTime(DateTime.Now);
+        public DateOnly? NgayNghiViecDate { get; set; } = null;
+        public DateOnly? NgayVaoCongTyDate { get; set; } = null;
+        public DateOnly? NgayKyHDLDDate { get; set; } = null;
+        public string CompanyString { get; set; }
+        public string DepartmentString { get; set; }
+        public string? SampleName
+        {
+            get
+            {
+                string s;
+                try
+                {
+                     s= string.Join("", employeeData.HoTen.Split(' ').Select(n => n[0].ToString().ToUpper()));
+                }
+                catch
+                {
+                    return s=employeeData.HoTen;
+                }
+                return s;
+            }
+        }
     }
 }

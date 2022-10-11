@@ -31,7 +31,7 @@ namespace BHDHRMWebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<TblPhong>> GetTblPhong(string id)
         {
-            var tblPhong = await _context.TblPhong.FindAsync(id);
+            var tblPhong = await _context.TblPhong.Where(t=>t.Id==id).FirstAsync();
 
             if (tblPhong == null)
             {

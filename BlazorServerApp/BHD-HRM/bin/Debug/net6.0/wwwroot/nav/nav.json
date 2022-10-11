@@ -27,44 +27,32 @@
     "Target": "Self"
   },
   {
-    "Id": 9,
-    "Title": "Employee",
-    "Icon": "mdi-calendar-check-outline",
-    "Href": "employee/employeelist",
-    "Target": "Self"
-  },
-  {
     "Id": 10,
-    "Title": "Invoice",
-    "Icon": "mdi-content-paste",
-    "Hide": true,
+    "Title": "Nhân viên",
+    "Icon": "mdi-account-outline",
     "Children": [
       {
         "Id": 11,
         "Title": "List",
         "Icon": "mdi-circle",
-        "Href": "app/invoice/list"
+        "Href": "employee/employees"
       },
       {
-        "Id": 12,
-        "Title": "Preview",
+        "Id": 12,    
+        "Title": "View",
         "Icon": "mdi-circle",
-        "Href": "app/invoice/preview"
+        "Href": "employee/employeeview"
+          
       },
       {
-        "Id": 13,
+        "Id": 13,       
         "Title": "Edit",
         "Icon": "mdi-circle",
-        "Href": "app/invoice/edit"
-      },
-      {
-        "Id": 14,
-        "Title": "Add",
-        "Icon": "mdi-circle",
-        "Href": "app/invoice/add"
+        "Href": "employee/employeeedit"
       }
     ]
   },
+  
   {
     "Id": 15,
     "Title": "User",
@@ -184,5 +172,7 @@
         "Href": "pages/others/404"
       }
     ]
+
   }
+  
 ]

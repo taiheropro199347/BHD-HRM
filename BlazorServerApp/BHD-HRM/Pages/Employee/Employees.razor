@@ -1,0 +1,178 @@
+﻿@page "/employee/employees"
+@using BHD_HRM.Data.Employees
+@using BHD_HRM.Services
+@inherits ProCompontentBase
+@inject MasaBlazor MasaBlazor
+@inject GlobalConfig GlobalConfig
+@inject NavigationManager Nav
+@inject IBHD_HRMService<EmployeeData> BHD_HRMService
+@inject IBHD_HRMService<CompanyData> BHD_HRMComapyService
+
+@if (@_empPage == null)
+{
+    
+}
+else
+{
+	<MCard>
+    <MCardText Class="pa-6">
+        <h6>Lọc thông tin</h6>
+		 <MRow Class="mt-3">
+			  <MCol Sm=12 Md=4>
+                <MSelect @bind-Value="_empPage.CompanyID"
+                         Color="primary"
+                         HideDetails="@("auto")"
+                         Clearable
+                         Outlined
+                         Items="@_companyData"
+                         ItemText="u => u.TenCongTy"
+                         ItemValue="u => u.Id"
+                         Label="Công ty">
+                </MSelect>
+            </MCol>
+            <MCol Sm=12 Md=4>
+                <MSelect @bind-Value="_empPage.Role"
+                         Color="primary"
+                         HideDetails="@("auto")"
+                         Clearable
+                         Outlined
+                         Items="@UserServices.GetRoleList()"
+                         ItemText="u => u"
+                         ItemValue="u => u"
+                         Label="Role">
+                </MSelect>
+            </MCol>
+            <MCol Sm=12 Md=4>
+                <MSelect @bind-Value="_empPage.Status"
+                         Color="primary"
+                         HideDetails="@("auto")"
+                         Clearable
+                         Outlined
+                         Items="@UserServices.GetTrangThaiList()"
+                         ItemText="u => u"
+                         ItemValue="u => u"
+                         Label="Trạng Thái">
+                </MSelect>
+            </MCol>    
+        </MRow>
+    </MCardText>
+</MCard>
+<MCard Class="mt-6">
+    <MCardText Class="pa-6">
+        <MRow>
+            <MCol Md=6 Sm=12 Class="d-flex block-center">
+                <span class="text-btn neutral-lighten-1--text">Show:</span>
+                <MSelect @bind-Value="_empPage.PageSize"
+                         Color="primary"
+                         Style="max-width:120px;"
+                         Dense
+                         Class="mx-6"
+                         HideDetails="@("auto")"
+                         Outlined
+                         Items="@_pageSizes"
+                         ItemText="u => u.ToString()"
+                         ItemValue="u => u">
+                </MSelect>
+                <span class="text-btn">entries</span>
+            </MCol>
+            <MCol Md=6 Sm=12 Class="d-flex block-center">
+                <MTextField @bind-Value="_empPage.Search" Color="primary" Class="rounded-2" HideDetails="@("auto")" Flat Dense Solo BackgroundColor="fill-lighten-1" Placeholder="Search">
+                    <PrependInnerContent>
+                        <MIcon Size=16 Class="mr-2 neutral-lighten-1--text">mdi-magnify</MIcon>
+                    </PrependInnerContent>
+                </MTextField>
+                <MButton Color="primary" MinWidth=80 Height=32 Class="ml-6 rounded-pill" OnClick="()=>_visible=true">
+                    Add User
+                </MButton>
+            </MCol>
+        </MRow>
+    </MCardText>
+
+    <MDataTable Headers="_headers" Items="_empPage.GetPageDatas()" TItem="EmployeeDto" ItemsPerPage="_empPage.PageSize" HideDefaultFooter Class="user ml-2 table-border-none">
+        <HeaderColContent Context="header">
+            <span class="text-subtitle">@header.Text</span>
+        </HeaderColContent>
+        <ItemColContent>
+            @switch (context.Header.Value)
+            {
+                case nameof(EmployeeDto.employeeData.HoTen):
+                    <div class="hover-pointer d-flex my-2" @onclick="()=>NavigateToDetails(context.Item.employeeData.Id.ToString())">
+                        @if (string.IsNullOrEmpty(context.Item.employeeData.AnhNhanVien))
+                        {
+                            string color = "pry";
+
+                            <MAvatar Size=48 Color="@($"{color}-lighten-5")" Class="mt-1">
+                                <span class="@($"{color}--text")">@context.Item.SampleName</span>
+                            </MAvatar>
+                        }
+                        else
+                        {
+                            <MAvatar Size=48 Class="mt-1">
+                                <MImage Contain Src="@context.Item.employeeData.AnhNhanVien"></MImage>
+                            </MAvatar>
+                        }
+                        <div class="ml-4">
+                            <div class="text-subtitle">@context.Item.employeeData.HoTen</div>
+                            <div class="text-caption mt-1">@@@context.Item.employeeData.CardNumber</div>
+                        </div>
+                    </div>
+                    break;
+                case (nameof(EmployeeDto.NgaySinhDate)):
+                    <span>@context.Item.NgaySinhDate</span>
+                    break;
+                case nameof(EmployeeDto.employeeData.GioiTinh):
+				<span>@context.Item.employeeData.GioiTinh</span>
+                    break;
+                case (nameof(EmployeeDto.employeeData.SoDt)):
+				<span>@context.Item.employeeData.SoDt</span>
+                    break;
+                case nameof(EmployeeDto.employeeData.Email):
+				<span>@context.Item.employeeData.Email</span>
+                    break;
+                case "Action":
+                    <MMenu Right Bottom>
+                        <ActivatorContent Context="activatorContext">
+                            <MButton Icon @attributes="@activatorContext.Attrs">
+                                <MIcon XSmall>fas fa-ellipsis-v</MIcon>
+                            </MButton>
+                        </ActivatorContent>
+                        <ChildContent>
+                            <MList>
+                                <MListItem OnClick="()=>NavigateToDetails(context.Item.employeeData.Id.ToString())">
+                                    <MIcon Small>fas fa-user-tie</MIcon>
+                                    <MListItemTitle Class="ml-2"> Details </MListItemTitle>
+                                </MListItem>
+                                <MListItem OnClick="()=>NavigateToEdit(context.Item.employeeData.Id.ToString())">
+                                    <MIcon Small>far fa-edit</MIcon>
+                                    <MListItemTitle Class="ml-2"> Edit </MListItemTitle>
+                                </MListItem>
+                                <MListItem OnClick="()=>_empPage.EmpDatas.RemoveAt(_empPage.EmpDatas.FindIndex(u=>u.employeeData.Id==context.Item.employeeData.Id))">
+                                    <MIcon Small>far fa-trash-alt</MIcon>
+                                    <MListItemTitle Class="ml-2"> Delete </MListItemTitle>
+                                </MListItem>
+                            </MList>
+                        </ChildContent>
+                    </MMenu>
+                    break;
+                default:
+                    @context.Value
+                    break;
+            }
+        </ItemColContent>
+    </MDataTable>
+
+    <MCardText>
+        <div>
+            <div class="mr-auto pt-3 text-btn neutral-lighten-1--text">Showing @((_empPage.PageIndex-1)*_empPage.PageSize+1) to @(_empPage.PageIndex*_empPage.PageSize) of @_empPage.CurrentCount entries</div>
+            @if (_empPage.PageCount > 0)
+            {
+                <MPagination @bind-Value="_empPage.PageIndex" Color="primary" Circle Length=@_empPage.PageCount></MPagination>
+            }
+        </div>
+    </MCardText>
+</MCard>
+}
+
+<MButton Color="primary" MinWidth=80 Height=32 Class="ml-6 rounded-pill" OnClick="()=>_visible=true">
+	Add User
+</MButton>

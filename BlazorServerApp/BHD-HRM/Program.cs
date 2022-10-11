@@ -20,6 +20,8 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Tewr.Blazor.FileReader;
 using Microsoft.Extensions.FileProviders;
+using BHD_HRM.Data.Employee;
+using BHD_HRM.Data.Employees;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -41,8 +43,12 @@ builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddHttpClient<IUserService, UserService>();
 builder.Services.AddSingleton<HttpClient>();
 builder.Services.AddFileReaderService(o => o.UseWasmSharedBuffer = true);
-builder.Services.AddScoped<IEmployeeService, EmployeeService>();
-
+builder.Services.AddHttpClient<IBHD_HRMService<EmployeeData>, BHD_HRMService<EmployeeData>>()
+                   .AddHttpMessageHandler<ValidateHeaderHandler>();
+builder.Services.AddHttpClient<IBHD_HRMService<CompanyData>, BHD_HRMService<CompanyData>>()
+                   .AddHttpMessageHandler<ValidateHeaderHandler>();
+builder.Services.AddHttpClient<IBHD_HRMService<DepartmentData>, BHD_HRMService<DepartmentData>>()
+                   .AddHttpMessageHandler<ValidateHeaderHandler>();
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("SeniorEmployee", policy =>

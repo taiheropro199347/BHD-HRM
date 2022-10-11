@@ -710,11 +710,6 @@ public class UserServices
 
     public static List<UserDto> GetList() => _datas;
 
-    public static List<string> GetRoleList() => new List<string>
-    {
-        "Admin", "Author", "Editor", "Maintainer", "Subscriber",
-    };
-
     public static Dictionary<string, string> GetRoleIconMap() => new()
     {
         ["Editor"] = "mdi-pencil,info",
@@ -737,6 +732,21 @@ public class UserServices
     public static List<string> GetEducateList() => new List<string>
     {
         "Cao Học", "Đại học", "Cao đẳng", "Trung cấp nghề", "THPT",
+    };
+
+    public static List<string> GetContracttypeList() => new List<string>
+    {
+        "Có thời hạn", "Không Thời Hạn",
+    };
+
+    public static List<string> GetTrangThaiList() => new List<string>
+    {
+         "Chờ Update","Thử việc","Full Time","Part Time","Đã nghỉ việc",
+    };
+
+    public static List<string> GetRoleList() => new List<string>
+    {
+        "Admin","Board of Directors","Manager","Senior"
     };
 
     public static List<PermissionDto> GetPermissionsList() => new List<PermissionDto>()

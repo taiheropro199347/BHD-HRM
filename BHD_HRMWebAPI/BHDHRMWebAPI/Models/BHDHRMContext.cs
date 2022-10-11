@@ -916,6 +916,7 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.Id)
                     .ValueGeneratedOnAdd()
                     .HasColumnName("ID");
+                entity.Property(e => e.Id).Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Ignore);
 
                 entity.Property(e => e.Idcapbac).HasColumnName("idcapbac");
 
@@ -946,6 +947,7 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.NgaySinh).HasColumnType("date");
 
                 entity.Property(e => e.NgayVaoCongTy).HasColumnType("date");
+                entity.Property(e => e.NgayKyHDLD).HasColumnType("date");
 
                 entity.Property(e => e.Ngaynghiviec)
                     .HasColumnType("date")
@@ -992,6 +994,7 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.ThuongTru).HasMaxLength(500);
                 entity.Property(e => e.TamTru).HasMaxLength(500);
                 entity.Property(e => e.AnhNhanVien).HasMaxLength(150);
+                entity.Property(e => e.Role).HasMaxLength(50);
 
                 entity.Property(e => e.TrangThai).HasMaxLength(50);
 
