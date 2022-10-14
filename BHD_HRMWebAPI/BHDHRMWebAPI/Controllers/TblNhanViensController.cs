@@ -86,8 +86,34 @@ namespace BHDHRMWebAPI.Controllers
             }
 
             return nhanvien;
-        } 
+        }
+        [HttpGet("GetBirthdayNhanVien")]
+        public async Task<ActionResult<IEnumerable<TblNhanVien>>> GetBirthdayNhanVien()
 
+        {
+            var nhanvien = await _context.TblNhanVien.Where(t => t.NgaySinh.Value.Month == DateTime.Today.Month).ToListAsync();
+
+            if (nhanvien == null)
+            {
+                return NotFound();
+            }
+
+            return nhanvien;
+        }
+
+        [HttpGet("GetNhanVienNew")]
+        public async Task<ActionResult<IEnumerable<TblNhanVien>>> GetNhanVienNew()
+
+        {
+            var nhanvien = await _context.TblNhanVien.Where(t => (t.NgayVaoCongTy.Value.Month == DateTime.Today.Month && t.NgayVaoCongTy.Value.Year == DateTime.Today.Year)||t.CardNumber.Length>10).ToListAsync();
+
+            if (nhanvien == null)
+            {
+                return NotFound();
+            }
+
+            return nhanvien;
+        }
         // POST: api/TblNhanViens
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.

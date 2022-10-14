@@ -736,7 +736,7 @@ public class UserServices
 
     public static List<string> GetContracttypeList() => new List<string>
     {
-        "Có thời hạn", "Không Thời Hạn",
+        "Có thời hạn", "Vô thời hạn",
     };
 
     public static List<string> GetTrangThaiList() => new List<string>

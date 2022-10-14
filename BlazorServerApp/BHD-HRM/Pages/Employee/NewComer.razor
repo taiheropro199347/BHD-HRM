@@ -1,0 +1,102 @@
+﻿@page "/employee/newcomer"
+@using BHD_HRM.Data.Employees
+@using BHD_HRM.Services
+@inject NavigationManager Nav
+@inject IBHD_HRMService<EmployeeData> BHD_HRMService
+@inject IBHD_HRMService<CompanyData> BHD_HRMComapyService
+@inject IBHD_HRMService<DepartmentData> BHD_HRMDepartmentService
+@if (@_employeeDto == null)
+{
+
+}
+else
+{
+	<MCard>
+		<MCardText Class="pa-6">
+			<h5>Nhân viên mới</h5>
+			<MRow Class="mt-3">
+				@foreach (var item in _employeeDto)
+				{
+					<MCol Sm=12 Md=4>
+						<MCard Outlined Color="#F0F3FA !important" MaxWidth="434" Tile>
+							<MImage Height="@("100%")">
+								<MRow Align="AlignTypes.End" Class="fill-height">
+									<MCol Align="AlignTypes.Start" Cols="12">
+
+										<div class="d-flex block-center">
+											@if (string.IsNullOrEmpty(item.employeeData.AnhNhanVien))
+											{
+												<MImage MaxWidth="125" Src="/usersupload/avatar/bhd.png"></MImage>
+											}
+											else
+											{
+												<MAvatar Class="profile" Color="grey" Size="125" Tile>
+													<MImage Src="@item.employeeData.AnhNhanVien"></MImage>
+												</MAvatar>
+											}
+											<div Class="ml-10">
+												<h5 class="mb-1">@item.employeeData.HoTen</h5>
+												<subtitle-2 class="mb-1"><i class="fas fa-tag"></i> @item.employeeData.CardNumber</subtitle-2><br>
+												<subtitle-2 class="mb-1"><i class="fa fa-suitcase"></i> @item.employeeData.ChucVu</subtitle-2><br>
+												<subtitle-2 class="mb-1"><i class="fas fa-envelope"></i> @item.employeeData.Email</subtitle-2><br>
+											</div>
+										</div>
+									</MCol>
+									<MCol Class="py-0 col-8">
+										<MListItem>
+											<MListItemContent>
+												<MListItemTitle Class="text-h6 black--text"><i class="fa fa-birthday-cake"></i> Ngày sinh: @item.NgaySinhDate</MListItemTitle>
+												<MListItemSubtitle><i class="fas fa-industry"></i> @item.CompanyString - @item.DepartmentString</MListItemSubtitle>
+												<MListItemSubtitle><i class="fa fa-id-card"></i> Ngày vào làm: @item.NgayVaoCongTyDate</MListItemSubtitle>
+											</MListItemContent>
+										</MListItem>
+										
+									</MCol>
+									<MCol Class="col-4">
+										<MButton Type="submit" MinWidth=80 Height=40 Color="primary" OnClick="() => OnClick(item.employeeData.Id)" Class="rounded-pill"> Sửa TTNV </MButton>
+									</MCol>
+								</MRow>
+							</MImage>
+						</MCard>
+					</MCol>
+				}
+			</MRow>
+		</MCardText>
+	</MCard>
+}
+@code {
+	public List<EmployeeDto>? _employeeDto = new List<EmployeeDto>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		var getpendingemp = await BHD_HRMService.GetAllAsync("TblNhanViens/GetNhanVienNew");
+		foreach (var item in getpendingemp)
+		{
+			EmployeeDto employeeDto = new EmployeeDto();
+			employeeDto.employeeData = item;
+			employeeDto.NgaySinhDate = DateOnly.FromDateTime((DateTime)item.NgaySinh);
+			employeeDto.NgayVaoCongTyDate = item.NgayVaoCongTy != null ? DateOnly.FromDateTime((DateTime)item.NgayVaoCongTy) : null;
+			if (item.IdcongTy != null)
+			{
+				var company = await BHD_HRMComapyService.GetByIdAsync("TblCompanies/", item.IdcongTy.ToString());
+				if (company != null)
+				{
+					employeeDto.CompanyString = company.TenCongTy;
+				}
+			}
+			if (item.IdphongBan != null)
+			{
+				var departmnet = await BHD_HRMDepartmentService.GetByIdAsync("TblPhongs/", item.IdphongBan);
+				if (departmnet != null)
+				{
+					employeeDto.DepartmentString = departmnet.TenPhong;
+				}
+			}
+			_employeeDto.Add(employeeDto);
+		}
+	}
+	private void OnClick(int Id)
+    {
+		Nav.NavigateTo($"/employee/employeeedit/{Id}");
+	}
+}

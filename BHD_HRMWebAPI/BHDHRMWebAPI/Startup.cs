@@ -90,6 +90,7 @@ namespace BHDHRMWebAPI
             app.UseAuthorization();
 
             app.UseSwagger();
+            app.UseRequestLocalization("en-GB");
 
             app.UseSwaggerUI(ui =>
             {

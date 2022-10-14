@@ -14,7 +14,7 @@
             <MImage Src="/img/avatar/1.svg">
             </MImage>
         </MAvatar>
-        <h5 class="mt-2 mb-12">Welcome to BHD_HRM! 👋</h5>
+        <h5 class="mt-2 mb-12">Welcome to BHD Star! 👋</h5>
 
         <MTextField TValue="string"
                     @bind-Value="@(_user)"
@@ -39,9 +39,9 @@
         </span>
         <MButton Class="mt-11 rounded-4 text-btn white--text" OnClick=OnLogin Height=46 Width=340 Color="primary">Login</MButton>
 
-        <div class="my-6">
+        @*<div class="my-6">
             <span class="text-btn">New on our platform? &nbsp;</span>
-            <span class="primary--text hover-pointer">Create an account</span>@*@onclick="@(()=>Navigation.NavigateTo(Navigation.BaseUri+CreateAccountRoute))"*@
-        </div>
+            <span class="primary--text hover-pointer">Create an account</span>@onclick="@(()=>Navigation.NavigateTo(Navigation.BaseUri+CreateAccountRoute))"
+        </div>*@
     </div>
 </MCard>

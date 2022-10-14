@@ -86,7 +86,7 @@
 				<MTextField @bind-Value="UserData.employeeData.SoDt" Label="Số điện thoại" Color="primary" HideDetails="@("auto")" Outlined />
 			</MCol>
 			<MCol Md=4 Sm=12>
-				<MTextField @bind-Value="UserData.employeeData.SoTaiKhoanNh" Label="Số TK VietCapital" Color="primary" HideDetails="@("auto")" Outlined />
+				<MTextField @bind-Value="UserData.employeeData.SoTaiKhoanNh" Label="Số TK VietCapital(Nếu có)" Color="primary" HideDetails="@("auto")" Outlined />
 			</MCol>
 		</MRow>
 
@@ -213,6 +213,7 @@
 		_userData.employeeData.CardNumber = DateTime.Now.ToString("MMddyyyyHHmmssss.fffffffK");
 		_userData.employeeData.NgaySinh = _userData.NgaySinhDate.ToDateTime(TimeOnly.Parse("00:00 AM"));
 		_userData.employeeData.NgayCap = _userData.NgayCapDate.ToDateTime(TimeOnly.Parse("00:00 AM"));
+		_userData.employeeData.LanCuoiChinhSua = DateTime.Now.ToString("dd-MM-yyyy HH:mm");
 		await BHD_HRMService.SaveAsync("TblNhanViens", _userData.employeeData);
 		dialog = true;
 	}

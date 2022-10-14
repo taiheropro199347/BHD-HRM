@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6x57RG1agwpkbJ0kZszL+ieCRdFQqMWkna0qP5NtTcc=",
+  "Hash": "BTJr9E49ITLbomar4NY1vtcOSurGKedsL+mp6ZeNl/o=",
   "Source": "BHD-HRM",
   "BasePath": "_content/BHD-HRM",
   "Mode": "Default",
@@ -423,40 +423,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\skiasharp.views.blazor\\2.88.0-preview.256\\staticwebassets\\SKHtmlCanvas.js"
-    },
-    {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\tewr.blazor.filereader\\3.3.1.21360\\staticwebassets\\FileReaderComponent.js",
-      "SourceId": "Tewr.Blazor.FileReader",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\tewr.blazor.filereader\\3.3.1.21360\\staticwebassets\\",
-      "BasePath": "_content/Tewr.Blazor.FileReader",
-      "RelativePath": "FileReaderComponent.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\tewr.blazor.filereader\\3.3.1.21360\\staticwebassets\\FileReaderComponent.js"
-    },
-    {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\tewr.blazor.filereader\\3.3.1.21360\\staticwebassets\\FileReaderComponent.js.map",
-      "SourceId": "Tewr.Blazor.FileReader",
-      "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\tewr.blazor.filereader\\3.3.1.21360\\staticwebassets\\",
-      "BasePath": "_content/Tewr.Blazor.FileReader",
-      "RelativePath": "FileReaderComponent.js.map",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\tewr.blazor.filereader\\3.3.1.21360\\staticwebassets\\FileReaderComponent.js.map"
     },
     {
       "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\css\\masa-blazor-pro.css",
@@ -1853,12 +1819,12 @@
       "OriginalItemSpec": "wwwroot\\img\\eCommerce\\trophy.png"
     },
     {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\login\\2873.png",
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\login\\faicon.png",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
       "BasePath": "_content/BHD-HRM",
-      "RelativePath": "img/login/2873.png",
+      "RelativePath": "img/login/faicon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1867,24 +1833,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\login\\2873.png"
-    },
-    {
-      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\login\\Gxwd.png",
-      "SourceId": "BHD-HRM",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
-      "BasePath": "_content/BHD-HRM",
-      "RelativePath": "img/login/Gxwd.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\login\\Gxwd.png"
+      "OriginalItemSpec": "wwwroot\\img\\login\\faicon.png"
     },
     {
       "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\login\\left.svg",
@@ -1902,6 +1851,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\login\\left.svg"
+    },
+    {
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\login\\logo.png",
+      "SourceId": "BHD-HRM",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
+      "BasePath": "_content/BHD-HRM",
+      "RelativePath": "img/login/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\login\\logo.png"
     },
     {
       "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\img\\mainLayout\\logo.png",
@@ -2072,6 +2038,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\nav\\nav.json"
+    },
+    {
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\usersupload\\avatar\\217201615263414213567476_1259524594058182_7744547760687921291_n.jpg",
+      "SourceId": "BHD-HRM",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
+      "BasePath": "_content/BHD-HRM",
+      "RelativePath": "usersupload/avatar/217201615263414213567476_1259524594058182_7744547760687921291_n.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\usersupload\\avatar\\217201615263414213567476_1259524594058182_7744547760687921291_n.jpg"
     },
     {
       "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\usersupload\\avatar\\bhd.png",

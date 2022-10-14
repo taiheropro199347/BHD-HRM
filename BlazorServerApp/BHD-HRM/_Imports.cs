@@ -25,3 +25,5 @@ global using System.ComponentModel.DataAnnotations;
 global using System.Reflection;
 global using System.Text.Json;
 global using Masa.Blazor;
+global using MailKit.Net.Smtp;
+global using MailKit.Security;

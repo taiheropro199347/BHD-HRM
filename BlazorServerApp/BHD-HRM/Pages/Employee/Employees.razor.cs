@@ -48,6 +48,10 @@ namespace BHD_HRM.Pages.Employee
             Nav.NavigateTo($"/employee/employeeedit/{id}");
         }
 
+        private void NavigateToCreate()
+        {
+            Nav.NavigateTo($"/employee/employeeedit");
+        }
         private void AddUserData(EmployeeDto empData)
         {
             _empPage.EmpDatas.Insert(0, empData);

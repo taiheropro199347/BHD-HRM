@@ -27,7 +27,7 @@ else
                          Items="@_companyData"
                          ItemText="u => u.TenCongTy"
                          ItemValue="u => u.Id"
-                         Label="Công ty">
+                         Label="Phòng ban">
                 </MSelect>
             </MCol>
             <MCol Sm=12 Md=4>
@@ -81,8 +81,8 @@ else
                         <MIcon Size=16 Class="mr-2 neutral-lighten-1--text">mdi-magnify</MIcon>
                     </PrependInnerContent>
                 </MTextField>
-                <MButton Color="primary" MinWidth=80 Height=32 Class="ml-6 rounded-pill" OnClick="()=>_visible=true">
-                    Add User
+                <MButton Color="primary" MinWidth=80 Height=32 Class="ml-6 rounded-pill" OnClick="()=>NavigateToCreate()">
+                    Thêm nhân viên
                 </MButton>
             </MCol>
         </MRow>
@@ -146,10 +146,10 @@ else
                                     <MIcon Small>far fa-edit</MIcon>
                                     <MListItemTitle Class="ml-2"> Edit </MListItemTitle>
                                 </MListItem>
-                                <MListItem OnClick="()=>_empPage.EmpDatas.RemoveAt(_empPage.EmpDatas.FindIndex(u=>u.employeeData.Id==context.Item.employeeData.Id))">
+                                @*<MListItem OnClick="()=>_empPage.EmpDatas.RemoveAt(_empPage.EmpDatas.FindIndex(u=>u.employeeData.Id==context.Item.employeeData.Id))">
                                     <MIcon Small>far fa-trash-alt</MIcon>
                                     <MListItemTitle Class="ml-2"> Delete </MListItemTitle>
-                                </MListItem>
+                                </MListItem>*@
                             </MList>
                         </ChildContent>
                     </MMenu>
@@ -172,7 +172,3 @@ else
     </MCardText>
 </MCard>
 }
-
-<MButton Color="primary" MinWidth=80 Height=32 Class="ml-6 rounded-pill" OnClick="()=>_visible=true">
-	Add User
-</MButton>

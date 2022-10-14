@@ -18,15 +18,16 @@ using BHD_HRM.Handlers;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
-using Tewr.Blazor.FileReader;
 using Microsoft.Extensions.FileProviders;
 using BHD_HRM.Data.Employee;
 using BHD_HRM.Data.Employees;
+using BHD_HRM.Data.Mail;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddLocalization();
 var appSettingSection = builder.Configuration.GetSection("AppSettings");
 builder.Services.Configure<AppSettings>(appSettingSection);
 builder.Services.AddMasaBlazor(builder =>
@@ -42,13 +43,14 @@ builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStat
 builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddHttpClient<IUserService, UserService>();
 builder.Services.AddSingleton<HttpClient>();
-builder.Services.AddFileReaderService(o => o.UseWasmSharedBuffer = true);
 builder.Services.AddHttpClient<IBHD_HRMService<EmployeeData>, BHD_HRMService<EmployeeData>>()
                    .AddHttpMessageHandler<ValidateHeaderHandler>();
 builder.Services.AddHttpClient<IBHD_HRMService<CompanyData>, BHD_HRMService<CompanyData>>()
                    .AddHttpMessageHandler<ValidateHeaderHandler>();
 builder.Services.AddHttpClient<IBHD_HRMService<DepartmentData>, BHD_HRMService<DepartmentData>>()
                    .AddHttpMessageHandler<ValidateHeaderHandler>();
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
+builder.Services.AddTransient<IMailService, BHD_HRM.Services.MailService>();
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("SeniorEmployee", policy =>
@@ -80,7 +82,9 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+
 app.MapControllers();
 app.MapBlazorHub();
+app.UseRequestLocalization("en-GB");
 app.MapFallbackToPage("/_Host");
 app.Run();

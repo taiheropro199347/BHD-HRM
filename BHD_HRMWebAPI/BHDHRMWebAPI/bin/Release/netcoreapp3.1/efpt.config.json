@@ -1,0 +1,305 @@
+﻿{
+   "CodeGenerationMode": 0,
+   "ContextClassName": "BHDHRMContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": "Models",
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "BHDHRMWebAPI",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Area]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BHD_Account]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BHD_Group]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BHD_Roles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Chevrons]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ERROR]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Logs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[luongtran]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Modules]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MyTable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RefreshToken]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Table_1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Table_2]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Table_3]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Table_test1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Table_test2]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tb1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tbl_Menu]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblCapbac]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblChamCong]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblChamCongPT]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblChucVu]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblCongTy]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblEmail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblEmailConfig]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblGiaDinh]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblGroupUser]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblHopDong]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblKhenThuongKyLuat]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblLogPoint]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblLuong]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblLuongKhac]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblMenu]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblNgayle]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblNgayNghi]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblNghiPhep]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblNhanVien]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblNhanVien_IMG]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblPermissions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblPhong]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblPhucLoi]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblQuaTrinhCongTac]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblQuaTrinhCongViec]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblQuaTrinhCongViec_new]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblQuaTrinhDaoTao]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblQuaTrinhHocTap]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblScheduler]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblSubMenu]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblSubMenu2]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblTaiSanCap]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblTangCa]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblTapDoan]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblTroCap]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tblTrocaptrachnhiem]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[thietlapbaohiem]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Thietlapthue]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[prNgayCong]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[pro_HR_BC_HopDongHetHan]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[pro_HR_BC_Luong]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[pro_HR_BC_QuaTrinhCongViec]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[pro_HR_BC_SinhNhat]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[pro_HR_BC_TroCap]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[pro_HR_LuongPT]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[pro_Menu1]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[pro_Menu2]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[pro_Menu3]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[SoNgayTrongThang]",
+         "ObjectType": 2
+      }
+   ],
+   "UiHint": "CHICILON\\SQLEXPRESS.BHD_HRM",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}
