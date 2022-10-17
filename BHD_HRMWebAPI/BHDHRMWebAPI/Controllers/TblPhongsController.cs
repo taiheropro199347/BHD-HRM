@@ -28,6 +28,21 @@ namespace BHDHRMWebAPI.Controllers
         }
 
         // GET: api/TblPhongs/5
+        [HttpGet("GetDepmbyComp/{id}")]
+        public async Task<ActionResult<IEnumerable<TblPhong>>> GetDepmbyComp(string id)
+
+        {
+            var tblPhong = await _context.TblPhong.Where(t => t.IdcongTy == int.Parse(id)).ToListAsync();
+
+            if (tblPhong == null)
+            {
+                return NotFound();
+            }
+
+            return tblPhong;
+        }
+
+        // GET: api/TblPhongs/5
         [HttpGet("{id}")]
         public async Task<ActionResult<TblPhong>> GetTblPhong(string id)
         {

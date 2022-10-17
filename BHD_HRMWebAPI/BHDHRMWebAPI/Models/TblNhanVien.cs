@@ -50,9 +50,11 @@ namespace BHDHRMWebAPI.Models
         public string LoaiNhanVien { get; set; }
         public string NgKhanCap { get; set; }
         public string TrinhDo { get; set; }
-        public string HonNhan { get; set; }   
+        public string HonNhan { get; set; }
         public string TamTru { get; set; }
         public string AnhNhanVien { get; set; }
         public string Role { get; set; }
+        public string DalaNV { get; set; }
+        public string CNNganHang { get; set; }
     }
 }

@@ -13,6 +13,32 @@
 @inject IBHD_HRMService<EmployeeData> BHD_HRMService
 @inject IJSRuntime JSRuntime
 
+<style>
+    .file-input-zone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:#4318FF ;
+        color: white;
+        cursor: pointer;
+        position: relative;
+        width: 150px;
+        height: 40px;
+		border-radius: 9999px!important;
+    }
+
+        .file-input-zone:hover {
+            background-color: lightblue;
+        }
+
+        .file-input-zone input[type=file] {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+</style>
 <MForm Model="@UserData.employeeData" EnableValidation OnValidSubmit="SaveEmployee">
 	<MContainer>
 		<div class="d-flex block-center mt-3">
@@ -35,12 +61,15 @@
 				<h5 class="mb-1">@UserData.employeeData.HoTen</h5>
 				<subtitle-2 class="mb-1">@UserData.employeeData.Email2</subtitle-2><br>
 				<subtitle-2 class="mb-1">@UserData.employeeData.SoDt</subtitle-2><br>
-				<InputFile OnChange="@UploadFile" />
+				<div class="file-input-zone">
+					<InputFile accept="image/x-png,image/jpeg" title="Tải lên ảnh cá nhân 3x4" OnChange="@UploadFile"/>
+					Ảnh cá nhân 3x4
+				</div>
 			</div>
 		</div>
 		<div class="mt-3">
 			<MIcon Size=20 Color="sample-green" Class="mt-n1">far fa-user</MIcon>
-			<span class="ml-1 text-h6">Thông tin cá nhân</span>
+			<span class="ml-1 text-h6">Thông tin bắt buộc</span>
 		</div>
 		<MRow Class="my-3">
 			<MCol Md=4 Sm=12>
@@ -80,16 +109,26 @@
 		</MRow>
 		<MRow Class="mt-3">
 			<MCol Md=4 Sm=12>
-				<MTextField @bind-Value="UserData.employeeData.MaSoThue" Color="primary" Label="MST cá nhân" HideDetails="@("auto")" Outlined />
+				<MTextField @bind-Value="UserData.employeeData.MaSoThue" Color="primary" Label="MST cá nhân(Nếu có)" HideDetails="@("auto")" Outlined />
 			</MCol>
 			<MCol Md=4 Sm=12>
 				<MTextField @bind-Value="UserData.employeeData.SoDt" Label="Số điện thoại" Color="primary" HideDetails="@("auto")" Outlined />
 			</MCol>
 			<MCol Md=4 Sm=12>
-				<MTextField @bind-Value="UserData.employeeData.SoTaiKhoanNh" Label="Số TK VietCapital(Nếu có)" Color="primary" HideDetails="@("auto")" Outlined />
-			</MCol>
+					<MTextField @bind-Value="UserData.employeeData.ThuongTru" Label="Địa chỉ thường trú" Color="primary" HideDetails="@("auto")" Outlined />
+				</MCol>
 		</MRow>
-
+		<MRow Class="mt-3">
+			<MCol Md=4 Sm=12>
+				<MTextField @bind-Value="UserData.employeeData.TenNganHang" Label="Tên ngân hàng" Color="primary" HideDetails="@("auto")" Outlined />
+			</MCol>			
+			<MCol Md=4 Sm=12>
+					<MTextField @bind-Value="UserData.employeeData.CNNganHang" Label="Chi nhánh NH" Color="primary" HideDetails="@("auto")" Outlined />
+				</MCol>			
+			<MCol Md=4 Sm=12>
+					<MTextField @bind-Value="UserData.employeeData.SoTaiKhoanNh" Label="Số TK NH" Color="primary" HideDetails="@("auto")" Outlined />
+				</MCol>
+		</MRow>
 		<MRow Class="mt-3">
 			<MCol Md=4 Sm=12>
 				<MSelect @bind-Value="UserData.employeeData.TrinhDo"
@@ -125,11 +164,8 @@
 
 		<div class="mt-12">
 			<MIcon Size=20 Color="sample-green" Class="mt-n1">mdi-map-marker-outline</MIcon>
-			<span class="text-h6">Address</span>
-			<MRow Class="mt-3">
-				<MCol Md=4 Sm=12>
-					<MTextField @bind-Value="UserData.employeeData.ThuongTru" Label="Địa chỉ thường trú" Color="primary" HideDetails="@("auto")" Outlined />
-				</MCol>
+			<span class="text-h6">Thông tin bổ sung</span>
+			<MRow Class="mt-3">				
 				<MCol Md=4 Sm=12>
 					<MTextField @bind-Value="UserData.employeeData.TamTru" Label="Địa chỉ tạm trú" Color="primary" HideDetails="@("auto")" Outlined />
 				</MCol>
@@ -143,9 +179,6 @@
 				</MCol>
 				<MCol Md=4 Sm=12>
 					<MTextField @bind-Value="UserData.employeeData.SdtKhanCap" Label="SDT khẩn cấp" Color="primary" HideDetails="@("auto")" Outlined />
-				</MCol>
-				<MCol Md=4 Sm=12>
-					<MTextField @bind-Value="UserData.employeeData.MaSoThue" Label="Mã số thuế" Color="primary" HideDetails="@("auto")" Outlined />
 				</MCol>
 			</MRow>
 		</div>
@@ -211,8 +244,8 @@
 	{
 		_userData.employeeData.TrangThai="Chờ Update";
 		_userData.employeeData.CardNumber = DateTime.Now.ToString("MMddyyyyHHmmssss.fffffffK");
-		_userData.employeeData.NgaySinh = _userData.NgaySinhDate.ToDateTime(TimeOnly.Parse("00:00 AM"));
-		_userData.employeeData.NgayCap = _userData.NgayCapDate.ToDateTime(TimeOnly.Parse("00:00 AM"));
+		_userData.employeeData.NgaySinh = ((DateOnly)_userData.NgaySinhDate).ToDateTime(TimeOnly.Parse("00:00 AM"));
+		_userData.employeeData.NgayCap = ((DateOnly)_userData.NgayCapDate).ToDateTime(TimeOnly.Parse("00:00 AM"));
 		_userData.employeeData.LanCuoiChinhSua = DateTime.Now.ToString("dd-MM-yyyy HH:mm");
 		await BHD_HRMService.SaveAsync("TblNhanViens", _userData.employeeData);
 		dialog = true;

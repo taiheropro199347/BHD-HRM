@@ -731,7 +731,7 @@ public class UserServices
 
     public static List<string> GetEducateList() => new List<string>
     {
-        "Cao Học", "Đại học", "Cao đẳng", "Trung cấp nghề", "THPT",
+        "Sau đại học", "Đại học", "Cao đẳng", "Trung cấp", "12/12",
     };
 
     public static List<string> GetContracttypeList() => new List<string>
@@ -746,7 +746,7 @@ public class UserServices
 
     public static List<string> GetRoleList() => new List<string>
     {
-        "Admin","Board of Directors","Manager","Senior"
+        "Admin","Board of Directors","Manager","Senior","Employess"
     };
 
     public static List<PermissionDto> GetPermissionsList() => new List<PermissionDto>()

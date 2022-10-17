@@ -16,6 +16,7 @@ namespace BHD_HRM.Data.Employee
         public int? IdcongTy { get; set; } = null;
         public string IdphongBan { get; set; }
         public string ChucVu { get; set; }
+        [Required(ErrorMessage = "Bạn phải nhập ngày sinh")]
         public DateTime? NgaySinh { get; set; }
         [Required(ErrorMessage = "Bạn phải chọn giới tính")]
         public string GioiTinh { get; set; }
@@ -28,6 +29,7 @@ namespace BHD_HRM.Data.Employee
         public string Email { get; set; }
         public string Email2 { get; set; }
         public string SoCmnd { get; set; }
+        [Required(ErrorMessage = "Bạn phải nhập ngày cấp")]
         public DateTime? NgayCap { get; set; }
         public string NoiCap { get; set; }
         public string TrangThai { get; set; }
@@ -59,6 +61,8 @@ namespace BHD_HRM.Data.Employee
         public string HonNhan { get; set; }
         public string TamTru { get; set; }
         public string Role { get; set; }
+        public string DalaNV { get; set; }
+        public string CNNganHang { get; set; }
         public string AnhNhanVien { get; set; } = "/usersupload/avatar/test.jpg";
     }
 }

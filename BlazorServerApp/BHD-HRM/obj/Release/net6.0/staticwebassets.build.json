@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BTJr9E49ITLbomar4NY1vtcOSurGKedsL+mp6ZeNl/o=",
+  "Hash": "0D0KMJiGHrXfExtj3WO6WhJqHm2NSiR4M0GnAs/0xcM=",
   "Source": "BHD-HRM",
   "BasePath": "_content/BHD-HRM",
   "Mode": "Default",
@@ -2072,6 +2072,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\usersupload\\avatar\\bhd.png"
+    },
+    {
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\usersupload\\avatar\\Google-Pixel-7-va-Pixel-7-Pro-Su-khac-biet.jpg",
+      "SourceId": "BHD-HRM",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
+      "BasePath": "_content/BHD-HRM",
+      "RelativePath": "usersupload/avatar/Google-Pixel-7-va-Pixel-7-Pro-Su-khac-biet.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\usersupload\\avatar\\Google-Pixel-7-va-Pixel-7-Pro-Su-khac-biet.jpg"
     },
     {
       "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\usersupload\\avatar\\test.jpg",

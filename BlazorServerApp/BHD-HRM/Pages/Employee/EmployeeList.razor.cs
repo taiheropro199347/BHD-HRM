@@ -1,4 +1,6 @@
-﻿using BHD_HRM.Pages.App.User;
+﻿using BHD_HRM.Data.Employees;
+using BHD_HRM.Pages.App.User;
+using BHD_HRM.Pages.Employee.ViewModel;
 
 namespace BHD_HRM.Pages.Employee
 {
@@ -7,7 +9,13 @@ namespace BHD_HRM.Pages.Employee
         private object? _orderChart;
         private object? _profitChart;
         private object? _earningsChart;
-        protected override void OnInitialized()
+        public bool _visible;
+        public EmpPage? _empPage = new EmpPage();
+        public List<EmployeeDto>? _employeeDto = new List<EmployeeDto>();
+        public List<CompanyData> _companyData { get; set; }
+        public List<DepartmentData> _departmentData { get; set; }
+        private List<Data> _items = new List<Data>();
+        protected override async Task OnInitializedAsync()
         {
 
             _orderChart = new
@@ -197,40 +205,57 @@ namespace BHD_HRM.Pages.Employee
                    }
                 }
             };
+            var getpendingemp = await BHD_HRMService.GetAllAsync("TblNhanViens");
+            foreach (var item in getpendingemp)
+            {
+                EmployeeDto employeeDto = new EmployeeDto();
+                employeeDto.employeeData = item;
+                employeeDto.NgaySinhDate = DateOnly.FromDateTime((DateTime)item.NgaySinh);
+                employeeDto.NgayCapDate = DateOnly.FromDateTime(item.NgayCap == null ? DateTime.Now : (DateTime)item.NgayCap);
+                _employeeDto.Add(employeeDto);
+            }
+            _companyData = await BHD_HRMComapyService.GetAllAsync("TblCompanies");
+            if(_companyData!=null)
+            {
+                foreach(var item in _companyData)
+                {
+                    _departmentData =await BHD_HRMDepartmentService.GetbyConAsync("TblPhongs/GetDepmbyComp/", item.Id.ToString());
+                     List<Data> _itemchills = new List<Data>();
+                    if(_departmentData!=null)
+                    {
+                        foreach (var itemchill in _departmentData)
+                        {
+                            Data datachill = new Data();
+                            datachill.IdString = itemchill.Id;
+                        }    
+                    }    
+                }    
+
+            }
+            _empPage.EmpDatas = _employeeDto;
         }
-        public bool _visible;
         public UserPage _userPage = new(UserServices.GetList());
         private List<int> _pageSizes = new() { 10, 25, 50, 100 };
-        private readonly List<DataTableHeader<UserDto>> _headers = new()
+        private readonly List<DataTableHeader<EmployeeDto>> _headers = new()
         {
-            new() { Text = "USER", Value = nameof(UserDto.UserName), CellClass = "" },
-            new() { Text = "EMAIL", Value = nameof(UserDto.Email) },
-            new() { Text = "ROLE", Value = nameof(UserDto.Role) },
-            new() { Text = "PLAN", Value = nameof(UserDto.Plan) },
-            new() { Text = "STATUS", Value = nameof(UserDto.Status) },
-            new() { Text = "ACTIONS", Value = "Action", Sortable = false }
+            new() { Text = "Họ Tên",Sortable= false, Value = nameof(EmployeeDto.employeeData.HoTen), CellClass = "" },
+            new() { Text = "Ngày sinh",Sortable= false, Value = nameof(EmployeeDto.NgaySinhDate) },
+            new() { Text = "Giới tính",Sortable= false, Value = nameof(EmployeeDto.employeeData.GioiTinh) },
+            new() { Text = "Số điện thoại",Sortable= false, Value = nameof(EmployeeDto.employeeData.SoDt) },
+            new() { Text = "Email",Sortable= false, Value = nameof(EmployeeDto.employeeData.Email) }
         };
-        private readonly Dictionary<string, string> _roleIconMap = UserServices.GetRoleIconMap();
 
         private void NavigateToDetails(string id)
         {
             Nav.NavigateTo($"/app/user/view/{id}");
         }
-
-        private void NavigateToEdit(string id)
-        {
-            Nav.NavigateTo($"/app/user/edit/{id}");
-        }
-
-        private void AddUserData(UserDto userData)
-        {
-            _userPage.UserDatas.Insert(0, userData);
-        }
         public class Data
         {
             public int Id { get; set; }
+            public string IdString { get; set; }
 
             public string Name { get; set; }
+            public string Type { get; set; }
 
             public List<Data> Children { get; set; }
         }
@@ -240,124 +265,10 @@ namespace BHD_HRM.Pages.Employee
            new Data()
            {
               Id= 1,
-              Name= "MASA Blazor Human Resources",
+              Name= "BHDS Human Resources",
               Children= new List<Data>()
               {
-                new Data()
-                {
-                  Id= 2,
-                  Name= "Core team",
-                  Children= new List<Data>()
-                    {
-                       new Data() {
-                          Id= 201,
-                          Name= "John",
-                        },
-                        new Data(){
-                          Id= 202,
-                          Name= "Kael",
-                        },
-                        new Data(){
-                          Id= 203,
-                          Name= "Nekosaur",
-                        },
-                        new Data(){
-                          Id= 204,
-                          Name= "Jacek",
-                        },
-                        new Data(){
-                          Id= 205,
-                          Name= "Andrew",
-                        }
-                    }
-                },
-                new Data()
-                {
-                  Id= 3,
-                  Name= "Administrators",
-                  Children= new List<Data>()
-                    {
-                        new Data()
-                        {
-                          Id= 301,
-                          Name= "Mike",
-                        },
-                        new Data()
-                        {
-                          Id= 302,
-                          Name= "Hunt",
-                        }
-                    }
-                },
-                new Data()
-                {
-                  Id= 4,
-                  Name= "Contributors",
-                  Children= new List<Data>()
-                    {
-                        new Data()
-                        {
-                          Id= 401,
-                          Name= "Phlow"
-                        },
-                        new Data()
-                        {
-                          Id= 402,
-                          Name= "Brandon"
-                        },
-                        new Data()
-                        {
-                          Id= 403,
-                          Name= "Sean"
-                        }
-                    }
-                },
-                 new Data()
-                {
-                  Id= 5,
-                  Name= "Contributors",
-                  Children= new List<Data>()
-                    {
-                        new Data()
-                        {
-                          Id= 401,
-                          Name= "Phlow"
-                        },
-                        new Data()
-                        {
-                          Id= 402,
-                          Name= "Brandon"
-                        },
-                        new Data()
-                        {
-                          Id= 403,
-                          Name= "Sean"
-                        }
-                    }
-                },
-                 new Data()
-                {
-                  Id= 6,
-                  Name= "Contributors",
-                  Children= new List<Data>()
-                    {
-                        new Data()
-                        {
-                          Id= 401,
-                          Name= "Phlow"
-                        },
-                        new Data()
-                        {
-                          Id= 402,
-                          Name= "Brandon"
-                        },
-                        new Data()
-                        {
-                          Id= 403,
-                          Name= "Sean"
-                        }
-                    }
-                }
+                
               }
             }
         };

@@ -16,6 +16,32 @@
 @inject IBHD_HRMService<DepartmentData> BHD_HRMDepartmentService
 @inject IMailService MailService 
 @inject IJSRuntime JSRuntime
+<style>
+    .file-input-zone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:#4318FF ;
+        color: white;
+        cursor: pointer;
+        position: relative;
+        width: 150px;
+        height: 40px;
+		border-radius: 9999px!important;
+    }
+
+        .file-input-zone:hover {
+            background-color: lightblue;
+        }
+
+        .file-input-zone input[type=file] {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+</style>
 <MCard>
 	<MCardText Class="px-6">
 		<MTabs @bind-Value="tab" HideSlider Height=10 Color="sample-green">
@@ -52,7 +78,10 @@
 										<h5 class="mb-1">@UserData.employeeData.HoTen</h5>
 										<subtitle-2 class="mb-1">@UserData.employeeData.Email</subtitle-2><br>
 										<subtitle-2 class="mb-1">@UserData.employeeData.SoDt</subtitle-2><br>
-										<InputFile OnChange="@UploadFile" />
+										<div class="file-input-zone">
+											<InputFile accept="image/x-png,image/jpeg" title="Tải lên ảnh cá nhân 3x4" OnChange="@UploadFile"/>
+											Ảnh cá nhân 3x4
+										</div>
 									</div>
 								</div>
 							</MCol>
@@ -265,12 +294,39 @@
 									</MSelect>
 								</MCol>
 							</MRow>
+							<MRow Class="mt-3">
+								<MCol Sm=12 Md=4>
+								<span class="text-btn">Đã Từng Làm Ở BHD Star</span>
+								<MRadioGroup @bind-Value="UserData.employeeData.DalaNV" HideDetails="@("auto")" Color="primary" Row Class="mt-1">
+									<MRadio Color="primary" Label="Chưa từng" Value="@("Chưa từng")"></MRadio>
+									<MRadio Color="primary" Label="Đã từng" Value="@("Đã từng")"></MRadio>
+								</MRadioGroup>
+								</MCol>
+								<MCol Sm=12 Md=4>
+									<MSelect @bind-Value="UserData.employeeData.Role"
+											 Color="primary"
+											 HideDetails="@("auto")"
+											 Clearable
+											 Outlined
+											 Items="@UserServices.GetRoleList()"
+											 ItemText="u => u"
+											 ItemValue="u => u"
+											 Label="Nhóm quyền">
+									</MSelect>
+								</MCol>
+								<MCol Sm=12 Md=4>
+									<div class="mt-2 d-flex flex-row-reverse">
+							<MButton Type="submit" MinWidth=80 Height=40 Color="primary" Class="ml-10 rounded-pill"> Lưu thông tin </MButton>
+							@*<MButton Type="submit" MinWidth=80 OnClick="SentMailClick" Height=40 Color="primary" Class="ml-6 rounded-pill"> Gửi mail </MButton>*@
 						</div>
-						<div class="mt-10 d-flex">
+								</MCol>
+							</MRow>
+						</div>
+						@*<div class="mt-10 d-flex">
 							<MSpacer></MSpacer>
 							<MButton Type="submit" MinWidth=80 Height=40 Color="primary" Class="ml-6 rounded-pill"> Lưu thông tin </MButton>
 							<MButton Type="submit" MinWidth=80 OnClick="SentMailClick" Height=40 Color="primary" Class="ml-6 rounded-pill"> Gửi mail </MButton>
-						</div>
+						</div>*@
 					</MContainer>
 				</MForm>
 				<MDialog @bind-Value="dialog" Persistent
@@ -391,15 +447,15 @@
 		{
 			_userData.employeeData.TrangThai = "Chờ Update";
 			_userData.employeeData.CardNumber = DateTime.Now.ToString("MMddyyyyHHmmssss.fffffffK");
-			_userData.employeeData.NgaySinh = _userData.NgaySinhDate.ToDateTime(TimeOnly.Parse("00:00 AM"));
-			_userData.employeeData.NgayCap = _userData.NgayCapDate.ToDateTime(TimeOnly.Parse("00:00 AM"));
+			_userData.employeeData.NgaySinh = ((DateOnly)_userData.NgaySinhDate).ToDateTime(TimeOnly.Parse("00:00 AM"));
+			_userData.employeeData.NgayCap = ((DateOnly)_userData.NgayCapDate).ToDateTime(TimeOnly.Parse("00:00 AM"));
 			_userData.employeeData.LanCuoiChinhSua = DateTime.Now.ToString("dd-MM-yyyy HH:mm");
 			await BHD_HRMService.SaveAsync("TblNhanViens", _userData.employeeData);
 		}
 		else
 		{
-			_userData.employeeData.NgaySinh = _userData.NgaySinhDate.ToDateTime(TimeOnly.Parse("00:00 AM"));
-			_userData.employeeData.NgayCap = _userData.NgayCapDate.ToDateTime(TimeOnly.Parse("00:00 AM"));
+			_userData.employeeData.NgaySinh = ((DateOnly)_userData.NgaySinhDate).ToDateTime(TimeOnly.Parse("00:00 AM"));
+			_userData.employeeData.NgayCap = ((DateOnly)_userData.NgayCapDate).ToDateTime(TimeOnly.Parse("00:00 AM"));
 			_userData.employeeData.NgayVaoCongTy = _userData.NgayVaoCongTyDate != null ? ((DateOnly)_userData.NgayVaoCongTyDate).ToDateTime(TimeOnly.Parse("00:00 AM")) : null;
 			_userData.employeeData.NgayKyHDLD = _userData.NgayKyHDLDDate != null ? ((DateOnly)_userData.NgayKyHDLDDate).ToDateTime(TimeOnly.Parse("00:00 AM")) : null;
 			_userData.employeeData.Ngaynghiviec = _userData.NgayNghiViecDate != null ? ((DateOnly)_userData.NgayNghiViecDate).ToDateTime(TimeOnly.Parse("00:00 AM")) : null;

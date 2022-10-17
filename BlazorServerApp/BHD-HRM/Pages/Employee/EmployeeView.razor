@@ -31,10 +31,10 @@ else
                                     <MAvatar Size="120">
                                         <MImage Contain Src="@_userData.employeeData.AnhNhanVien" />
                                     </MAvatar>
-                            }
-                             <h5 class="mt-1">@_userData.CompanyString</h5>
+                            }                            
                             <h5 class="mt-1">@_userData.employeeData.HoTen</h5>
-                            <span class="mt-1 text-caption">@_userData.employeeData.Email</span>
+                            <span class="mt-1 text-body2">@_userData.employeeData.Email</span>
+							<h5 class="mt-1">@_userData.CompanyString</h5>
                             <MRow NoGutters class="mt-4">
                                 <MCol Md="6" class="text-center">
                                     <h6>Phòng ban</h6>
@@ -50,48 +50,48 @@ else
                     <MDivider Vertical />
                     <MCol class="ml-3 d-flex flex-column">
                         <div class="mb-3 d-flex justify-space-between">
-                            <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Ngày tháng năm sinh</span>
-                            <span class="text-caption">@_userData.NgaySinhDate</span>
+                            <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Ngày sinh</span>
+                            <span class="text-body2">@_userData.NgaySinhDate</span>
                         </div>
                         <div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Giới tính</span>
-                            <span class="text-caption">@_userData.employeeData.GioiTinh</span>
+                            <span class="text-body2">@_userData.employeeData.GioiTinh</span>
                         </div>
                         <div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Ngày bắt đầu làm việc</span>
-                            <span class="text-caption">@_userData.NgayVaoCongTyDate</span>
+                            <span class="text-body2">@_userData.NgayVaoCongTyDate</span>
                         </div>
                         <div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Mã số nhân viên</span>
-                            <span class="text-caption">@_userData.employeeData.CardNumber</span>
+                            <span class="text-body2">@_userData.employeeData.CardNumber</span>
                         </div>
 						<div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Trình độ học vấn</span>
-                            <span class="text-caption">@_userData.employeeData.TrinhDo</span>
+                            <span class="text-body2">@_userData.employeeData.TrinhDo</span>
                         </div>
 						<div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Điện thoại di động</span>
-                            <span class="text-caption">@_userData.employeeData.SoDt</span>
+                            <span class="text-body2">@_userData.employeeData.SoDt</span>
                         </div>
 						<div class="mb-3 d-flex justify-space-between">
-                            <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Địa chỉ thường trú</span>
-                            <span class="text-caption">@_userData.employeeData.ThuongTru</span>
+                            <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Địa chỉ</span>
+                            <span class="text-body2">@_userData.employeeData.ThuongTru</span>
                         </div>
 						<div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Số CMND/CCCD</span>
-                            <span class="text-caption">@_userData.employeeData.SoCmnd</span>
+                            <span class="text-body2">@_userData.employeeData.SoCmnd</span>
                         </div>
 						<div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Ngày ký HDLD</span>
-                            <span class="text-caption">@_userData.NgayKyHDLDDate</span>
+                            <span class="text-body2">@_userData.NgayKyHDLDDate</span>
                         </div>
 						<div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Loại HDLD</span>
-                            <span class="text-caption">@_userData.employeeData.LoaiHopDong</span>
+                            <span class="text-body2">@_userData.employeeData.LoaiHopDong</span>
                         </div>
 						<div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Mức lương hiện tại</span>
-                            <span class="text-caption">@_userData.employeeData.Luongthoathuan</span>
+                            <span class="text-body2">@_userData.employeeData.Luongthoathuan</span>
                         </div>
 
                     </MCol>
@@ -104,37 +104,44 @@ else
             <MCardText>
 				<div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Địa chỉ tạm trú</span>
-                            <span class="text-caption">@_userData.employeeData.TamTru</span>
+                            <span class="text-body2">@_userData.employeeData.TamTru</span>
                         </div>
                 <div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Người liên lạc khẩn cấp</span>
-                            <span class="text-caption">@_userData.employeeData.NgKhanCap</span>
+                            <span class="text-body2">@_userData.employeeData.NgKhanCap</span>
                         </div>
 				<div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>SDT khẩn cấp</span>
-                            <span class="text-caption">@_userData.employeeData.SdtKhanCap</span>
+                            <span class="text-body2">@_userData.employeeData.SdtKhanCap</span>
                         </div>
 						<div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Tên ngân hàng</span>
-                            <span class="text-caption">@_userData.employeeData.TenNganHang</span>
+                            <span class="text-body2">@_userData.employeeData.TenNganHang</span>
+                        </div>
+						<div class="mb-3 d-flex justify-space-between">
+                            <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Chi nhánh</span>
+                            <span class="text-body2">@_userData.employeeData.CNNganHang</span>
                         </div>
 						<div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Số TK ngân hàng</span>
-                            <span class="text-caption">@_userData.employeeData.SoTaiKhoanNh</span>
+                            <span class="text-body2">@_userData.employeeData.SoTaiKhoanNh</span>
                         </div>
 						<div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Email cá nhân</span>
-                            <span class="text-caption">@_userData.employeeData.Email2</span>
+                            <span class="text-body2">@_userData.employeeData.Email2</span>
                         </div>
 						<div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Tình trạng hôn nhân</span>
-                            <span class="text-caption">@_userData.employeeData.HonNhan</span>
+                            <span class="text-body2">@_userData.employeeData.HonNhan</span>
+                        </div>
+						<div class="mb-3 d-flex justify-space-between">
+                            <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Đã Từng Làm Ở BHD Star</span>
+                            <span class="text-body2">@_userData.employeeData.DalaNV</span>
                         </div>
 						<div class="mb-3 d-flex justify-space-between">
                             <span class="text-body2 neutral-lighten-1--text"><MIcon Small class="mr-2" Color="neutral-lighten-1">mdi-account-outline</MIcon>Ngày nghỉ việc chính thức</span>
-                            <span class="text-caption">@_userData.NgayNghiViecDate</span>
-                        </div>
-
+                            <span class="text-body2">@_userData.NgayNghiViecDate</span>
+                        </div>		
             </MCardText>
         </MCard>
     </MCol>

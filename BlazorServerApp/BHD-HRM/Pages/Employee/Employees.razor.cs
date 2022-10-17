@@ -30,14 +30,13 @@ namespace BHD_HRM.Pages.Employee
         private List<int> _pageSizes = new() { 10, 25, 50, 100 };
         private readonly List<DataTableHeader<EmployeeDto>> _headers = new()
         {
-            new() { Text = "Họ Tên", Value = nameof(EmployeeDto.employeeData.HoTen), CellClass = "" },
-            new() { Text = "Ngày sinh", Value = nameof(EmployeeDto.NgaySinhDate) },
-            new() { Text = "Giới tính", Value = nameof(EmployeeDto.employeeData.GioiTinh) },
-            new() { Text = "Số điện thoại", Value = nameof(EmployeeDto.employeeData.SoDt) },
-            new() { Text = "Email", Value = nameof(UserDto.Email) },
+            new() { Text = "Họ Tên",Sortable= false, Value = nameof(EmployeeDto.employeeData.HoTen), CellClass = "" },
+            new() { Text = "Ngày sinh",Sortable= false, Value = nameof(EmployeeDto.NgaySinhDate) },
+            new() { Text = "Giới tính",Sortable= false, Value = nameof(EmployeeDto.employeeData.GioiTinh) },
+            new() { Text = "Số điện thoại",Sortable= false, Value = nameof(EmployeeDto.employeeData.SoDt) },
+            new() { Text = "Email",Sortable= false, Value = nameof(EmployeeDto.employeeData.Email) },
             new() { Text = "ACTIONS", Value = "Action", Sortable = false }
         };
-        private readonly Dictionary<string, string> _roleIconMap = UserServices.GetRoleIconMap();
         private void NavigateToDetails(string id)
         {
             Nav.NavigateTo($"/employee/employeeview/{id}");
@@ -51,10 +50,6 @@ namespace BHD_HRM.Pages.Employee
         private void NavigateToCreate()
         {
             Nav.NavigateTo($"/employee/employeeedit");
-        }
-        private void AddUserData(EmployeeDto empData)
-        {
-            _empPage.EmpDatas.Insert(0, empData);
         }
     }
 }

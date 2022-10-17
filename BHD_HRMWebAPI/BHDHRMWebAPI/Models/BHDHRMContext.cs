@@ -995,9 +995,9 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.TamTru).HasMaxLength(500);
                 entity.Property(e => e.AnhNhanVien).HasMaxLength(150);
                 entity.Property(e => e.Role).HasMaxLength(50);
-
+                entity.Property(e => e.DalaNV).HasMaxLength(20);
+                entity.Property(e => e.CNNganHang).HasMaxLength(500);
                 entity.Property(e => e.TrangThai).HasMaxLength(50);
-
                 entity.Property(e => e.Vitri).HasMaxLength(500);
             });
 

@@ -16,6 +16,7 @@ D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\Blazored.LocalStorage.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\FluentValidation.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\MailKit.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\Masa.Blazor.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\Microsoft.AspNetCore.Http.Connections.Client.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\Microsoft.Azure.SignalR.Common.dll
@@ -28,8 +29,11 @@ D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\Microsoft.Rest.ClientRuntime.dll
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\MimeKit.dll
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\NETCore.MailKit.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\Newtonsoft.Json.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\OneOf.dll
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\BouncyCastle.Crypto.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\SkiaSharp.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\SkiaSharp.Views.Blazor.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
@@ -65,7 +69,3 @@ D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\BHD-HRM.pdb
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\BHD-HRM.genruntimeconfig.cache
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\ref\BHD-HRM.dll
-D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\MailKit.dll
-D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\MimeKit.dll
-D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\NETCore.MailKit.dll
-D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\BouncyCastle.Crypto.dll
