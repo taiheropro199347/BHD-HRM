@@ -49,14 +49,13 @@ builder.Services.AddHttpClient<IBHD_HRMService<CompanyData>, BHD_HRMService<Comp
                    .AddHttpMessageHandler<ValidateHeaderHandler>();
 builder.Services.AddHttpClient<IBHD_HRMService<DepartmentData>, BHD_HRMService<DepartmentData>>()
                    .AddHttpMessageHandler<ValidateHeaderHandler>();
-builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
-builder.Services.AddTransient<IMailService, BHD_HRM.Services.MailService>();
+builder.Services.AddSingleton(builder.Configuration.GetSection("MailSettings").Get<MailSettings>());
+builder.Services.AddScoped<IMailService, MailService>();
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("SeniorEmployee", policy =>
         policy.RequireClaim("IsUserEmployedBefore1990", "true"));
 });
-
 
 var app = builder.Build();
 

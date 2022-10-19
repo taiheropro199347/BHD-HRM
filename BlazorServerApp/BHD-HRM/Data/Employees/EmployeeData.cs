@@ -16,21 +16,24 @@ namespace BHD_HRM.Data.Employee
         public int? IdcongTy { get; set; } = null;
         public string IdphongBan { get; set; }
         public string ChucVu { get; set; }
-        [Required(ErrorMessage = "Bạn phải nhập ngày sinh")]
         public DateTime? NgaySinh { get; set; }
         [Required(ErrorMessage = "Bạn phải chọn giới tính")]
         public string GioiTinh { get; set; }
         public string DanToc { get; set; }
         public string Dkhk { get; set; }
+
+        [Required(ErrorMessage = "Bạn phải nhập địa chỉ")]
         public string ThuongTru { get; set; }
         [Required(ErrorMessage = "Bạn phải nhập số điện thoại")]
         public string SoDt { get; set; }
-        [Required(ErrorMessage = "Bạn phải nhập email")]
         public string Email { get; set; }
+
+        [Required(ErrorMessage = "Bạn phải nhập email")]
         public string Email2 { get; set; }
+        [Required(ErrorMessage = "Bạn phải nhập CMND/CCCD")]
         public string SoCmnd { get; set; }
-        [Required(ErrorMessage = "Bạn phải nhập ngày cấp")]
         public DateTime? NgayCap { get; set; }
+        [Required(ErrorMessage = "Bạn phải nhập nơi cấp")]
         public string NoiCap { get; set; }
         public string TrangThai { get; set; }
         public string LoaiHopDong { get; set; }

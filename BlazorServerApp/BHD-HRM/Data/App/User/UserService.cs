@@ -741,7 +741,7 @@ public class UserServices
 
     public static List<string> GetTrangThaiList() => new List<string>
     {
-         "Chờ Update","Thử việc","Full Time","Part Time","Đã nghỉ việc",
+         "Chờ cập nhật","Thử việc","Full Time","Part Time","Đã nghỉ việc",
     };
 
     public static List<string> GetRoleList() => new List<string>

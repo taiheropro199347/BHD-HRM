@@ -5,10 +5,9 @@ namespace BHD_HRM.Data.Employees
 {
     public class EmployeeDto
     {
+        [EnumerableValidation]
         public EmployeeData employeeData { get; set; } = new EmployeeData();
-        [Required(ErrorMessage = "Bạn phải nhập ngày cấp")]
         public DateOnly? NgayCapDate { get; set; }= null;
-        [Required(ErrorMessage = "Bạn phải nhập ngày sinh")]
         public DateOnly? NgaySinhDate { get; set; } = null;
         public DateOnly? NgayNghiViecDate { get; set; } = null;
         public DateOnly? NgayVaoCongTyDate { get; set; } = null;

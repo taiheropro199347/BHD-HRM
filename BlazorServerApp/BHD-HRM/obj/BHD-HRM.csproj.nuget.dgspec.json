@@ -57,9 +57,9 @@
               "target": "Package",
               "version": "[1.18.3, )"
             },
-            "NETCore.MailKit": {
+            "MixERP.Net.VCards": {
               "target": "Package",
-              "version": "[2.1.0, )"
+              "version": "[1.0.7, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

@@ -9,12 +9,16 @@
 @using Microsoft.AspNetCore.Hosting
 @using System.ComponentModel.DataAnnotations
 @using FluentValidation
+@using MixERP.Net.VCards
+@using MixERP.Net.VCards.Models
+@using MixERP.Net.VCards.Serializer
+@using MixERP.Net.VCards.Types
+@using System.Text
 @inject NavigationManager NavManager
 @inject IWebHostEnvironment Environment
 @inject IBHD_HRMService<EmployeeData> BHD_HRMService
 @inject IBHD_HRMService<CompanyData> BHD_HRMComapyService
-@inject IBHD_HRMService<DepartmentData> BHD_HRMDepartmentService
-@inject IMailService MailService 
+@inject IBHD_HRMService<DepartmentData> BHD_HRMDepartmentService 
 @inject IJSRuntime JSRuntime
 <style>
     .file-input-zone {
@@ -167,8 +171,19 @@
 							<MCol Md=4 Sm=12>
 								<MTextField @bind-Value="UserData.employeeData.SoDt" Label="Số điện thoại" Color="primary" HideDetails="@("auto")" Outlined />
 							</MCol>
+							<MCol Md=4 Sm=12>								
+								<MTextField @bind-Value="UserData.employeeData.ThuongTru" Label="Địa chỉ thường trú" Color="primary" HideDetails="@("auto")" Outlined />
+							</MCol>
+						</MRow>
+						<MRow Class="mt-3">
 							<MCol Md=4 Sm=12>
-								<MTextField @bind-Value="UserData.employeeData.SoTaiKhoanNh" Label="Số TK VietCapital" Color="primary" HideDetails="@("auto")" Outlined />
+								<MTextField @bind-Value="UserData.employeeData.TenNganHang" Color="primary" Label="Tên ngân hàng" HideDetails="@("auto")" Outlined />
+							</MCol>
+							<MCol Md=4 Sm=12>
+								<MTextField @bind-Value="UserData.employeeData.CNNganHang" Label="Chi nhánh" Color="primary" HideDetails="@("auto")" Outlined />
+							</MCol>
+							<MCol Md=4 Sm=12>								
+								<MTextField @bind-Value="UserData.employeeData.SoTaiKhoanNh" Label="Số TK ngân hàng" Color="primary" HideDetails="@("auto")" Outlined />
 							</MCol>
 						</MRow>
 
@@ -204,36 +219,8 @@
 
 							</MCol>
 						</MRow>
-
+						
 						<div class="mt-12">
-							<MIcon Size=20 Color="sample-green" Class="mt-n1">mdi-map-marker-outline</MIcon>
-							<span class="text-h6">Địa chỉ</span>
-							<MRow Class="mt-3">
-								<MCol Md=4 Sm=12>
-									<MTextField @bind-Value="UserData.employeeData.ThuongTru" Label="Địa chỉ thường trú" Color="primary" HideDetails="@("auto")" Outlined />
-								</MCol>
-								<MCol Md=4 Sm=12>
-									<MTextField @bind-Value="UserData.employeeData.TamTru" Label="Địa chỉ tạm trú" Color="primary" HideDetails="@("auto")" Outlined />
-								</MCol>
-								<MCol Md=4 Sm=12>
-									<MTextField @bind-Value="UserData.employeeData.SoBhxh" Label="Mã số BHXH" Color="primary" HideDetails="@("auto")" Outlined />
-								</MCol>
-							</MRow>
-							<MRow Class="mt-3">
-								<MCol Md=4 Sm=12>
-									<MTextField @bind-Value="UserData.employeeData.NgKhanCap" Label="Tên Người liên hệ khẩn cấp" Color="primary" HideDetails="@("auto")" Outlined />
-								</MCol>
-								<MCol Md=4 Sm=12>
-									<MTextField @bind-Value="UserData.employeeData.SdtKhanCap" Label="SDT khẩn cấp" Color="primary" HideDetails="@("auto")" Outlined />
-								</MCol>
-								<MCol Md=4 Sm=12>
-									<MTextField @bind-Value="UserData.employeeData.MaSoThue" Label="Mã số thuế" Color="primary" HideDetails="@("auto")" Outlined />
-								</MCol>
-							</MRow>
-						</div>
-						<div class="mt-12">
-							<MIcon Size=20 Color="sample-green" Class="mt-n1">mdi-map-marker-outline</MIcon>
-							<span class="text-h6">Công ty</span>
 							<MRow Class="mt-3">
 								<MCol Md=4 Sm=12>
 									<MMenu CloseOnContentClick="false" NudgeRight="40" Transition="scale-transition" OffsetY MinWidth="@("auto")" @bind-Value="_joinDateMenu">
@@ -303,7 +290,7 @@
 								</MRadioGroup>
 								</MCol>
 								<MCol Sm=12 Md=4>
-									<MSelect @bind-Value="UserData.employeeData.Role"
+									@*<MSelect @bind-Value="UserData.employeeData.Role"
 											 Color="primary"
 											 HideDetails="@("auto")"
 											 Clearable
@@ -312,12 +299,23 @@
 											 ItemText="u => u"
 											 ItemValue="u => u"
 											 Label="Nhóm quyền">
-									</MSelect>
+									</MSelect>*@
+									<MTextField @bind-Value="UserData.employeeData.TamTru" Label="Địa chỉ tạm trú" Color="primary" HideDetails="@("auto")" Outlined />
 								</MCol>
 								<MCol Sm=12 Md=4>
+									<MTextField @bind-Value="UserData.employeeData.SoBhxh" Label="Mã số BHXH" Color="primary" HideDetails="@("auto")" Outlined />
+								</MCol>
+							</MRow>
+							<MRow Class="mt-3">
+								<MCol Md=4 Sm=12>
+									<MTextField @bind-Value="UserData.employeeData.NgKhanCap" Label="Tên Người liên hệ khẩn cấp" Color="primary" HideDetails="@("auto")" Outlined />
+								</MCol>
+								<MCol Md=4 Sm=12>
+									<MTextField @bind-Value="UserData.employeeData.SdtKhanCap" Label="SDT khẩn cấp" Color="primary" HideDetails="@("auto")" Outlined />
+								</MCol>
+								<MCol Md=4 Sm=12>
 									<div class="mt-2 d-flex flex-row-reverse">
 							<MButton Type="submit" MinWidth=80 Height=40 Color="primary" Class="ml-10 rounded-pill"> Lưu thông tin </MButton>
-							@*<MButton Type="submit" MinWidth=80 OnClick="SentMailClick" Height=40 Color="primary" Class="ml-6 rounded-pill"> Gửi mail </MButton>*@
 						</div>
 								</MCol>
 							</MRow>
@@ -425,8 +423,8 @@
 					_userData.DepartmentString = departmnet.TenPhong;
 				}
 			}
-			_userData.NgaySinhDate = DateOnly.FromDateTime((DateTime)getemployee.NgaySinh);
-			_userData.NgayCapDate = DateOnly.FromDateTime(getemployee.NgayCap == null ? DateTime.Now : (DateTime)getemployee.NgayCap);
+			_userData.NgaySinhDate = getemployee.NgaySinh != null ?DateOnly.FromDateTime((DateTime)getemployee.NgaySinh):null;
+			_userData.NgayCapDate = getemployee.NgayCap != null ?DateOnly.FromDateTime((DateTime)getemployee.NgayCap):null;
 			_userData.NgayVaoCongTyDate = getemployee.NgayVaoCongTy != null ? DateOnly.FromDateTime((DateTime)getemployee.NgayVaoCongTy) : null;
 			_userData.NgayNghiViecDate = getemployee.Ngaynghiviec != null ? DateOnly.FromDateTime((DateTime)getemployee.Ngaynghiviec) : null;
 			_userData.NgayKyHDLDDate = getemployee.NgayKyHDLD != null ? DateOnly.FromDateTime((DateTime)getemployee.NgayKyHDLD) : null;
@@ -435,34 +433,110 @@
 	}
 	private async Task UploadFile(InputFileChangeEventArgs e)
 	{
-		var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/avatar", e.File.Name);
+		var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/avatar/", e.File.Name);
 
 		await using FileStream fs = new(path, FileMode.Create);
 		await e.File.OpenReadStream().CopyToAsync(fs);
-		_userData.employeeData.AnhNhanVien = Path.Combine("http://localhost:5000/", "usersupload/avatar", e.File.Name);
+		_userData.employeeData.AnhNhanVien = Path.Combine("/", "usersupload/avatar/", e.File.Name);
 	}
 	private async Task SaveEmployee()
 	{
 		if (Id == null)
 		{
 			_userData.employeeData.TrangThai = "Chờ Update";
-			_userData.employeeData.CardNumber = DateTime.Now.ToString("MMddyyyyHHmmssss.fffffffK");
-			_userData.employeeData.NgaySinh = ((DateOnly)_userData.NgaySinhDate).ToDateTime(TimeOnly.Parse("00:00 AM"));
-			_userData.employeeData.NgayCap = ((DateOnly)_userData.NgayCapDate).ToDateTime(TimeOnly.Parse("00:00 AM"));
+			_userData.employeeData.CardNumber = DateTime.Now.ToString("MMddyyyyHHmmssss");
+			_userData.employeeData.NgaySinh = _userData.NgaySinhDate != null ?((DateOnly)_userData.NgaySinhDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
+			_userData.employeeData.NgayCap = _userData.NgayCapDate != null ?((DateOnly)_userData.NgayCapDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
 			_userData.employeeData.LanCuoiChinhSua = DateTime.Now.ToString("dd-MM-yyyy HH:mm");
 			await BHD_HRMService.SaveAsync("TblNhanViens", _userData.employeeData);
 		}
 		else
 		{
-			_userData.employeeData.NgaySinh = ((DateOnly)_userData.NgaySinhDate).ToDateTime(TimeOnly.Parse("00:00 AM"));
-			_userData.employeeData.NgayCap = ((DateOnly)_userData.NgayCapDate).ToDateTime(TimeOnly.Parse("00:00 AM"));
+			_userData.employeeData.NgaySinh = _userData.NgaySinhDate != null ?((DateOnly)_userData.NgaySinhDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
+			_userData.employeeData.NgayCap = _userData.NgayCapDate != null ?((DateOnly)_userData.NgayCapDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
 			_userData.employeeData.NgayVaoCongTy = _userData.NgayVaoCongTyDate != null ? ((DateOnly)_userData.NgayVaoCongTyDate).ToDateTime(TimeOnly.Parse("00:00 AM")) : null;
 			_userData.employeeData.NgayKyHDLD = _userData.NgayKyHDLDDate != null ? ((DateOnly)_userData.NgayKyHDLDDate).ToDateTime(TimeOnly.Parse("00:00 AM")) : null;
 			_userData.employeeData.Ngaynghiviec = _userData.NgayNghiViecDate != null ? ((DateOnly)_userData.NgayNghiViecDate).ToDateTime(TimeOnly.Parse("00:00 AM")) : null;
 			_userData.employeeData.LanCuoiChinhSua = DateTime.Now.ToString("dd-MM-yyyy HH:mm");
 			await BHD_HRMService.UpdateAsync("TblNhanViens/", _userData.employeeData.CardNumber, _userData.employeeData);
 		}
-
+		string fullName = _userData.employeeData.HoTen;
+		// họ
+		String ho = fullName.Substring(0, fullName.IndexOf(' '));
+		// tên đệm
+		String td = fullName.Substring(fullName.IndexOf(' ') + 1, fullName.LastIndexOf(' ') - ho.Length - 1);
+		// tên
+		String ten = fullName.Substring(fullName.LastIndexOf(' ') + 1); 
+		var vcard = new VCard
+			{
+				Version = VCardVersion.V3,
+				FirstName = Utility.RemoveSign4VietnameseString(ho).ToUpper()+" "+Utility.RemoveSign4VietnameseString(td).ToUpper(),
+				LastName = Utility.RemoveSign4VietnameseString(ten).ToUpper(),
+				FormattedName = Utility.RemoveSign4VietnameseString(_userData.employeeData.HoTen).ToUpper(),
+				Organization = "BHD STAR CINEPLEX",
+				Addresses = new List<Address>
+                    {
+                        new Address
+                        {
+                            Type = AddressType.Work,
+                            PoBox = "",
+                            ExtendedAddress = "",
+                            Street = "159 Xa Lo Ha Noi",
+                            Locality = "Thanh Pho Ho Chi Minh",
+                            Region = "Quan 2",
+                            PostalCode = "70000",
+                            Country = "Viet Nam",
+                            Label = "",
+                            Preference = 1,
+                            TimeZone = TimeZoneInfo.Local
+                        }
+                    },
+				Telephones = new List<Telephone>
+                    {
+                        new Telephone
+                        {
+                            Type = TelephoneType.Preferred,
+                            Number = ""
+                        },
+                        new Telephone
+                        {
+                            Type = TelephoneType.Home,
+                            Number = ""
+                        },
+                        new Telephone
+                        {
+                            Type = TelephoneType.Work,
+                            Number = _userData.employeeData.SoDt
+                        },
+                        new Telephone
+                        {
+                            Type = TelephoneType.Car,
+                            Number = ""
+                        },
+                        new Telephone
+                        {
+                            Type = TelephoneType.Fax,
+                            Number = ""
+                        },
+                        new Telephone
+                        {
+                            Type = TelephoneType.Cell,
+                            Number = _userData.employeeData.SoDt
+                        }
+                    },
+					Emails = new List<Email>
+                    {
+                        new Email
+                        {
+                            Type = EmailType.Smtp,
+                            EmailAddress = _userData.employeeData.Email
+                        },
+                    },
+					Url = new Uri("https://bhdstar.vn")
+		};
+		string serialized = vcard.Serialize();
+		var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/VCard/", _userData.employeeData.CardNumber+"-"+_userData.employeeData.HoTen+".vcf");
+		File.WriteAllText(path, serialized);
 		dialog = true;
 	}
 	protected void SetDepartmentDdl()
@@ -473,16 +547,5 @@
 	{
 		dialog = false;
 		NavManager.NavigateTo("/employee/employees");
-	}
-	public async Task SentMailClick()
-	{
-
-			MailRequest content = new MailRequest {
-            ToEmail = "nguyen_tai147@yahoo.com",
-            Subject = "Kiểm tra thử",
-            Body = "<p><strong>Hello mấy cưng</strong></p>"
-        };
-
-        await MailService.SendEmailAsync(content);
 	}
 }

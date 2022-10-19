@@ -5,8 +5,10 @@
 @inject MasaBlazor MasaBlazor
 @inject GlobalConfig GlobalConfig
 @inject NavigationManager Nav
+@inject IWebHostEnvironment Environment
 @inject IBHD_HRMService<EmployeeData> BHD_HRMService
 @inject IBHD_HRMService<CompanyData> BHD_HRMComapyService
+@inject IMailService MailService
 
 @if (@_empPage == null)
 {
@@ -18,7 +20,7 @@ else
     <MCardText Class="pa-6">
         <h6>Lọc thông tin</h6>
 		 <MRow Class="mt-3">
-			  <MCol Sm=12 Md=4>
+			  <MCol Sm=12 Md=6>
                 <MSelect @bind-Value="_empPage.CompanyID"
                          Color="primary"
                          HideDetails="@("auto")"
@@ -30,19 +32,7 @@ else
                          Label="Phòng ban">
                 </MSelect>
             </MCol>
-            <MCol Sm=12 Md=4>
-                <MSelect @bind-Value="_empPage.Role"
-                         Color="primary"
-                         HideDetails="@("auto")"
-                         Clearable
-                         Outlined
-                         Items="@UserServices.GetRoleList()"
-                         ItemText="u => u"
-                         ItemValue="u => u"
-                         Label="Role">
-                </MSelect>
-            </MCol>
-            <MCol Sm=12 Md=4>
+            <MCol Sm=12 Md=6>
                 <MSelect @bind-Value="_empPage.Status"
                          Color="primary"
                          HideDetails="@("auto")"
@@ -145,6 +135,10 @@ else
                                 <MListItem OnClick="()=>NavigateToEdit(context.Item.employeeData.Id.ToString())">
                                     <MIcon Small>far fa-edit</MIcon>
                                     <MListItemTitle Class="ml-2"> Edit </MListItemTitle>
+                                </MListItem>
+								<MListItem OnClick="()=>SentMailClick(context.Item.employeeData.Id.ToString())">
+                                    <MIcon Small>far fa-envelope</MIcon>
+                                    <MListItemTitle Class="ml-2"> Sent VCARD </MListItemTitle>
                                 </MListItem>
                                 @*<MListItem OnClick="()=>_empPage.EmpDatas.RemoveAt(_empPage.EmpDatas.FindIndex(u=>u.employeeData.Id==context.Item.employeeData.Id))">
                                     <MIcon Small>far fa-trash-alt</MIcon>

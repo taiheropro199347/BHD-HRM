@@ -110,7 +110,4 @@ D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\Sy
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\MailKit.dll
-D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\MimeKit.dll
-D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\NETCore.MailKit.dll
-D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\MixERP.Net.VCards.dll

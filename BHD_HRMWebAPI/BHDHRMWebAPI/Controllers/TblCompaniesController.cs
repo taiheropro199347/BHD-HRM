@@ -24,7 +24,7 @@ namespace BHDHRMWebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TblCongTy>>> GetTblCongTy()
         {
-            return await _context.TblCongTy.ToListAsync();
+            return await _context.TblCongTy.Where(t=>t.HienThi==true).ToListAsync();
         }
 
         // GET: api/TblCompanies/5

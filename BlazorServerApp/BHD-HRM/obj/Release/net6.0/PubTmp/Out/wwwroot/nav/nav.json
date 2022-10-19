@@ -1,0 +1,49 @@
+[
+  {
+    "Id": 1,
+    "Title": "Dashboard",
+    "Icon": "mdi-trending-up",
+    "Href": "dashboard/ecommerce"
+  },
+  {
+    "Id": 8,
+    "Title": "Nhân viên mới",
+    "Icon": "mdi-calendar-check-outline",
+    "Href": "employee/newcomer",
+    "Target": "Self"
+  },
+  {
+    "Id": 9,
+    "Title": "Sinh nhật nhân viên",
+    "Icon": "mdi-cake-variant",
+    "Href": "employee/BirthdayEmployees",
+    "Target": "Self"
+  },
+  {
+    "Id": 10,
+    "Title": "Nhân viên",
+    "Icon": "mdi-account-outline",
+    "Children": [
+      {
+        "Id": 11,
+        "Title": "List",
+        "Icon": "mdi-circle",
+        "Href": "employee/employees"
+      },
+      {
+        "Id": 12,    
+        "Title": "View",
+        "Icon": "mdi-circle",
+        "Href": "employee/employeeview"
+          
+      },
+      {
+        "Id": 13,       
+        "Title": "Edit",
+        "Icon": "mdi-circle",
+        "Href": "employee/employeeedit"
+      }
+    ]
+  }
+  
+]

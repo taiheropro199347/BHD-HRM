@@ -101,6 +101,20 @@ namespace BHDHRMWebAPI.Controllers
             return nhanvien;
         }
 
+        [HttpGet("GetAvailNhanVien")]
+        public async Task<ActionResult<IEnumerable<TblNhanVien>>> GetAvailNhanVien()
+
+        {
+            var nhanvien = await _context.TblNhanVien.Where(t => t.TrangThai!="Đã nghỉ việc"&&t.TrangThai!="Chờ cập nhật").ToListAsync();
+
+            if (nhanvien == null)
+            {
+                return NotFound();
+            }
+
+            return nhanvien;
+        }
+
         [HttpGet("GetNhanVienNew")]
         public async Task<ActionResult<IEnumerable<TblNhanVien>>> GetNhanVienNew()
 

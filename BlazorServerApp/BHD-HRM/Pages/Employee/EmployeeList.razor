@@ -10,14 +10,14 @@
 @inject IBHD_HRMService<CompanyData> BHD_HRMComapyService
 @inject IBHD_HRMService<DepartmentData> BHD_HRMDepartmentService
 <MRow>
-    <MCol Md=3 Sm=12>
+    <MCol Md=4 Sm=12>
         <MCard Height=146>
            <MCard Height=146>
             <MCardText>
                 <MRow Class="max-height" NoGutters>
                     <MCol>
-                        <span class="text-btn neutral-lighten-4--text">Total Employee</span>
-                        <h5 class="mt-1">$682.5k</h5>
+                        <span class="text-btn neutral-lighten-4--text">Tổng số nhân viên</span>
+                        <h5 class="mt-1">@_employeeDto.Count()</h5>
                     </MCol>
                     <MCol Class="block-center">
                         <MECharts Height=100 Width="@("100%")" Class="mt-1" @key="GetEchartKey()" Option=_profitChart></MECharts>
@@ -27,51 +27,38 @@
         </MCard>
         </MCard>
     </MCol>
-    <MCol Md=3 Sm=12>
+    <MCol Md=4 Sm=12>
         <MCard Height=146>
             <MCard Height=146>
             <MCardText>
                 <MRow Class="max-height" NoGutters>
                     <MCol>
-                        <span class="text-btn neutral-lighten-4--text">New Employee</span>
-                        <h5 class="mt-1">$682.5k</h5>
+                        <span class="text-btn neutral-lighten-4--text">Nhân viên chính thức</span>
+                        <h5 class="mt-1">@(_chart1.Count()==0?"0":_chart1.Sum())</h5>
                     </MCol>
                     <MCol Class="block-center">
-                        <MECharts Height=100 Width="@("100%")" Class="mt-1" @key="GetEchartKey()" Option=_profitChart></MECharts>
+                        <MECharts Height=100 Width="@("100%")" Class="mt-1" @key="GetEchartKey()" Option=_profitChart1></MECharts>
                     </MCol>
                 </MRow>
             </MCardText>
         </MCard>
         </MCard>
     </MCol>
-    <MCol Md=3 Sm=12>
+	 <MCol Md=4 Sm=12>
         <MCard Height=146>
+            <MCard Height=146>
             <MCardText>
                 <MRow Class="max-height" NoGutters>
                     <MCol>
-                        <span class="text-btn neutral-lighten-4--text">FullTime Employee</span>
-                        <h5 class="mt-1">$682.5k</h5>
+                        <span class="text-btn neutral-lighten-4--text">Sinh nhật nhân viên</span>
+                        <h5 class="mt-1">@(_chart2.Count()<=(DateTime.Now.Month-1)?"0":_chart2.Skip(DateTime.Now.Month-1).First())</h5>
                     </MCol>
                     <MCol Class="block-center">
-                        <MECharts Height=100 Width="@("100%")" Class="mt-1" @key="GetEchartKey()" Option=_profitChart></MECharts>
+                        <MECharts Height=100 Width="@("100%")" Class="mt-1" @key="GetEchartKey()" Option=_profitChart2></MECharts>
                     </MCol>
                 </MRow>
             </MCardText>
         </MCard>
-    </MCol>
-    <MCol Md=3 Sm=12>
-        <MCard Height=146>
-            <MCardText>
-                <MRow Class="max-height" NoGutters>
-                    <MCol>
-                        <span class="text-btn neutral-lighten-4--text">PartTime Employee</span>
-                        <h5 class="mt-1">$682.5k</h5>
-                    </MCol>
-                    <MCol Class="block-center">
-                        <MECharts Height=100 Width="@("100%")" Class="mt-1" @key="GetEchartKey()" Option=_profitChart></MECharts>
-                    </MCol>
-                </MRow>
-            </MCardText>
         </MCard>
     </MCol>
 </MRow>
@@ -87,21 +74,23 @@
                     HideDetails="true"
                     Clearable
                     ClearIcon="mdi-close-circle-outline"></MTextField>
-        <MCheckbox @bind-Value="_caseSensitive"
-                   Dark
-                   HideDetails="true"
-                   Label="Case sensitive search"></MCheckbox>
     </MSheet>
     <MCardText>
-        <MTreeview Items="_items"
+        <MTreeview 
+            Selectable
+           OpenAll
+           Items="_items"
+			       TItem="Data"
+			       TKey="int"
                    Search="@_search"
                    Filter="Filter"
                    ItemKey="r=>r.Id"
                    ItemText="r=>r.Name"
                    ItemChildren="r=>r.Children"
-                   @bind-Open="_open"
-                    Activatable
-                    OpenOnClick>
+                   Activatable
+                   OpenOnClick
+				   SelectionType=SelectionType.Independent
+                   OnInput="val=>UpdateGrid(val)">
             <PrependContent>
                 @if (context.Item.Children != null && context.Item.Children.Count > 0)
                 {
@@ -183,6 +172,9 @@
                     break;
                 case nameof(EmployeeDto.employeeData.Email):
 				<span>@context.Item.employeeData.Email</span>
+                    break;
+					 case nameof(EmployeeDto.employeeData.TrangThai):
+				<span>@context.Item.employeeData.TrangThai</span>
                     break;
                 default:
                     @context.Value

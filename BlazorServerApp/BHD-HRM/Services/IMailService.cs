@@ -4,7 +4,7 @@ namespace BHD_HRM.Services
 {
     public interface IMailService
     {
-        Task SendEmailAsync(MailRequest mailRequest);
+        Task SendEmailAsync(string ToEmail, string Subject, string HTMLBody, string attachmentFilename);
 
     }
 }

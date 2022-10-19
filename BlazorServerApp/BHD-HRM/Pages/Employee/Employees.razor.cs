@@ -46,7 +46,15 @@ namespace BHD_HRM.Pages.Employee
         {
             Nav.NavigateTo($"/employee/employeeedit/{id}");
         }
-
+        public async Task SentMailClick(string id)
+        { 
+            int _id = int.Parse(id); 
+            var _emp = _employeeDto.Where(t => t.employeeData.Id == _id).FirstOrDefault();
+            var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/VCard/", _emp.employeeData.CardNumber+"-"+_emp.employeeData.HoTen+".vcf");
+            string _content = "Dear " + _emp.employeeData.HoTen +"<br/>"+
+                             "Phòng HCNS BHD Star gửi bạn file VCard";
+            await MailService.SendEmailAsync(_emp.employeeData.Email, "Bhd Star gửi thông tin VCard", _content,path);
+        }
         private void NavigateToCreate()
         {
             Nav.NavigateTo($"/employee/employeeedit");

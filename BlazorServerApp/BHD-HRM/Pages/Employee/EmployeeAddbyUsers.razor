@@ -13,6 +13,7 @@
 @inject IBHD_HRMService<EmployeeData> BHD_HRMService
 @inject IJSRuntime JSRuntime
 
+
 <style>
     .file-input-zone {
         display: flex;
@@ -234,18 +235,18 @@
 	}
 	private async Task UploadFile(InputFileChangeEventArgs e)
 	{
-		var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/avatar", e.File.Name);
+		var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/avatar/", e.File.Name);
 
 		await using FileStream fs = new(path, FileMode.Create);
 		await e.File.OpenReadStream().CopyToAsync(fs);
-		_userData.employeeData.AnhNhanVien = Path.Combine("http://localhost:5000/", "usersupload/avatar", e.File.Name);
+		_userData.employeeData.AnhNhanVien = Path.Combine("/", "usersupload/avatar/", e.File.Name);
 	}
 	private async Task SaveEmployee()
 	{
-		_userData.employeeData.TrangThai="Chờ Update";
-		_userData.employeeData.CardNumber = DateTime.Now.ToString("MMddyyyyHHmmssss.fffffffK");
-		_userData.employeeData.NgaySinh = ((DateOnly)_userData.NgaySinhDate).ToDateTime(TimeOnly.Parse("00:00 AM"));
-		_userData.employeeData.NgayCap = ((DateOnly)_userData.NgayCapDate).ToDateTime(TimeOnly.Parse("00:00 AM"));
+		_userData.employeeData.TrangThai="Chờ cập nhật";
+		_userData.employeeData.CardNumber = DateTime.Now.ToString("MMddyyyyHHmmssss");
+		_userData.employeeData.NgaySinh = _userData.NgaySinhDate != null ?((DateOnly)_userData.NgaySinhDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
+		_userData.employeeData.NgayCap = _userData.NgayCapDate != null ?((DateOnly)_userData.NgayCapDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
 		_userData.employeeData.LanCuoiChinhSua = DateTime.Now.ToString("dd-MM-yyyy HH:mm");
 		await BHD_HRMService.SaveAsync("TblNhanViens", _userData.employeeData);
 		dialog = true;
