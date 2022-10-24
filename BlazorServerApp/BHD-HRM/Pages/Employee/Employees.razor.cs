@@ -2,29 +2,35 @@
 using BHD_HRM.Data.Employees;
 using BHD_HRM.Pages.Employee.ViewModel;
 using BHD_HRM.Services;
+using Microsoft.AspNetCore.Components.Authorization;
 using System.Diagnostics.CodeAnalysis;
 
 namespace BHD_HRM.Pages.Employee
 {
     public partial class Employees: ProCompontentBase
     {
+        [CascadingParameter]
+        private Task<AuthenticationState> authenticationStateTask { get; set; }
         public bool _visible;
         public EmpPage? _empPage=new EmpPage();
         public List<EmployeeDto>? _employeeDto=new List<EmployeeDto>();
         public List<CompanyData> _companyData{ get; set; }
         protected override async Task OnInitializedAsync()
         {
-            var getpendingemp = await BHD_HRMService.GetAllAsync("TblNhanViens");
-            foreach(var item in getpendingemp)
+            var user = (await authenticationStateTask).User;
             {
-                EmployeeDto employeeDto = new EmployeeDto();
-                employeeDto.employeeData = item;
-                employeeDto.NgaySinhDate = DateOnly.FromDateTime((DateTime)item.NgaySinh);
-                employeeDto.NgayCapDate = DateOnly.FromDateTime(item.NgayCap==null?DateTime.Now:(DateTime)item.NgayCap);
-                _employeeDto.Add(employeeDto);
-            }
-            _companyData=await BHD_HRMComapyService.GetAllAsync("TblCompanies");
-            _empPage.EmpDatas = _employeeDto;
+                var getpendingemp = await BHD_HRMService.GetAllAsync("TblNhanViens");
+                foreach (var item in getpendingemp)
+                {
+                    EmployeeDto employeeDto = new EmployeeDto();
+                    employeeDto.employeeData = item;
+                    employeeDto.NgaySinhDate = DateOnly.FromDateTime((DateTime)item.NgaySinh);
+                    employeeDto.NgayCapDate = DateOnly.FromDateTime(item.NgayCap == null ? DateTime.Now : (DateTime)item.NgayCap);
+                    _employeeDto.Add(employeeDto);
+                }
+                _companyData = await BHD_HRMComapyService.GetAllAsync("TblCompanies");
+                _empPage.EmpDatas = _employeeDto;
+            }            
 
         }
         private List<int> _pageSizes = new() { 10, 25, 50, 100 };

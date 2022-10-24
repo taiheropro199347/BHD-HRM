@@ -8,6 +8,7 @@
 @inject IWebHostEnvironment Environment
 @inject IBHD_HRMService<EmployeeData> BHD_HRMService
 @inject IBHD_HRMService<CompanyData> BHD_HRMComapyService
+@inject IAuthorizationService authorizationService
 @inject IMailService MailService
 
 @if (@_empPage == null)

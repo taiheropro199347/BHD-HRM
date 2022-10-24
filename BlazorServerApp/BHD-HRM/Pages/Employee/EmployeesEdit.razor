@@ -314,17 +314,16 @@
 									<MTextField @bind-Value="UserData.employeeData.SdtKhanCap" Label="SDT khẩn cấp" Color="primary" HideDetails="@("auto")" Outlined />
 								</MCol>
 								<MCol Md=4 Sm=12>
-									<div class="mt-2 d-flex flex-row-reverse">
-							<MButton Type="submit" MinWidth=80 Height=40 Color="primary" Class="ml-10 rounded-pill"> Lưu thông tin </MButton>
-						</div>
+									<MTextField @bind-Value="UserData.employeeData.Email2" Color="primary" Label="Email Cá nhân" HideDetails="@("auto")" Outlined />
 								</MCol>
 							</MRow>
 						</div>
-						@*<div class="mt-10 d-flex">
-							<MSpacer></MSpacer>
-							<MButton Type="submit" MinWidth=80 Height=40 Color="primary" Class="ml-6 rounded-pill"> Lưu thông tin </MButton>
-							<MButton Type="submit" MinWidth=80 OnClick="SentMailClick" Height=40 Color="primary" Class="ml-6 rounded-pill"> Gửi mail </MButton>
-						</div>*@
+						<div class="mt-10 d-flex">
+							<MSpacer></MSpacer>							
+							<MButton Type="submit" MinWidth=80 Height=40 Color="primary" Class="ml-10 rounded-pill"> Lưu thông tin </MButton>
+							@*<MButton Type="submit" MinWidth=80 Height=40 Color="primary" Class="ml-6 rounded-pill"> Lưu thông tin </MButton>
+							<MButton Type="submit" MinWidth=80 OnClick="SentMailClick" Height=40 Color="primary" Class="ml-6 rounded-pill"> Gửi mail </MButton>*@
+						</div>
 					</MContainer>
 				</MForm>
 				<MDialog @bind-Value="dialog" Persistent
@@ -461,16 +460,21 @@
 			await BHD_HRMService.UpdateAsync("TblNhanViens/", _userData.employeeData.CardNumber, _userData.employeeData);
 		}
 		string fullName = _userData.employeeData.HoTen;
-		// họ
-		String ho = fullName.Substring(0, fullName.IndexOf(' '));
-		// tên đệm
-		String td = fullName.Substring(fullName.IndexOf(' ') + 1, fullName.LastIndexOf(' ') - ho.Length - 1);
-		// tên
-		String ten = fullName.Substring(fullName.LastIndexOf(' ') + 1); 
+		
+		string[] arrayStr=fullName.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries); 
+
+		string ho=arrayStr[0];
+		string ten=arrayStr[arrayStr.Length-1];
+
+		StringBuilder midleName=new StringBuilder();
+		//Lấy tên đệm
+		for(int i=1;i<arrayStr.Length-1;i++){
+			midleName.Append(arrayStr[i] + " ");
+		}
 		var vcard = new VCard
 			{
 				Version = VCardVersion.V3,
-				FirstName = Utility.RemoveSign4VietnameseString(ho).ToUpper()+" "+Utility.RemoveSign4VietnameseString(td).ToUpper(),
+				FirstName = Utility.RemoveSign4VietnameseString(ho).ToUpper()+" "+Utility.RemoveSign4VietnameseString(midleName.ToString()).ToUpper(),
 				LastName = Utility.RemoveSign4VietnameseString(ten).ToUpper(),
 				FormattedName = Utility.RemoveSign4VietnameseString(_userData.employeeData.HoTen).ToUpper(),
 				Organization = "BHD STAR CINEPLEX",

@@ -51,26 +51,15 @@ builder.Services.AddHttpClient<IBHD_HRMService<DepartmentData>, BHD_HRMService<D
                    .AddHttpMessageHandler<ValidateHeaderHandler>();
 builder.Services.AddSingleton(builder.Configuration.GetSection("MailSettings").Get<MailSettings>());
 builder.Services.AddScoped<IMailService, MailService>();
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("SeniorEmployee", policy =>
-        policy.RequireClaim("IsUserEmployedBefore1990", "true"));
-});
+builder.Services.AddOptions();
+builder.Services.AddAuthorizationCore();
+//builder.Services.AddAuthorization(options =>
+//{
+//    options.AddPolicy("SeniorEmployee", policy =>
+//        policy.RequireClaim("IsUserEmployedBefore1990", "true"));
+//});
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-     app.UseDeveloperExceptionPage();
-}
-else
-{
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-
 
 app.UseHttpsRedirection();
 
