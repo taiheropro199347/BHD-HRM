@@ -82,7 +82,8 @@ namespace BHD_HRM.Data
             { 
                 claimsIdentity = new ClaimsIdentity(new[]
                                 {
-                                    new Claim(ClaimTypes.Name, user.userAd)
+                                    new Claim(ClaimTypes.Name, user.userAd),
+                                    new Claim(ClaimTypes.Role, user.idGroup.ToString()),
                                 }, "apiauth_type");
             }
 

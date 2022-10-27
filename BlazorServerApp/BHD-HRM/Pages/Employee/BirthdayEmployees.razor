@@ -4,6 +4,7 @@
 @inject IBHD_HRMService<EmployeeData> BHD_HRMService
 @inject IBHD_HRMService<CompanyData> BHD_HRMComapyService
 @inject IBHD_HRMService<DepartmentData> BHD_HRMDepartmentService
+@inject BlazorSpinner.SpinnerService _spinnerService
 @if (@_employeeDto == null)
 {
 }
@@ -64,7 +65,11 @@ else
 
 	protected override async Task OnInitializedAsync()
 	{
-		System.Threading.Thread.Sleep(2000);
+		_spinnerService.Show();
+
+        await Task.Delay(3000);
+
+        _spinnerService.Hide();
 		var getpendingemp = await BHD_HRMService.GetAllAsync("TblNhanViens/GetBirthdayNhanVien");
 		foreach (var item in getpendingemp)
 		{

@@ -3,6 +3,8 @@
 @inject GlobalConfig GlobalConfig
 @implements IDisposable
 @inject IAuthorizationService authorizationService
+@inject BlazorSpinner.SpinnerService _spinnerService
+<Spinner></Spinner>
 <MApp>
     <MAppBar Elevation=0 App MaxHeight=60 Class="@($"{(GlobalConfig.PageMode == PageModes.PageTab ?"mx-6":"mx-6 rounded-b-4")}")">
         <Favorite />
@@ -42,10 +44,9 @@
     private Task<AuthenticationState> authenticationStateTask { get; set; }
 
     private bool _showSetting;
-	protected override async Task OnInitializedAsync()
-        
-    { 
-        string url = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
+	protected override async Task OnInitializedAsync()  
+    { 		
+         string url = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
 		 var user = (await authenticationStateTask).User;
             {
 				if(user.Identity.Name==null&&url!="employee/employeeaddbyusers")

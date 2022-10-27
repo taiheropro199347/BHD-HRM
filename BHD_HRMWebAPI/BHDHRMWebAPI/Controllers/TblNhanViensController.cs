@@ -91,7 +91,7 @@ namespace BHDHRMWebAPI.Controllers
         public async Task<ActionResult<IEnumerable<TblNhanVien>>> GetBirthdayNhanVien()
 
         {
-            var nhanvien = await _context.TblNhanVien.Where(t => t.NgaySinh.Value.Month == DateTime.Today.Month).ToListAsync();
+            var nhanvien = await _context.TblNhanVien.Where(t => t.NgaySinh.Value.Month == DateTime.Today.Month && t.TrangThai!="Đã nghỉ việc").ToListAsync();
 
             if (nhanvien == null)
             {

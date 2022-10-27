@@ -83,6 +83,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXFRvZG9cVG9kb05hdi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/Todo/TodoNavItem.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXFRvZG9cVG9kb05hdkl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/User/Add.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXFVzZXJcQWRkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -225,6 +229,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Shared/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Shared/LoginRedirect.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luUmVkaXJlY3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Shared/MainLayout.razor]

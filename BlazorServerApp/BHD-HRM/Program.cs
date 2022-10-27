@@ -42,7 +42,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddGlobalForServer();
 builder.Services.AddTransient<ValidateHeaderHandler>();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
-
+builder.Services.AddScoped<SpinnerService>();
 builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddHttpClient<IUserService, UserService>();
 builder.Services.AddSingleton<HttpClient>();
@@ -56,12 +56,6 @@ builder.Services.AddSingleton(builder.Configuration.GetSection("MailSettings").G
 builder.Services.AddScoped<IMailService, MailService>();
 builder.Services.AddOptions();
 builder.Services.AddAuthorizationCore();
-//builder.Services.AddAuthorization(options =>
-//{
-//    options.AddPolicy("SeniorEmployee", policy =>
-//        policy.RequireClaim("IsUserEmployedBefore1990", "true"));
-//});
-
 var app = builder.Build();
 app.UseHttpsRedirection();
 app.UseStaticFiles();

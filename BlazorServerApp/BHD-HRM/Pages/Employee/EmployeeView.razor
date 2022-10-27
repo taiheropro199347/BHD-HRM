@@ -2,11 +2,13 @@
 @using BHD_HRM.Data.Employees
 @using BHD_HRM.Services
 @using BHD_HRM.Pages.Employee.ViewModel;
+@using System.Security.Claims
 @inject IBHD_HRMService<EmployeeData> BHD_HRMService
 @inject IBHD_HRMService<CompanyData> BHD_HRMComapyService
 @inject IBHD_HRMService<DepartmentData> BHD_HRMDepartmentService
 @inherits ProCompontentBase
 @inject AuthenticationStateProvider AuthenticationStateProvider
+@inject BlazorSpinner.SpinnerService _spinnerService
 @if (@_userData == null)
 {
     
@@ -439,18 +441,28 @@ else
     private EmployeeDto? _userData =new EmployeeDto();
     [Parameter]
     public string? Id { get; set; }
-	[CascadingParameter]
+    [CascadingParameter]
     private Task<AuthenticationState> authenticationStateTask { get; set; }
+    ClaimsPrincipal user;
+    public string dataprivate = "************";
 
     protected override async Task OnParametersSetAsync()
     {
-		var user = (await authenticationStateTask).User;
-            {
-				if(user.Claims==null)
-                {
-                }
-            }
+		_spinnerService.Show();
+        await Task.Delay(1000);
+        _spinnerService.Hide();
+
+        user = (await authenticationStateTask).User;        
         var getemployee = await BHD_HRMService.GetByIdAsync("TblNhanViens/", Id);
+        if (!user.IsInRole("1014")&&!user.IsInRole("1")&&!user.IsInRole("4"))
+        {	
+            getemployee.SoCmnd = dataprivate;
+            getemployee.TamTru = dataprivate;
+            getemployee.ThuongTru = dataprivate;
+            getemployee.SoDt = dataprivate;
+            getemployee.Luonggop = 0;
+			getemployee.Luongthoathuan = 0;
+        }
         _userData.employeeData = getemployee;
         if (getemployee.IdcongTy != null)
         {

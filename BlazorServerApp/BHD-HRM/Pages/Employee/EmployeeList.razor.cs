@@ -18,8 +18,12 @@ namespace BHD_HRM.Pages.Employee
         public List<int> _chart1=new List<int>();
          public List<int> _chart2=new List<int>();
         protected override async Task OnInitializedAsync()
-        {         
+        {
+            _spinnerService.Show();
 
+            await Task.Delay(1000);
+
+            _spinnerService.Hide();
             var getpendingemp = await BHD_HRMService.GetAllAsync("TblNhanViens/GetAvailNhanVien");
             foreach (var item in getpendingemp)
             {

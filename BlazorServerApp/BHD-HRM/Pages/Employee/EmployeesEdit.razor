@@ -20,6 +20,7 @@
 @inject IBHD_HRMService<CompanyData> BHD_HRMComapyService
 @inject IBHD_HRMService<DepartmentData> BHD_HRMDepartmentService 
 @inject IJSRuntime JSRuntime
+@inject BlazorSpinner.SpinnerService _spinnerService
 <style>
     .file-input-zone {
         display: flex;
@@ -397,6 +398,11 @@
 	}
 	protected override async Task OnInitializedAsync()
 	{
+		_spinnerService.Show();
+
+            await Task.Delay(500);
+
+            _spinnerService.Hide();
 
 		_companyData = await BHD_HRMComapyService.GetAllAsync("TblCompanies");
 		_departmentData = await BHD_HRMDepartmentService.GetAllAsync("TblPhongs");

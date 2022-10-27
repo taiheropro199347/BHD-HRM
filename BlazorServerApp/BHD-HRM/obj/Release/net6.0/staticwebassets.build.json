@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JAAO5qBXqVfNSrvtruW+jZVAgklzOPECez3Fm8f0nNE=",
+  "Hash": "rdr76PI/OE9/CydnzkSf/Li4nLfAsTosBoO8F5SYSm4=",
   "Source": "BHD-HRM",
   "BasePath": "_content/BHD-HRM",
   "Mode": "Default",
@@ -17,10 +17,10 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.5.0\\staticwebassets\\js\\blazor-component.js",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\js\\blazor-component.js",
       "SourceId": "BlazorComponent",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/BlazorComponent",
       "RelativePath": "js/blazor-component.js",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.5.0\\staticwebassets\\js\\blazor-component.js"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\js\\blazor-component.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.5.0\\staticwebassets\\js\\blazor-component.js.map",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\js\\blazor-component.js.map",
       "SourceId": "BlazorComponent",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/BlazorComponent",
       "RelativePath": "js/blazor-component.js.map",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.5.0\\staticwebassets\\js\\blazor-component.js.map"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\js\\blazor-component.js.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.5.0\\staticwebassets\\js\\delayable.js",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\js\\delayable.js",
       "SourceId": "BlazorComponent",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/BlazorComponent",
       "RelativePath": "js/delayable.js",
       "AssetKind": "All",
@@ -65,13 +65,47 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.5.0\\staticwebassets\\js\\delayable.js"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\js\\delayable.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.5.0\\staticwebassets\\js\\transition.js",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\js\\input.js",
       "SourceId": "BlazorComponent",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\",
+      "BasePath": "_content/BlazorComponent",
+      "RelativePath": "js/input.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\js\\input.js"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\js\\input.js.map",
+      "SourceId": "BlazorComponent",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\",
+      "BasePath": "_content/BlazorComponent",
+      "RelativePath": "js/input.js.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\js\\input.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\js\\transition.js",
+      "SourceId": "BlazorComponent",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/BlazorComponent",
       "RelativePath": "js/transition.js",
       "AssetKind": "All",
@@ -82,13 +116,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.5.0\\staticwebassets\\js\\transition.js"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\blazorcomponent\\0.6.0-rc.8\\staticwebassets\\js\\transition.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\css\\masa-blazor.css",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\css\\masa-blazor.css",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "css/masa-blazor.css",
       "AssetKind": "All",
@@ -99,13 +133,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\css\\masa-blazor.css"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\css\\masa-blazor.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\css\\masa-blazor.extend.css",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\css\\masa-blazor.extend.css",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "css/masa-blazor.extend.css",
       "AssetKind": "All",
@@ -116,13 +150,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\css\\masa-blazor.extend.css"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\css\\masa-blazor.extend.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\css\\masa-blazor.min.css",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\css\\masa-blazor.min.css",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "css/masa-blazor.min.css",
       "AssetKind": "All",
@@ -133,13 +167,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\css\\masa-blazor.min.css"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\css\\masa-blazor.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\css\\quill\\quill.bubble.css",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\css\\quill\\quill.bubble.css",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "css/quill/quill.bubble.css",
       "AssetKind": "All",
@@ -150,13 +184,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\css\\quill\\quill.bubble.css"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\css\\quill\\quill.bubble.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\css\\quill\\quill-emoji.css",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\css\\quill\\quill-emoji.css",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "css/quill/quill-emoji.css",
       "AssetKind": "All",
@@ -167,13 +201,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\css\\quill\\quill-emoji.css"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\css\\quill\\quill-emoji.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\css\\quill\\quilljs-markdown-common-style.css",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\css\\quill\\quilljs-markdown-common-style.css",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "css/quill/quilljs-markdown-common-style.css",
       "AssetKind": "All",
@@ -184,13 +218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\css\\quill\\quilljs-markdown-common-style.css"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\css\\quill\\quilljs-markdown-common-style.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\css\\quill\\quilljs-markdown-common-style.css.map",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\css\\quill\\quilljs-markdown-common-style.css.map",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "css/quill/quilljs-markdown-common-style.css.map",
       "AssetKind": "All",
@@ -201,13 +235,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\css\\quill\\quilljs-markdown-common-style.css.map"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\css\\quill\\quilljs-markdown-common-style.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\images\\quill\\1e7b63404cd2fb8e6525b2fd4ee4d286.png",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\images\\quill\\1e7b63404cd2fb8e6525b2fd4ee4d286.png",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "images/quill/1e7b63404cd2fb8e6525b2fd4ee4d286.png",
       "AssetKind": "All",
@@ -218,13 +252,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\images\\quill\\1e7b63404cd2fb8e6525b2fd4ee4d286.png"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\images\\quill\\1e7b63404cd2fb8e6525b2fd4ee4d286.png"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\Dragzone\\sorttable-helper.js",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\Dragzone\\sorttable-helper.js",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "js/Dragzone/sorttable-helper.js",
       "AssetKind": "All",
@@ -235,13 +269,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\Dragzone\\sorttable-helper.js"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\Dragzone\\sorttable-helper.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\echarts-helper.js",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\echarts-helper.js",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "js/echarts-helper.js",
       "AssetKind": "All",
@@ -252,13 +286,30 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\echarts-helper.js"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\echarts-helper.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\quill\\quill-blot-formatter.min.js",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\Masa.Blazor.lib.module.js",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
+      "BasePath": "_content/Masa.Blazor",
+      "RelativePath": "js/Masa.Blazor.lib.module.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "JSModule",
+      "AssetTraitValue": "JSLibraryModule",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\Masa.Blazor.lib.module.js"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\quill\\quill-blot-formatter.min.js",
+      "SourceId": "Masa.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "js/quill/quill-blot-formatter.min.js",
       "AssetKind": "All",
@@ -269,13 +320,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\quill\\quill-blot-formatter.min.js"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\quill\\quill-blot-formatter.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\quill\\quill-emoji.js",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\quill\\quill-emoji.js",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "js/quill/quill-emoji.js",
       "AssetKind": "All",
@@ -286,13 +337,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\quill\\quill-emoji.js"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\quill\\quill-emoji.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\quill\\quill-helper.js",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\quill\\quill-helper.js",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "js/quill/quill-helper.js",
       "AssetKind": "All",
@@ -303,13 +354,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\quill\\quill-helper.js"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\quill\\quill-helper.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\quill\\quilljs-markdown.js",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\quill\\quilljs-markdown.js",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "js/quill/quilljs-markdown.js",
       "AssetKind": "All",
@@ -320,13 +371,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\quill\\quilljs-markdown.js"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\quill\\quilljs-markdown.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\quill\\quilljs-markdown.js.map",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\quill\\quilljs-markdown.js.map",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "js/quill/quilljs-markdown.js.map",
       "AssetKind": "All",
@@ -337,13 +388,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\quill\\quilljs-markdown.js.map"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\quill\\quilljs-markdown.js.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\vditor\\vditor-helper.js",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\vditor\\vditor-helper.js",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "js/vditor/vditor-helper.js",
       "AssetKind": "All",
@@ -354,13 +405,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\js\\vditor\\vditor-helper.js"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\js\\vditor\\vditor-helper.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\logo_masablazor_48.png",
+      "Identity": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\logo_masablazor_48.png",
       "SourceId": "Masa.Blazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\",
       "BasePath": "_content/Masa.Blazor",
       "RelativePath": "logo_masablazor_48.png",
       "AssetKind": "All",
@@ -371,7 +422,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.5.0\\staticwebassets\\logo_masablazor_48.png"
+      "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\masa.blazor\\0.6.0-rc.8\\staticwebassets\\logo_masablazor_48.png"
     },
     {
       "Identity": "C:\\Users\\Admin\\.nuget\\packages\\skiasharp.views.blazor\\2.88.0-preview.256\\staticwebassets\\DpiWatcher.js",
@@ -425,6 +476,23 @@
       "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\skiasharp.views.blazor\\2.88.0-preview.256\\staticwebassets\\SKHtmlCanvas.js"
     },
     {
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\obj\\Release\\net6.0\\jsmodules\\jsmodules.build.manifest.json",
+      "SourceId": "BHD-HRM",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\obj\\Release\\net6.0\\jsmodules\\",
+      "BasePath": "_content/BHD-HRM",
+      "RelativePath": "BHD-HRM.modules.json",
+      "AssetKind": "Build",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "JSModule",
+      "AssetTraitValue": "JSModuleManifest",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "obj\\Release\\net6.0\\jsmodules\\jsmodules.build.manifest.json"
+    },
+    {
       "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\css\\masa-blazor-pro.css",
       "SourceId": "BHD-HRM",
       "SourceType": "Discovered",
@@ -440,6 +508,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\masa-blazor-pro.css"
+    },
+    {
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\css\\masa-blazor-pro.rar",
+      "SourceId": "BHD-HRM",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
+      "BasePath": "_content/BHD-HRM",
+      "RelativePath": "css/masa-blazor-pro.rar",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\masa-blazor-pro.rar"
     },
     {
       "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\i18n\\en-US.json",

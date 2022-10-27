@@ -17,6 +17,11 @@ namespace BHD_HRM.Pages.Employee
         public List<CompanyData> _companyData{ get; set; }
         protected override async Task OnInitializedAsync()
         {
+            _spinnerService.Show();
+
+            await Task.Delay(1000);
+
+            _spinnerService.Hide();
             var user = (await authenticationStateTask).User;
             {
                 var getpendingemp = await BHD_HRMService.GetAllAsync("TblNhanViens");

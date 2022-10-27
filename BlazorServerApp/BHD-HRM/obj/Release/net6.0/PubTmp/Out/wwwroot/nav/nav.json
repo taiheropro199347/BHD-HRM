@@ -31,19 +31,26 @@
         "Href": "employee/employees"
       },
       {
-        "Id": 12,    
+        "Id": 12,
         "Title": "View",
         "Icon": "mdi-circle",
         "Href": "employee/employeeview"
-          
+
       },
       {
-        "Id": 13,       
+        "Id": 13,
         "Title": "Edit",
         "Icon": "mdi-circle",
         "Href": "employee/employeeedit"
       }
     ]
+  },
+  {
+    "Id": 15,
+    "Title": "Logout",
+    "Icon": "fas fa-sign-out-alt",
+    "Href": "pages/authentication/Components/Logout",
+    "Target": "Self"
   }
   
 ]
