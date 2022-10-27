@@ -51,15 +51,7 @@
             },
             "Masa.Blazor": {
               "target": "Package",
-              "version": "[0.5.0, )"
-            },
-            "Microsoft.AspNetCore.Components": {
-              "target": "Package",
-              "version": "[6.0.10, )"
-            },
-            "Microsoft.AspNetCore.Components.Web": {
-              "target": "Package",
-              "version": "[6.0.10, )"
+              "version": "[0.6.0-rc.8, )"
             },
             "Microsoft.Azure.SignalR": {
               "target": "Package",

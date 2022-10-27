@@ -6,8 +6,13 @@ using System.Security.Claims;
 namespace BHD_HRM.Pages.Authentication.Components;
 public partial class Login
 {
-    public string _user;
-    public string _password;
+    class Model
+    { 
+        [Required(ErrorMessage = "Bạn phải nhập mật khẩu")]
+        public string _password { get; set; }
+        [Required(ErrorMessage = "Bạn phải nhập tài khoản")]
+        public string _user { get; set; }
+    }
 
     private bool _show;
 
@@ -32,6 +37,7 @@ public partial class Login
     //[Parameter]
     //public EventCallback<MouseEventArgs> OnLogin { get; set; }
     private User user;
+    private Model _model = new();
     public string LoginMesssage { get; set; }
     ClaimsPrincipal claimsPrincipal;
 
@@ -49,14 +55,14 @@ public partial class Login
         }
 
     }
-    private async void OnLogin()
+    private async void HandleOnValidSubmit()
     {
         user = new User();
 
         claimsPrincipal = (await authenticationStateTask).User;
 
-        user.userAd = _user;
-        user.pass=_password;
+        user.userAd = _model._user;
+        user.pass=_model._password;
         var returnedUser = await userService.LoginAsync(user);
 
         if (returnedUser.userAd != null)

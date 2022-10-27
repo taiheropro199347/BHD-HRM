@@ -10,7 +10,18 @@
 @inject IBHD_HRMService<CompanyData> BHD_HRMComapyService
 @inject IBHD_HRMService<DepartmentData> BHD_HRMDepartmentService
 @inject IAuthorizationService authorizationService
+<style>
+    .m-treeview-node__prepend
+    {
+        min-width:0px;
+    }
+</style>
+@if(_chart.Count==0&&_chart1.Count==0&&_chart2.Count==0)
+{
 
+}
+else
+{
 <MRow>
     <MCol Md=4 Sm=12>
         <MCard Height=146>
@@ -94,10 +105,10 @@
 				   SelectionType=SelectionType.Independent
                    OnInput="val=>UpdateGrid(val)">
             <PrependContent>
-                @if (context.Item.Children != null && context.Item.Children.Count > 0)
+                @if (context.Item.Children != null && context.Item.Children.Count > 0 && context.Item.Id == 1) 
                 {
                     <MIcon>
-                        @($"mdi-{(context.Item.Id == 1 ? "home-variant" : "folder-network")}")
+                        @($"mdi-home-variant")
                     </MIcon>
                 }
             </PrependContent>
@@ -134,7 +145,7 @@
         </MRow>
     </MCardText>
 
-    <MDataTable Headers="_headers" Items="_empPage.GetPageDatas()" TItem="EmployeeDto" ItemsPerPage="_empPage.PageSize" HideDefaultFooter Class="user ml-2 table-border-none">
+    <MDataTable  Headers="_headers" Items="_empPage.GetPageDatas()" TItem="EmployeeDto" ItemsPerPage="_empPage.PageSize" HideDefaultFooter Class="user ml-2 table-border-none">
         <HeaderColContent Context="header">
             <span class="text-subtitle">@header.Text</span>
         </HeaderColContent>
@@ -166,17 +177,17 @@
                 case (nameof(EmployeeDto.NgaySinhDate)):
                     <span>@context.Item.NgaySinhDate</span>
                     break;
-                case nameof(EmployeeDto.employeeData.GioiTinh):
-				<span>@context.Item.employeeData.GioiTinh</span>
+                case nameof(EmployeeDto.GioiTinh):
+				<span>@context.Item.GioiTinh</span>
                     break;
-                case (nameof(EmployeeDto.employeeData.SoDt)):
-				<span>@context.Item.employeeData.SoDt</span>
+                case (nameof(EmployeeDto.SoDt)):
+				<span>@context.Item.SoDt</span>
                     break;
-                case nameof(EmployeeDto.employeeData.Email):
-				<span>@context.Item.employeeData.Email</span>
+                case nameof(EmployeeDto.Email):
+				<span>@context.Item.Email</span>
                     break;
-					 case nameof(EmployeeDto.employeeData.TrangThai):
-				<span>@context.Item.employeeData.TrangThai</span>
+					 case nameof(EmployeeDto.TrangThai):
+				<span>@context.Item.TrangThai</span>
                     break;
                 default:
                     @context.Value
@@ -197,3 +208,5 @@
 </MCard>
 </MCol>
 </MRow>
+}
+

@@ -13,9 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="Blazored.LocalStorage" Version="4.2.0" />
-    <PackageReference Include="Masa.Blazor" Version="0.5.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.10" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.10" />
+    <PackageReference Include="Masa.Blazor" Version="0.6.0-rc.8" />
     <PackageReference Include="Microsoft.Azure.SignalR" Version="1.18.3" />
     <PackageReference Include="MixERP.Net.VCards" Version="1.0.7" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
@@ -41,6 +39,27 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Pages\App\ECommerce\Order\Address.razor" />
+    <None Include="Pages\App\ECommerce\Order\Cart.razor" />
+    <None Include="Pages\App\ECommerce\Order\Order.razor" />
+    <None Include="Pages\App\ECommerce\Order\Payment.razor" />
+    <None Include="Pages\App\ECommerce\Shop\Details.razor" />
+    <None Include="Pages\App\ECommerce\Shop\Shop.razor" />
+    <None Include="Pages\App\Invoice\Add.razor" />
+    <None Include="Pages\App\Invoice\Components\AddPayment.razor" />
+    <None Include="Pages\App\Invoice\Components\InvoiceList.razor" />
+    <None Include="Pages\App\Invoice\Components\SendInvoice.razor" />
+    <None Include="Pages\App\Invoice\Edit.razor" />
+    <None Include="Pages\App\Invoice\List.razor" />
+    <None Include="Pages\App\Invoice\Preview.razor" />
+    <None Include="Pages\App\Todo\Todo.razor" />
+    <None Include="Pages\App\Todo\TodoDetail.razor" />
+    <None Include="Pages\App\Todo\TodoNav.razor" />
+    <None Include="Pages\App\Todo\TodoNavItem.razor" />
+    <None Include="Pages\App\User\Add.razor" />
+    <None Include="Pages\App\User\Edit.razor" />
+    <None Include="Pages\App\User\List.razor" />
+    <None Include="Pages\App\User\View.razor" />
     <None Include="Pages\Dashboard\Analytics.razor" />
     <None Include="Pages\Dashboard\ECommerce.razor" />
   </ItemGroup>

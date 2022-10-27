@@ -12,6 +12,11 @@ namespace BHD_HRM.Data.Employees
         public DateOnly? NgayNghiViecDate { get; set; } = null;
         public DateOnly? NgayVaoCongTyDate { get; set; } = null;
         public DateOnly? NgayKyHDLDDate { get; set; } = null;
+        public string? HoTen { get { return employeeData.HoTen; }}
+        public string? GioiTinh { get { return employeeData.GioiTinh; }}
+        public string? SoDt { get { return employeeData.SoDt; }}
+        public string? Email { get { return employeeData.Email; }}
+         public string? TrangThai { get { return employeeData.TrangThai; }}
         public string CompanyString { get; set; }
         public string DepartmentString { get; set; }
         public string? SampleName
@@ -30,7 +35,6 @@ namespace BHD_HRM.Data.Employees
                 return s;
             }
         }
-
     }
 
 }

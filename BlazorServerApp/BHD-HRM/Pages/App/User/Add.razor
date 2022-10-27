@@ -3,7 +3,7 @@
         <span class="text-h6">Add New User</span>
         <MIcon Color="neutral-lighten-3" Size=24 OnClick="()=>Visible=false">mdi-close</MIcon>
     </div>
-    <MForm Model=_userData EnableDataAnnotationsValidation>
+    <MForm Model=_userData EnableValidation>
         <MTextField @bind-Value="_userData.FullName" Class="mb-6" Label="FullName" HideDetails="@("auto")" Outlined />
         <MTextField @bind-Value="_userData.UserName" Class="mb-6" Label="UserName" HideDetails="@("auto")" Outlined />
         <MTextField @bind-Value="_userData.Email" Class="mb-6" Label="Email" HideDetails="@("auto")" Outlined />
@@ -19,7 +19,7 @@
 
         <div style="bottom:48px;right:24px;position:absolute">
             <MButton MinWidth=80 Height=40 Outlined Class="text-btn rounded-pill" OnClick="async() => await UpdateVisible(false)"> Cancel </MButton>
-            <MButton MinWidth=80 Height=40 Color="primary" Class="ml-6 rounded-pill" OnClick="async ()=> await AddData(context)"> Add </MButton>
+            <MButton MinWidth=80 Height=40 Color="primary" Class="ml-6 rounded-pill" OnClick="async ()=> await AddData(context.EditContext)"> Add </MButton>
         </div>
     </MForm>
 </MNavigationDrawer>

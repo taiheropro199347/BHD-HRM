@@ -32,8 +32,11 @@ var appSettingSection = builder.Configuration.GetSection("AppSettings");
 builder.Services.Configure<AppSettings>(appSettingSection);
 builder.Services.AddMasaBlazor(builder =>
 {
-    builder.Theme.Primary = "#4318FF";
-    builder.Theme.Accent = "#4318FF";
+    builder.ConfigureTheme(theme =>
+    {
+        theme.Themes.Light.Primary = "#4318FF";
+        theme.Themes.Light.Accent = "#4318FF";
+    });
 }).AddI18nForServer("wwwroot/i18n");
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddGlobalForServer();
@@ -60,17 +63,11 @@ builder.Services.AddAuthorizationCore();
 //});
 
 var app = builder.Build();
-
 app.UseHttpsRedirection();
-
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthentication();
 app.UseAuthorization();
-
-
 app.MapControllers();
 app.MapBlazorHub();
 app.UseRequestLocalization("en-GB");

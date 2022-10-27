@@ -13,9 +13,9 @@
     <SourceRoot Include="C:\Users\Admin\.nuget\packages\" />
   </ItemGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Content Include="$(NuGetPackageRoot)masa.blazor\0.5.0\contentFiles\any\net6.0\package.json" Condition="Exists('$(NuGetPackageRoot)masa.blazor\0.5.0\contentFiles\any\net6.0\package.json')">
+    <Content Include="$(NuGetPackageRoot)masa.blazor\0.6.0-rc.8\contentFiles\any\net6.0\package.json" Condition="Exists('$(NuGetPackageRoot)masa.blazor\0.6.0-rc.8\contentFiles\any\net6.0\package.json')">
       <NuGetPackageId>Masa.Blazor</NuGetPackageId>
-      <NuGetPackageVersion>0.5.0</NuGetPackageVersion>
+      <NuGetPackageVersion>0.6.0-rc.8</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
       <Pack>false</Pack>
       <Private>False</Private>
@@ -25,7 +25,7 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)skiasharp.nativeassets.webassembly\2.88.0-preview.256\buildTransitive\netstandard1.0\SkiaSharp.NativeAssets.WebAssembly.props" Condition="Exists('$(NuGetPackageRoot)skiasharp.nativeassets.webassembly\2.88.0-preview.256\buildTransitive\netstandard1.0\SkiaSharp.NativeAssets.WebAssembly.props')" />
     <Import Project="$(NuGetPackageRoot)skiasharp.views.blazor\2.88.0-preview.256\buildTransitive\net6.0\SkiaSharp.Views.Blazor.props" Condition="Exists('$(NuGetPackageRoot)skiasharp.views.blazor\2.88.0-preview.256\buildTransitive\net6.0\SkiaSharp.Views.Blazor.props')" />
-    <Import Project="$(NuGetPackageRoot)blazorcomponent\0.5.0\buildTransitive\BlazorComponent.props" Condition="Exists('$(NuGetPackageRoot)blazorcomponent\0.5.0\buildTransitive\BlazorComponent.props')" />
-    <Import Project="$(NuGetPackageRoot)masa.blazor\0.5.0\buildTransitive\Masa.Blazor.props" Condition="Exists('$(NuGetPackageRoot)masa.blazor\0.5.0\buildTransitive\Masa.Blazor.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorcomponent\0.6.0-rc.8\buildTransitive\BlazorComponent.props" Condition="Exists('$(NuGetPackageRoot)blazorcomponent\0.6.0-rc.8\buildTransitive\BlazorComponent.props')" />
+    <Import Project="$(NuGetPackageRoot)masa.blazor\0.6.0-rc.8\buildTransitive\Masa.Blazor.props" Condition="Exists('$(NuGetPackageRoot)masa.blazor\0.6.0-rc.8\buildTransitive\Masa.Blazor.props')" />
   </ImportGroup>
 </Project>

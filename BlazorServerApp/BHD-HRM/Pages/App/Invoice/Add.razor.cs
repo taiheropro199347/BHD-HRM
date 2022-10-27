@@ -1,4 +1,5 @@
-﻿namespace BHD_HRM.Pages.App.Invoice
+﻿
+namespace BHD_HRM.Pages.App.Invoice
 {
     public partial class Add : ProCompontentBase
     {

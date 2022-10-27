@@ -6,6 +6,7 @@
 @inject IBHD_HRMService<CompanyData> BHD_HRMComapyService
 @inject IBHD_HRMService<DepartmentData> BHD_HRMDepartmentService
 @inherits ProCompontentBase
+@inject AuthenticationStateProvider AuthenticationStateProvider
 @if (@_userData == null)
 {
     
@@ -438,9 +439,17 @@ else
     private EmployeeDto? _userData =new EmployeeDto();
     [Parameter]
     public string? Id { get; set; }
+	[CascadingParameter]
+    private Task<AuthenticationState> authenticationStateTask { get; set; }
 
     protected override async Task OnParametersSetAsync()
     {
+		var user = (await authenticationStateTask).User;
+            {
+				if(user.Claims==null)
+                {
+                }
+            }
         var getemployee = await BHD_HRMService.GetByIdAsync("TblNhanViens/", Id);
         _userData.employeeData = getemployee;
         if (getemployee.IdcongTy != null)

@@ -1,4 +1,6 @@
-﻿namespace BHD_HRM.Pages.App.User
+﻿using BHD_HRM.Data.App.User;
+
+namespace BHD_HRM.Pages.App.User
 {
     public partial class List
     {

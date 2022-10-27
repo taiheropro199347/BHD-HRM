@@ -36,11 +36,11 @@ namespace BHD_HRM.Pages.Employee
         private List<int> _pageSizes = new() { 10, 25, 50, 100 };
         private readonly List<DataTableHeader<EmployeeDto>> _headers = new()
         {
-            new() { Text = "Họ Tên",Sortable= false, Value = nameof(EmployeeDto.employeeData.HoTen), CellClass = "" },
-            new() { Text = "Ngày sinh",Sortable= false, Value = nameof(EmployeeDto.NgaySinhDate) },
-            new() { Text = "Giới tính",Sortable= false, Value = nameof(EmployeeDto.employeeData.GioiTinh) },
-            new() { Text = "Số điện thoại",Sortable= false, Value = nameof(EmployeeDto.employeeData.SoDt) },
-            new() { Text = "Email",Sortable= false, Value = nameof(EmployeeDto.employeeData.Email) },
+            new() { Text = "Họ Tên", Value = nameof(EmployeeDto.HoTen), CellClass = "" },
+            new() { Text = "Ngày sinh", Value = nameof(EmployeeDto.NgaySinhDate) },
+            new() { Text = "Giới tính", Value = nameof(EmployeeDto.GioiTinh) },
+            new() { Text = "Số điện thoại", Value = nameof(EmployeeDto.SoDt) },
+            new() { Text = "Email", Value = nameof(EmployeeDto.Email) },
             new() { Text = "ACTIONS", Value = "Action", Sortable = false }
         };
         private void NavigateToDetails(string id)

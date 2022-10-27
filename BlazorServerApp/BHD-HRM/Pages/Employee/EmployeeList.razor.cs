@@ -1,5 +1,4 @@
 ﻿using BHD_HRM.Data.Employees;
-using BHD_HRM.Pages.App.User;
 using BHD_HRM.Pages.Employee.ViewModel;
 
 
@@ -19,10 +18,83 @@ namespace BHD_HRM.Pages.Employee
         public List<int> _chart1=new List<int>();
          public List<int> _chart2=new List<int>();
         protected override async Task OnInitializedAsync()
-        {
+        {         
 
-            
+            var getpendingemp = await BHD_HRMService.GetAllAsync("TblNhanViens/GetAvailNhanVien");
+            foreach (var item in getpendingemp)
+            {
+                EmployeeDto employeeDto = new EmployeeDto();
+                employeeDto.employeeData = item;
+                employeeDto.NgaySinhDate = DateOnly.FromDateTime((DateTime)item.NgaySinh);
+                employeeDto.NgayCapDate = DateOnly.FromDateTime(item.NgayCap == null ? DateTime.Now : (DateTime)item.NgayCap);
+                _employeeDto.Add(employeeDto);
+            }
+            _companyData = await BHD_HRMComapyService.GetAllAsync("TblCompanies");
+            if(_companyData!=null)
+            {
+                int i = 2;
+                  List<Data> _itemdatas = new List<Data>();
+                foreach(var item in _companyData)
+                {
+                    _departmentData =await BHD_HRMDepartmentService.GetbyConAsync("TblPhongs/GetDepmbyComp/", item.Id.ToString());
+                     List<Data> _itemchills = new List<Data>();
+                    if(_departmentData!=null)
+                    {
+                        foreach (var itemchill in _departmentData)
+                        {
+                            Data datachill = new Data();
+                            datachill.Id = i;
+                            datachill.IdString = itemchill.Id;
+                            datachill.Name = itemchill.TenPhong;
+                            datachill.Type = "Department";
+                            _itemchills.Add(datachill);
+                            i++;
+                        }    
+                    }    
+                     Data _itemdata = new Data();
+                    _itemdata.Id = i;
+                    _itemdata.IdString = item.Id.ToString();
+                    _itemdata.Name = item.TenCongTy;
+                    _itemdata.Children = _itemchills;
+                    _itemdatas.Add(_itemdata);
+                    i++;
 
+                }
+                    Data _itemTreeView = new Data();
+                _itemTreeView.Id = 1;
+                _itemTreeView.Name = "BHDS Human Resources";
+                    _itemTreeView.Children = _itemdatas;
+                _items.Add(_itemTreeView);
+
+            }
+            _empPage.EmpDatas = _employeeDto;
+            var StreetCrimes = _employeeDto
+       .Where(x => x.employeeData.Id > 0 && x.employeeData.NgayVaoCongTy!=null)
+       .GroupBy(s => new { month = ((DateTime)s.employeeData.NgayVaoCongTy).Month })
+       .Select(x => new { count = x.Count()})
+       .ToArray();
+            foreach (var _item in StreetCrimes)
+            {
+                _chart.Add(_item.count);
+            }
+            var StreetCrimes1 = _employeeDto
+       .Where(x => x.employeeData.Id > 0 && x.employeeData.NgayVaoCongTy != null && x.employeeData.TrangThai=="Full Time")
+       .GroupBy(s => new { month = ((DateTime)s.employeeData.NgayVaoCongTy).Month })
+       .Select(x => new { count = x.Count() })
+       .ToArray();
+            foreach (var _item in StreetCrimes1)
+            {
+                _chart1.Add(_item.count);
+            }
+            var StreetCrimes2 = _employeeDto
+      .Where(x => x.employeeData.Id > 0 && x.employeeData.NgaySinh != null)
+      .GroupBy(s => new { month = ((DateTime)s.employeeData.NgaySinh).Month })
+      .Select(x => new { count = x.Count() })
+      .ToArray();
+            foreach (var _item in StreetCrimes2)
+            {
+                _chart2.Add(_item.count);
+            }
             _profitChart = new
             {
                 Tooltip = new
@@ -73,7 +145,7 @@ namespace BHD_HRM.Pages.Employee
                     },
                 },
                 Series = new[]
-                {
+               {
                     new
                     {
                         Type= "bar",
@@ -221,93 +293,17 @@ namespace BHD_HRM.Pages.Employee
                     y2 = 5
                 }
             };
-
-            var getpendingemp = await BHD_HRMService.GetAllAsync("TblNhanViens/GetAvailNhanVien");
-            foreach (var item in getpendingemp)
-            {
-                EmployeeDto employeeDto = new EmployeeDto();
-                employeeDto.employeeData = item;
-                employeeDto.NgaySinhDate = DateOnly.FromDateTime((DateTime)item.NgaySinh);
-                employeeDto.NgayCapDate = DateOnly.FromDateTime(item.NgayCap == null ? DateTime.Now : (DateTime)item.NgayCap);
-                _employeeDto.Add(employeeDto);
-            }
-            _companyData = await BHD_HRMComapyService.GetAllAsync("TblCompanies");
-            if(_companyData!=null)
-            {
-                int i = 2;
-                  List<Data> _itemdatas = new List<Data>();
-                foreach(var item in _companyData)
-                {
-                    _departmentData =await BHD_HRMDepartmentService.GetbyConAsync("TblPhongs/GetDepmbyComp/", item.Id.ToString());
-                     List<Data> _itemchills = new List<Data>();
-                    if(_departmentData!=null)
-                    {
-                        foreach (var itemchill in _departmentData)
-                        {
-                            Data datachill = new Data();
-                            datachill.Id = i;
-                            datachill.IdString = itemchill.Id;
-                            datachill.Name = itemchill.TenPhong;
-                            datachill.Type = "Department";
-                            _itemchills.Add(datachill);
-                            i++;
-                        }    
-                    }    
-                     Data _itemdata = new Data();
-                    _itemdata.Id = i;
-                    _itemdata.IdString = item.Id.ToString();
-                    _itemdata.Name = item.TenCongTy;
-                    _itemdata.Children = _itemchills;
-                    _itemdatas.Add(_itemdata);
-                    i++;
-
-                }
-                    Data _itemTreeView = new Data();
-                _itemTreeView.Id = 1;
-                _itemTreeView.Name = "BHDS Human Resources";
-                    _itemTreeView.Children = _itemdatas;
-                _items.Add(_itemTreeView);
-
-            }
-            _empPage.EmpDatas = _employeeDto;
-            var StreetCrimes = _employeeDto
-       .Where(x => x.employeeData.Id > 0 && x.employeeData.NgayVaoCongTy!=null)
-       .GroupBy(s => new { month = ((DateTime)s.employeeData.NgayVaoCongTy).Month })
-       .Select(x => new { count = x.Count()})
-       .ToArray();
-            foreach (var _item in StreetCrimes)
-            {
-                _chart.Add(_item.count);
-            }
-            var StreetCrimes1 = _employeeDto
-       .Where(x => x.employeeData.Id > 0 && x.employeeData.NgayVaoCongTy != null && x.employeeData.TrangThai=="Full Time")
-       .GroupBy(s => new { month = ((DateTime)s.employeeData.NgayVaoCongTy).Month })
-       .Select(x => new { count = x.Count() })
-       .ToArray();
-            foreach (var _item in StreetCrimes1)
-            {
-                _chart1.Add(_item.count);
-            }
-            var StreetCrimes2 = _employeeDto
-      .Where(x => x.employeeData.Id > 0 && x.employeeData.NgaySinh != null)
-      .GroupBy(s => new { month = ((DateTime)s.employeeData.NgaySinh).Month })
-      .Select(x => new { count = x.Count() })
-      .ToArray();
-            foreach (var _item in StreetCrimes2)
-            {
-                _chart2.Add(_item.count);
-            }
         }
-        public UserPage _userPage = new(UserServices.GetList());
+
         private List<int> _pageSizes = new() { 10, 25, 50, 100 };
         private readonly List<DataTableHeader<EmployeeDto>> _headers = new()
         {
-            new() { Text = "Họ Tên",Sortable= false, Value = nameof(EmployeeDto.employeeData.HoTen), CellClass = "" },
-            new() { Text = "Ngày sinh",Sortable= false, Value = nameof(EmployeeDto.NgaySinhDate) },
-            new() { Text = "Giới tính",Sortable= false, Value = nameof(EmployeeDto.employeeData.GioiTinh) },
-            new() { Text = "Số điện thoại",Sortable= false, Value = nameof(EmployeeDto.employeeData.SoDt) },
-            new() { Text = "Email",Sortable= false, Value = nameof(EmployeeDto.employeeData.Email) },
-            new() { Text = "Trạng thái",Sortable= false, Value = nameof(EmployeeDto.employeeData.TrangThai) }
+            new() { Text = "Họ Tên", Value = nameof(EmployeeDto.HoTen), CellClass = "" },
+            new() { Text = "Ngày sinh", Value = nameof(EmployeeDto.NgaySinhDate) },
+            new() { Text = "Giới tính", Value = nameof(EmployeeDto.GioiTinh) },
+            new() { Text = "Số điện thoại", Value = nameof(EmployeeDto.SoDt) },
+            new() { Text = "Email", Value = nameof(EmployeeDto.Email) },
+            new() { Text = "Trạng thái", Value = nameof(EmployeeDto.TrangThai) }
         };
 
         private void NavigateToDetails(string id)

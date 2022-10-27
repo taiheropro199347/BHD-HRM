@@ -1,5 +1,4 @@
-﻿
-namespace BHD_HRM.Pages.App.Todo
+﻿namespace BHD_HRM.Pages.App.Todo
 {
     public partial class Todo
     {

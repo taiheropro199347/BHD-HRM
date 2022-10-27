@@ -1,4 +1,5 @@
-﻿global using BlazorComponent;
+﻿global using Masa.Blazor;
+global using BlazorComponent;
 global using BlazorComponent.I18n;
 global using BHD_HRM.Data.App.ECommerce;
 global using BHD_HRM.Data.App.ECommerce.Dto;
@@ -24,4 +25,4 @@ global using System.ComponentModel;
 global using System.ComponentModel.DataAnnotations;
 global using System.Reflection;
 global using System.Text.Json;
-global using Masa.Blazor;
+

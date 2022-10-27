@@ -1,4 +1,5 @@
-﻿namespace BHD_HRM.Pages.App.ECommerce.Shop
+﻿
+namespace BHD_HRM.Pages.App.ECommerce.Shop
 {
     public partial class Shop : ProCompontentBase
     {

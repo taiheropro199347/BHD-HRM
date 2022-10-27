@@ -4,6 +4,10 @@ namespace BHD_HRM.Data.App.User;
 
 public class UserServices
 {
+    public static List<string> GetLanguageList() => new List<string>
+    {
+        "English", "Spanish", "French", "Russian", "German", "Arabic","Sanskrit",
+    };
     static List<UserDto> _datas = new()
     {
         new UserDto("Pending", "Subscriber", DateOnly.FromDateTime(DateTime.Now), "(895) 401-4255", "Male", GetPermissionsList())

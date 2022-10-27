@@ -67,5 +67,21 @@ namespace BHD_HRM.Data.Employee
         public string DalaNV { get; set; }
         public string CNNganHang { get; set; }
         public string AnhNhanVien { get; set; } = "/usersupload/avatar/test.jpg";
+        public string? SampleName
+        {
+            get
+            {
+                string s;
+                try
+                {
+                    s = string.Join("", HoTen.Split(' ').Select(n => n[0].ToString().ToUpper()));
+                }
+                catch
+                {
+                    return s = HoTen;
+                }
+                return s;
+            }
+        }
     }
 }
