@@ -1,4 +1,5 @@
 ﻿@page "/employee/employeeaddbyusers"
+@page "/employee/employeeaddbyusers/{Id}"
 @layout EmptyLayout
 @inherits ProCompontentBase
 @using BHD_HRM.Data.Employees
@@ -8,9 +9,11 @@
 @using Microsoft.AspNetCore.Hosting
 @using System.ComponentModel.DataAnnotations
 @using FluentValidation
+@using System.Web
 @inject NavigationManager NavManager
 @inject IWebHostEnvironment Environment
 @inject IBHD_HRMService<EmployeeData> BHD_HRMService
+@inject IBHD_HRMService<UrlDto> BHD_HRMUrlService
 @inject IJSRuntime JSRuntime
 
 
@@ -38,8 +41,10 @@
             height: 100%;
             opacity: 0;
             cursor: pointer;
-        }
+        } 
 </style>
+@if(_urlDto.Id!=0 && Id!="" && _urlDto.Status==true && Id.CompareTo(DateTime.Now.AddHours(24).ToString("MMddyyHHmmssfff"))<=0)
+{
 <MForm Model="@UserData.employeeData" EnableValidation OnValidSubmit="SaveEmployee">
 	<MContainer>
 		<div class="d-flex block-center mt-3">
@@ -189,6 +194,12 @@
 		</div>
 	</MContainer>
 </MForm>
+
+}
+else
+{
+	<span>Link của bạn không hợp lệ hoặc đã hết hạn đăng ký. </span>
+}
 <MDialog @bind-Value="dialog" Persistent
              MaxWidth="480">
         <MCard>
@@ -216,10 +227,13 @@
     </MDialog>
 
 @code {
+	[Parameter]
+	public string? Id { get; set; }
 	private EmployeeDto? _userData;
 	private bool _birthDateMenu;
 	private bool _allocationDateMenu;
 	bool dialog = false;
+	private UrlDto? _urlDto=new UrlDto();
 
 	[AllowNull]
 	public EmployeeDto UserData
@@ -232,6 +246,13 @@
 		{
 			_userData = value;
 		}
+	}
+	protected override async Task OnInitializedAsync()
+	{
+		string url = NavManager.Uri;
+		_urlDto = await BHD_HRMUrlService.GetByIdAsync("TblUrls/", HttpUtility.UrlEncode(NavManager.Uri));
+
+
 	}
 	private async Task UploadFile(InputFileChangeEventArgs e)
 	{
@@ -249,6 +270,8 @@
 		_userData.employeeData.NgayCap = _userData.NgayCapDate != null ?((DateOnly)_userData.NgayCapDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
 		_userData.employeeData.LanCuoiChinhSua = DateTime.Now.ToString("dd-MM-yyyy HH:mm");
 		await BHD_HRMService.SaveAsync("TblNhanViens", _userData.employeeData);
+		_urlDto.Status = false;
+		await BHD_HRMUrlService.UpdatebyidAsync("TblUrls/", _urlDto.Id, _urlDto);
 		dialog = true;
 	}
 	private void Close()

@@ -52,6 +52,8 @@ builder.Services.AddHttpClient<IBHD_HRMService<CompanyData>, BHD_HRMService<Comp
                    .AddHttpMessageHandler<ValidateHeaderHandler>();
 builder.Services.AddHttpClient<IBHD_HRMService<DepartmentData>, BHD_HRMService<DepartmentData>>()
                    .AddHttpMessageHandler<ValidateHeaderHandler>();
+builder.Services.AddHttpClient<IBHD_HRMService<UrlDto>, BHD_HRMService<UrlDto>>()
+                   .AddHttpMessageHandler<ValidateHeaderHandler>();
 builder.Services.AddSingleton(builder.Configuration.GetSection("MailSettings").Get<MailSettings>());
 builder.Services.AddScoped<IMailService, MailService>();
 builder.Services.AddOptions();

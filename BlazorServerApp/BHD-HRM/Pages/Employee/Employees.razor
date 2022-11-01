@@ -6,8 +6,10 @@
 @inject GlobalConfig GlobalConfig
 @inject NavigationManager Nav
 @inject IWebHostEnvironment Environment
+@inject NavigationManager MyNavigationManager
 @inject IBHD_HRMService<EmployeeData> BHD_HRMService
 @inject IBHD_HRMService<CompanyData> BHD_HRMComapyService
+@inject IBHD_HRMService<UrlDto> BHD_HRMUrlService
 @inject IAuthorizationService authorizationService
 @inject IMailService MailService
 @inject BlazorSpinner.SpinnerService _spinnerService
@@ -76,6 +78,7 @@ else
                 <MButton Color="primary" MinWidth=80 Height=32 Class="ml-6 rounded-pill" OnClick="()=>NavigateToCreate()">
                     Thêm nhân viên
                 </MButton>
+				<MButton Color="primary" Class="ml-6 rounded-pill" MinWidth=80 Height=32 OnClick="ShowModal">Gửi Form nhập thông tin</MButton>
             </MCol>
         </MRow>
     </MCardText>
@@ -167,4 +170,34 @@ else
         </div>
     </MCardText>
 </MCard>
+<PModal @bind-Value="value"
+        FormModel="urlDto"
+        Persistent
+        Title="Gửi Link Apply cho ứng viên"
+        Width="500"
+        OnSave="HandleOnSave"
+        OnCancel="HandleOnCancel">
+		<CancelContent Context="cancel">
+        <MButton Icon OnClick="cancel.Click" Disabled="cancel.Loading">
+            <MIcon>mdi-cancel</MIcon>
+        </MButton>
+    </CancelContent>
+    <SaveContent Context="save">
+        <MButton Icon Color="primary" OnClick="save.Click" Disabled="save.Loading" Loading="save.Loading">
+            <MIcon>mdi-check</MIcon>
+        </MButton>
+    </SaveContent>
+	 <ChildContent>
+    <MRow>
+        <MCol Cols="12">
+            <MTextField @bind-Value="urlDto.Email"
+                        Label="Email cá nhân"
+                        Dense
+                        Outlined
+						Autofocus
+                        HideDetails="@("auto")" />
+        </MCol>     
+    </MRow>
+    </ChildContent>
+</PModal>
 }

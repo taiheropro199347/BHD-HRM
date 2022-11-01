@@ -49,7 +49,7 @@
          string url = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
 		 var user = (await authenticationStateTask).User;
             {
-				if(user.Identity.Name==null&&url!="employee/employeeaddbyusers")
+				if(user.Identity.Name==null&&!url.Contains("employee/employeeaddbyusers"))
                 {
                     NavigationManager.NavigateTo("/pages/authentication/Login-v2");
                 }

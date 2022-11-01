@@ -15,6 +15,7 @@ namespace BHD_HRM.Services
         Task<T> GetByIdAsync(string requestUri, string Id);
         Task<T> SaveAsync(string requestUri, T obj);
         Task<T> UpdateAsync(string requestUri, string Id, T obj);
+        Task<T> UpdatebyidAsync(string requestUri, int Id, T obj);
         Task<bool> DeleteAsync(string requestUri, string Id);
     }
 }

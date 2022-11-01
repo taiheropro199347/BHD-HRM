@@ -153,7 +153,7 @@ namespace BHDHRMWebAPI.Controllers
 
             return CreatedAtAction("GetTblNhanVien", new { id = tblNhanVien.CardNumber }, tblNhanVien);
         }
-
+         
         // DELETE: api/TblNhanViens/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<TblNhanVien>> DeleteTblNhanVien(string id)

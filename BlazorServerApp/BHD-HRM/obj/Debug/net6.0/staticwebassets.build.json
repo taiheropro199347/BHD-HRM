@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cR9HBGtwabjZRGoqL+25zN/T1wp05i56/xZq2VDkzgA=",
+  "Hash": "fdPk7Q7/LkbgCsPD66k9MmcEohSQumUdRT36Q/Oc3Ko=",
   "Source": "BHD-HRM",
   "BasePath": "_content/BHD-HRM",
   "Mode": "Default",
@@ -2293,6 +2293,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\usersupload\\avatar\\xu-huong-ung-dung-hr-tech-trong-quan-tri-nhan-su-1-removebg-preview.png"
+    },
+    {
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\usersupload\\vcard\\10007-Trương Thị Thanh Tâm.vcf",
+      "SourceId": "BHD-HRM",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
+      "BasePath": "_content/BHD-HRM",
+      "RelativePath": "usersupload/vcard/10007-Trương Thị Thanh Tâm.vcf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\usersupload\\vcard\\10007-Trương Thị Thanh Tâm.vcf"
     },
     {
       "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\usersupload\\vcard\\10057-Lê Hoàng Minh.vcf",

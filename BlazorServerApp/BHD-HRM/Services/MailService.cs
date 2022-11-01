@@ -21,9 +21,11 @@ namespace BHD_HRM.Services
             message.Subject = Subject;
             message.IsBodyHtml = true;
             System.Net.Mail.Attachment attachment;
-            attachment = new System.Net.Mail.Attachment(AttachmentFilename);
-            message.Attachments.Add(attachment);
-
+            if(!string.IsNullOrEmpty(AttachmentFilename))
+            {
+                attachment = new System.Net.Mail.Attachment(AttachmentFilename);
+                message.Attachments.Add(attachment);
+            }
             message.Body = HTMLBody;
             smtp.Port = _mailConfig.Port;
             smtp.Host = _mailConfig.Host;

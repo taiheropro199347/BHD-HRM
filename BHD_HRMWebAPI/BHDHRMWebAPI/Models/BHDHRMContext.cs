@@ -75,10 +75,22 @@ namespace BHDHRMWebAPI.Models
         public virtual DbSet<TblTrocaptrachnhiem> TblTrocaptrachnhiem { get; set; }
         public virtual DbSet<Thietlapbaohiem> Thietlapbaohiem { get; set; }
         public virtual DbSet<Thietlapthue> Thietlapthue { get; set; }
+        public virtual DbSet<TblUrl> TblUrl { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+            modelBuilder.Entity<TblUrl>(entity =>
+           {
+               entity.ToTable("tblUrl");
+
+               entity.Property(e => e.Url)
+                   .HasMaxLength(250)
+                   .HasColumnName("URL");
+               entity.Property(e => e.Email)
+                   .HasMaxLength(100)
+                   .HasColumnName("Email");
+           });
 
             modelBuilder.Entity<Area>(entity =>
             {
