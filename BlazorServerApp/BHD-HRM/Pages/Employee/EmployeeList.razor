@@ -22,7 +22,7 @@
 }
 else
 {
-<MRow>
+@*<MRow>
     <MCol Md=4 Sm=12>
         <MCard Height=146>
            <MCard Height=146>
@@ -74,25 +74,24 @@ else
         </MCard>
         </MCard>
     </MCol>
-</MRow>
+</MRow>*@
 <MRow>
 <MCol Md=3 Sm=12>
 <MCard>
     <MSheet Class="pa-4 primary lighten-2">
-        <MTextField @bind-Value="_search"
+       @* <MTextField @bind-Value="_search"
                     Label="Search Company Directory"
                     Dark
                     Flat
                     SoloInverted
                     HideDetails="true"
                     Clearable
-                    ClearIcon="mdi-close-circle-outline"></MTextField>
+                    ClearIcon="mdi-close-circle-outline"></MTextField>*@
     </MSheet>
     <MCardText>
         <MTreeview 
             Selectable
-           OpenAll
-           Items="_items"
+            Items="_items"
 			       TItem="Data"
 			       TKey="int"
                    Search="@_search"

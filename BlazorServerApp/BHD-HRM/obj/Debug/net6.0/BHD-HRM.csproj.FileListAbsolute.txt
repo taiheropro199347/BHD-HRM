@@ -62,7 +62,6 @@ D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\Bl
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\FluentValidation.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\Masa.Blazor.dll
-D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\Microsoft.AspNetCore.Http.Connections.Client.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\Microsoft.Azure.SignalR.Common.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\Microsoft.Azure.SignalR.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Debug\net6.0\Microsoft.Azure.SignalR.Protocols.dll

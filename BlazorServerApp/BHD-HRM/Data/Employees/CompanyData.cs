@@ -10,7 +10,7 @@
         public string TinhTrang { get; set; }
         public int? AreaId { get; set; }
         public bool? HienThi { get; set; }
-
+        public int? SapXep { get; set; }
         public virtual AreaData Area { get; set; }
     }
 }

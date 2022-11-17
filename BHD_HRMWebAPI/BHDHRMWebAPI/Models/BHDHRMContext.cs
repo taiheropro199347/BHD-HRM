@@ -532,6 +532,7 @@ namespace BHDHRMWebAPI.Models
                     .HasColumnName("ID");
 
                 entity.Property(e => e.AreaId).HasColumnName("AreaID");
+                entity.Property(e => e.SapXep).HasColumnName("SapXep");
 
                 entity.Property(e => e.DiaChi).HasMaxLength(500);
 

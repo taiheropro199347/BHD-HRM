@@ -545,7 +545,7 @@
 					Url = new Uri("https://bhdstar.vn")
 		};
 		string serialized = vcard.Serialize();
-		var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/VCard/", _userData.employeeData.CardNumber+"-"+_userData.employeeData.HoTen+".vcf");
+		var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/VCard/", _userData.employeeData.CardNumber+".vcf");
 		File.WriteAllText(path, serialized);
 		dialog = true;
 	}

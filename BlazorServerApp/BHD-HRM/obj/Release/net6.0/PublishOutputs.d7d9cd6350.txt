@@ -18,7 +18,6 @@ D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Components.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Components.Forms.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Components.Web.dll
-D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Http.Connections.Client.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Metadata.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\Microsoft.Azure.SignalR.Common.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\Microsoft.Azure.SignalR.dll

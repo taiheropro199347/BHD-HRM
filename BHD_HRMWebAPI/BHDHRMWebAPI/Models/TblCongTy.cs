@@ -14,6 +14,7 @@ namespace BHDHRMWebAPI.Models
         public string SoDt { get; set; }
         public string TinhTrang { get; set; }
         public int? AreaId { get; set; }
+        public int? SapXep { get; set; }
         public bool? HienThi { get; set; }
 
         public virtual Area Area { get; set; }

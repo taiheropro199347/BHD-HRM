@@ -38,7 +38,7 @@ namespace BHD_HRM.Pages.Employee
             {
                 int i = 2;
                   List<Data> _itemdatas = new List<Data>();
-                foreach(var item in _companyData)
+                foreach(var item in _companyData.OrderBy(t=>t.SapXep))
                 {
                     _departmentData =await BHD_HRMDepartmentService.GetbyConAsync("TblPhongs/GetDepmbyComp/", item.Id.ToString());
                      List<Data> _itemchills = new List<Data>();

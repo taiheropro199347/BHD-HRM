@@ -32,8 +32,8 @@ namespace BHD_HRM.Pages.Employee
                 {
                     EmployeeDto employeeDto = new EmployeeDto();
                     employeeDto.employeeData = item;
-                    employeeDto.NgaySinhDate = DateOnly.FromDateTime((DateTime)item.NgaySinh);
-                    employeeDto.NgayCapDate = DateOnly.FromDateTime(item.NgayCap == null ? DateTime.Now : (DateTime)item.NgayCap);
+                    employeeDto.NgaySinhDate = item.NgaySinh == null ? null: DateOnly.FromDateTime((DateTime)item.NgaySinh);
+                    employeeDto.NgayCapDate = item.NgayCap == null ? null :DateOnly.FromDateTime( (DateTime)item.NgayCap);
                     _employeeDto.Add(employeeDto);
                 }
                 _companyData = await BHD_HRMComapyService.GetAllAsync("TblCompanies");

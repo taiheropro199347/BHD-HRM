@@ -1,0 +1,431 @@
+﻿@page "/salary/timesheets"
+<div style="flex-grow: 1; overflow: auto; min-width: 900px; width: 100%;">
+    <div v="div" style="padding: 10px 20px; display: flex; max-width: 100%;">
+        <div style="flex-shrink: 0; flex-grow: 1; border: 0.5px solid #ddd;">
+            <h5>Bảng chấm công Tháng 11</h5>
+            <table style="width: 100%; border-collapse: collapse;" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td style="background: rgb(247, 248, 249); font-weight: bold;"><div style="padding: 10px; border: 0.5px solid #ddd; width: 100%;">Thứ 2</div></td>
+                    <td style="background: rgb(247, 248, 249); font-weight: bold;"><div style="padding: 10px; border: 0.5px solid #ddd; width: 100%;">Thứ 3</div></td>
+                    <td style="background: rgb(247, 248, 249); font-weight: bold;"><div style="padding: 10px; border: 0.5px solid #ddd; width: 100%;">Thứ 4</div></td>
+                    <td style="background: rgb(247, 248, 249); font-weight: bold;"><div style="padding: 10px; border: 0.5px solid #ddd; width: 100%;">Thứ 5</div></td>
+                    <td style="background: rgb(247, 248, 249); font-weight: bold;"><div style="padding: 10px; border: 0.5px solid #ddd; width: 100%;">Thứ 6</div></td>
+                    <td style="background: rgb(247, 248, 249); font-weight: bold;"><div style="padding: 10px; border: 0.5px solid #ddd; width: 100%;">Thứ 7</div></td>
+                    <td style="background: rgb(247, 248, 249); font-weight: bold;"><div style="padding: 10px; border: 0.5px solid #ddd; width: 100%;">Chủ nhật</div></td>
+                </tr>
+                <tr>
+                    <td style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">31/10</div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">01/11</div>
+                            <div style="color: #777;">0.9922</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;" title="Thời gian thực tế">08:02 - 17:11</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">02/11</div>
+                            <div style="color: #777;">1</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;" title="Thời gian thực tế">08:00 - 17:02</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: antiquewhite; cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">03/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;" title="Thời gian thực tế">08:03 - Không có</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">04/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">05/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">06/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">07/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">08/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">09/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">10/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">11/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">12/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">13/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">14/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">15/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">16/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">17/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">18/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">19/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">20/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">21/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">22/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">23/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">24/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">25/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">26/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">27/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">28/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">29/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td class="dialog-done pop-done pop-control pop-control-click pop-connect" style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer; color: red;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">30/11</div>
+                            <div style="color: #777;">0</div>
+                            <div style="font-size: 0.9em; padding-bottom: 0px;" title="Thời gian làm việc của ca">08:00 - 17:00</div>
+                            <div style="font-size: 0.9em;" title="HÀNH CHÍNH">HC</div>
+                            <div style="font-size: 0.9em; padding-bottom: 5px;"></div>
+                        </div>
+                    </td>
+                    <td style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">01/12</div>
+                        </div>
+                    </td>
+                    <td style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">02/12</div>
+                        </div>
+                    </td>
+                    <td style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">03/12</div>
+                        </div>
+                    </td>
+                    <td style="width: 14.29%; padding-bottom: 14.29%; position: relative; background: rgb(255, 255, 255); cursor: pointer;">
+                        <div rel="m" style="border: 0.5px solid #ddd; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                            <div style="position: absolute; top: 6px; right: 6px; font-size: 0.7em; color: #333;">04/12</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div
+            style="
+                position: relative;
+                z-index: 1;
+                padding: 0px 15px;
+                border-top: 1px solid rgb(221, 221, 221);
+                border-right: 1px solid rgb(221, 221, 221);
+                border-bottom: 1px solid rgb(221, 221, 221);
+                border-image: initial;
+                border-left: none;
+                flex-grow: 0;
+                min-width: 270px;
+                overflow: auto;
+                justify-self: stretch;
+                background: rgb(247, 248, 249);
+                flex-shrink: 1;
+                height: 1126.81px;
+            "
+        >
+            <div style="display: flex; justify-content: space-between; border: none; padding: 10px 0px; font-weight: bold;">
+                <div style="padding-right: 10px;">Công làm việc</div>
+                <div>-8.0078</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Giờ làm việc thực tính</div>
+                <div>14.9414</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Số công chuẩn</div>
+                <div>22</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Số lần đi muộn</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Số lần về sớm</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Số phút đi muộn</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Số phút về sớm</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Số công nghỉ không lý do</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Số lần quên check in/out</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Giờ làm việc thực tính ban đêm</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Giờ làm việc thực tính ban ngày</div>
+                <div>14.9414</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Công làm thêm</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Giờ làm thêm</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Công ăn làm thêm</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Công ăn theo ca</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Công ăn</div>
+                <div>1</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Tiền phạt đi muộn</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Tiền phạt về sớm</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Tiền phạt nghỉ không lý do</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Tiền phạt quên check inout</div>
+                <div>200000</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Tiền phạt chấm công</div>
+                <div>200000</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Công phạt đi muộn</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Công phạt về sớm</div>
+                <div>0</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Công phạt nghỉ không lý do</div>
+                <div>10</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding: 10px 0px;">
+                <div style="padding-right: 10px;">Công phạt quên check inout</div>
+                <div>0</div>
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+
+}

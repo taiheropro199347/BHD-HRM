@@ -51,15 +51,15 @@
             },
             "Blazored.LocalStorage": {
               "target": "Package",
-              "version": "[4.2.0, )"
+              "version": "[4.3.0, )"
             },
             "Masa.Blazor": {
               "target": "Package",
-              "version": "[0.6.0-rc.8, )"
+              "version": "[0.6.0, )"
             },
             "Microsoft.Azure.SignalR": {
               "target": "Package",
-              "version": "[1.18.3, )"
+              "version": "[1.19.0, )"
             },
             "MixERP.Net.VCards": {
               "target": "Package",

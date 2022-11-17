@@ -37,12 +37,12 @@ else
 											<div Class="ml-10">
 												<h5 class="mb-1">@item.employeeData.HoTen</h5>
 												<subtitle-2 class="mb-1"><i class="fas fa-tag"></i> @item.employeeData.CardNumber</subtitle-2><br>
-												<subtitle-2 class="mb-1"><i class="fa fa-suitcase"></i> @item.employeeData.ChucVu</subtitle-2><br>
+												<subtitle-2 class="mb-1"><i class="fa fa-birthday-cake"></i> Ngày sinh: @item.NgaySinhDate</subtitle-2><br>
 												<subtitle-2 class="mb-1"><i class="fas fa-envelope"></i> @item.employeeData.Email</subtitle-2><br>
 											</div>
 										</div>
 									</MCol>
-									<MCol Class="py-0 col-8">
+									@*<MCol Class="py-0 col-8">
 										<MListItem>
 											<MListItemContent>
 												<MListItemTitle Class="text-h6 black--text"><i class="fa fa-birthday-cake"></i> Ngày sinh: @item.NgaySinhDate</MListItemTitle>
@@ -51,9 +51,9 @@ else
 											</MListItemContent>
 										</MListItem>
 										
-									</MCol>
-									<MCol Class="col-4">
-										<MButton Type="submit" MinWidth=80 Rounded Color="primary" OnClick="() => OnClick(item.employeeData.Id)"> Sửa TTNV </MButton>
+									</MCol>*@
+									<MCol Class="col-12 text-center">
+										<MButton Type="submit" MinWidth=80 Rounded Color="primary" OnClick="() => OnClick(item.employeeData.Id)"> Cập nhật </MButton>
 									</MCol>
 								</MRow>
 							</MImage>

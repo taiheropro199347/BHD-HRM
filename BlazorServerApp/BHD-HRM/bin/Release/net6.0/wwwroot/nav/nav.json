@@ -14,7 +14,7 @@
   },
   {
     "Id": 9,
-    "Title": "Sinh nhật nhân viên",
+    "Title": "Sinh nhật trong tháng",
     "Icon": "mdi-cake-variant",
     "Href": "employee/BirthdayEmployees",
     "Target": "Self"
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "Id": 15,
+    "Id": 16,
     "Title": "Logout",
     "Icon": "fas fa-sign-out-alt",
     "Href": "pages/authentication/Components/Logout",
