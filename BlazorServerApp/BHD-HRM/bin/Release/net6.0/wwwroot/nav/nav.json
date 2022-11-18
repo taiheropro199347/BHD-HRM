@@ -46,6 +46,19 @@
     ]
   },
   {
+    "Id": 14,
+    "Title": "Lương nhân viên",
+    "Icon": "fas fa-wallet",
+    "Children": [
+      {
+        "Id": 15,
+        "Title": "Bảng chấm công",
+        "Icon": "mdi-circle",
+        "Href": "/salary/timesheets"
+      }
+    ]
+  },
+  {
     "Id": 16,
     "Title": "Logout",
     "Icon": "fas fa-sign-out-alt",

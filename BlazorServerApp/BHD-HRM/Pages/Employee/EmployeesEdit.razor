@@ -14,6 +14,12 @@
 @using MixERP.Net.VCards.Serializer
 @using MixERP.Net.VCards.Types
 @using System.Text
+@using System.Drawing
+@using System.Drawing.Drawing2D
+@using System.Drawing.Imaging
+@using QRCoder
+@using System.DrawingCore
+@using System.DrawingCore.Imaging
 @inject NavigationManager NavManager
 @inject IWebHostEnvironment Environment
 @inject IBHD_HRMService<EmployeeData> BHD_HRMService
@@ -367,117 +373,117 @@
 	</MCardText>
 </MCard>
 @code {
-	[Parameter]
-	public string? Id { get; set; }
-	private bool _birthDateMenu;
-	private bool _allocationDateMenu;
-	private bool _signDateMenu;
-	private bool _joinDateMenu;
-	private bool _offDateMenu;
-	bool dialog = false;
-	private EmployeeDto? _userData;
-	private StringNumber? tab;
-	private CompanyData _selected = new CompanyData();
-	public List<CompanyData> _companyData { get; set; }
-	public List<DepartmentData> _departmentData { get; set; }
-	public List<DepartmentData> _departmentSelect { get; set; }
-	public List<EmployeeDto>? _employeeDto = new List<EmployeeDto>();
+    [Parameter]
+    public string? Id { get; set; }
+    private bool _birthDateMenu;
+    private bool _allocationDateMenu;
+    private bool _signDateMenu;
+    private bool _joinDateMenu;
+    private bool _offDateMenu;
+    bool dialog = false;
+    private EmployeeDto? _userData;
+    private StringNumber? tab;
+    private CompanyData _selected = new CompanyData();
+    public List<CompanyData> _companyData { get; set; }
+    public List<DepartmentData> _departmentData { get; set; }
+    public List<DepartmentData> _departmentSelect { get; set; }
+    public List<EmployeeDto>? _employeeDto = new List<EmployeeDto>();
 
 
-	[AllowNull]
-	public EmployeeDto UserData
-	{
-		get
-		{
-			return _userData ?? (_userData = new EmployeeDto());
-		}
-		set
-		{
-			_userData = value;
-		}
-	}
-	protected override async Task OnInitializedAsync()
-	{
-		_spinnerService.Show();
+    [AllowNull]
+    public EmployeeDto UserData
+    {
+        get
+        {
+            return _userData ?? (_userData = new EmployeeDto());
+        }
+        set
+        {
+            _userData = value;
+        }
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        _spinnerService.Show();
 
-            await Task.Delay(500);
+        await Task.Delay(500);
 
-            _spinnerService.Hide();
+        _spinnerService.Hide();
 
-		_companyData = await BHD_HRMComapyService.GetAllAsync("TblCompanies");
-		_departmentData = await BHD_HRMDepartmentService.GetAllAsync("TblPhongs");
+        _companyData = await BHD_HRMComapyService.GetAllAsync("TblCompanies");
+        _departmentData = await BHD_HRMDepartmentService.GetAllAsync("TblPhongs");
 
-		if (Id != null)
-		{
-			var getemployee = await BHD_HRMService.GetByIdAsync("TblNhanViens/", Id);
-			_userData.employeeData = getemployee;
-			if (getemployee.IdcongTy != null)
-			{
-				var company = await BHD_HRMComapyService.GetByIdAsync("TblCompanies/", getemployee.IdcongTy.ToString());
-				if (company != null)
-				{
-					_userData.CompanyString = company.TenCongTy;
-					_departmentSelect = _departmentData.Where(t => t.IdcongTy == getemployee.IdcongTy).ToList();
-				}
-			}
-			if (getemployee.IdphongBan != null)
-			{
-				var departmnet = await BHD_HRMDepartmentService.GetByIdAsync("TblPhongs/", getemployee.IdphongBan);
-				if (departmnet != null)
-				{
-					_userData.DepartmentString = departmnet.TenPhong;
-				}
-			}
-			_userData.NgaySinhDate = getemployee.NgaySinh != null ?DateOnly.FromDateTime((DateTime)getemployee.NgaySinh):null;
-			_userData.NgayCapDate = getemployee.NgayCap != null ?DateOnly.FromDateTime((DateTime)getemployee.NgayCap):null;
-			_userData.NgayVaoCongTyDate = getemployee.NgayVaoCongTy != null ? DateOnly.FromDateTime((DateTime)getemployee.NgayVaoCongTy) : null;
-			_userData.NgayNghiViecDate = getemployee.Ngaynghiviec != null ? DateOnly.FromDateTime((DateTime)getemployee.Ngaynghiviec) : null;
-			_userData.NgayKyHDLDDate = getemployee.NgayKyHDLD != null ? DateOnly.FromDateTime((DateTime)getemployee.NgayKyHDLD) : null;
-		}
+        if (Id != null)
+        {
+            var getemployee = await BHD_HRMService.GetByIdAsync("TblNhanViens/", Id);
+            _userData.employeeData = getemployee;
+            if (getemployee.IdcongTy != null)
+            {
+                var company = await BHD_HRMComapyService.GetByIdAsync("TblCompanies/", getemployee.IdcongTy.ToString());
+                if (company != null)
+                {
+                    _userData.CompanyString = company.TenCongTy;
+                    _departmentSelect = _departmentData.Where(t => t.IdcongTy == getemployee.IdcongTy).ToList();
+                }
+            }
+            if (getemployee.IdphongBan != null)
+            {
+                var departmnet = await BHD_HRMDepartmentService.GetByIdAsync("TblPhongs/", getemployee.IdphongBan);
+                if (departmnet != null)
+                {
+                    _userData.DepartmentString = departmnet.TenPhong;
+                }
+            }
+            _userData.NgaySinhDate = getemployee.NgaySinh != null ?DateOnly.FromDateTime((DateTime)getemployee.NgaySinh):null;
+            _userData.NgayCapDate = getemployee.NgayCap != null ?DateOnly.FromDateTime((DateTime)getemployee.NgayCap):null;
+            _userData.NgayVaoCongTyDate = getemployee.NgayVaoCongTy != null ? DateOnly.FromDateTime((DateTime)getemployee.NgayVaoCongTy) : null;
+            _userData.NgayNghiViecDate = getemployee.Ngaynghiviec != null ? DateOnly.FromDateTime((DateTime)getemployee.Ngaynghiviec) : null;
+            _userData.NgayKyHDLDDate = getemployee.NgayKyHDLD != null ? DateOnly.FromDateTime((DateTime)getemployee.NgayKyHDLD) : null;
+        }
 
-	}
-	private async Task UploadFile(InputFileChangeEventArgs e)
-	{
-		var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/avatar/", e.File.Name);
+    }
+    private async Task UploadFile(InputFileChangeEventArgs e)
+    {
+        var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/avatar/", e.File.Name);
 
-		await using FileStream fs = new(path, FileMode.Create);
-		await e.File.OpenReadStream().CopyToAsync(fs);
-		_userData.employeeData.AnhNhanVien = Path.Combine("/", "usersupload/avatar/", e.File.Name);
-	}
-	private async Task SaveEmployee()
-	{
-		if (Id == null)
-		{
-			_userData.employeeData.TrangThai = "Chờ Update";
-			_userData.employeeData.CardNumber = DateTime.Now.ToString("MMddyyyyHHmmssss");
-			_userData.employeeData.NgaySinh = _userData.NgaySinhDate != null ?((DateOnly)_userData.NgaySinhDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
-			_userData.employeeData.NgayCap = _userData.NgayCapDate != null ?((DateOnly)_userData.NgayCapDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
-			_userData.employeeData.LanCuoiChinhSua = DateTime.Now.ToString("dd-MM-yyyy HH:mm");
-			await BHD_HRMService.SaveAsync("TblNhanViens", _userData.employeeData);
-		}
-		else
-		{
-			_userData.employeeData.NgaySinh = _userData.NgaySinhDate != null ?((DateOnly)_userData.NgaySinhDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
-			_userData.employeeData.NgayCap = _userData.NgayCapDate != null ?((DateOnly)_userData.NgayCapDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
-			_userData.employeeData.NgayVaoCongTy = _userData.NgayVaoCongTyDate != null ? ((DateOnly)_userData.NgayVaoCongTyDate).ToDateTime(TimeOnly.Parse("00:00 AM")) : null;
-			_userData.employeeData.NgayKyHDLD = _userData.NgayKyHDLDDate != null ? ((DateOnly)_userData.NgayKyHDLDDate).ToDateTime(TimeOnly.Parse("00:00 AM")) : null;
-			_userData.employeeData.Ngaynghiviec = _userData.NgayNghiViecDate != null ? ((DateOnly)_userData.NgayNghiViecDate).ToDateTime(TimeOnly.Parse("00:00 AM")) : null;
-			_userData.employeeData.LanCuoiChinhSua = DateTime.Now.ToString("dd-MM-yyyy HH:mm");
-			await BHD_HRMService.UpdateAsync("TblNhanViens/", _userData.employeeData.CardNumber, _userData.employeeData);
-		}
-		string fullName = _userData.employeeData.HoTen;
-		
-		string[] arrayStr=fullName.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries); 
+        await using FileStream fs = new(path, FileMode.Create);
+        await e.File.OpenReadStream().CopyToAsync(fs);
+        _userData.employeeData.AnhNhanVien = Path.Combine("/", "usersupload/avatar/", e.File.Name);
+    }
+    private async Task SaveEmployee()
+    {
+        if (Id == null)
+        {
+            _userData.employeeData.TrangThai = "Chờ Update";
+            _userData.employeeData.CardNumber = DateTime.Now.ToString("MMddyyyyHHmmssss");
+            _userData.employeeData.NgaySinh = _userData.NgaySinhDate != null ?((DateOnly)_userData.NgaySinhDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
+            _userData.employeeData.NgayCap = _userData.NgayCapDate != null ?((DateOnly)_userData.NgayCapDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
+            _userData.employeeData.LanCuoiChinhSua = DateTime.Now.ToString("dd-MM-yyyy HH:mm");
+            await BHD_HRMService.SaveAsync("TblNhanViens", _userData.employeeData);
+        }
+        else
+        {
+            _userData.employeeData.NgaySinh = _userData.NgaySinhDate != null ?((DateOnly)_userData.NgaySinhDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
+            _userData.employeeData.NgayCap = _userData.NgayCapDate != null ?((DateOnly)_userData.NgayCapDate).ToDateTime(TimeOnly.Parse("00:00 AM")):null;
+            _userData.employeeData.NgayVaoCongTy = _userData.NgayVaoCongTyDate != null ? ((DateOnly)_userData.NgayVaoCongTyDate).ToDateTime(TimeOnly.Parse("00:00 AM")) : null;
+            _userData.employeeData.NgayKyHDLD = _userData.NgayKyHDLDDate != null ? ((DateOnly)_userData.NgayKyHDLDDate).ToDateTime(TimeOnly.Parse("00:00 AM")) : null;
+            _userData.employeeData.Ngaynghiviec = _userData.NgayNghiViecDate != null ? ((DateOnly)_userData.NgayNghiViecDate).ToDateTime(TimeOnly.Parse("00:00 AM")) : null;
+            _userData.employeeData.LanCuoiChinhSua = DateTime.Now.ToString("dd-MM-yyyy HH:mm");
+            await BHD_HRMService.UpdateAsync("TblNhanViens/", _userData.employeeData.CardNumber, _userData.employeeData);
+        }
+        string fullName = _userData.employeeData.HoTen;
 
-		string ho=arrayStr[0];
-		string ten=arrayStr[arrayStr.Length-1];
+        string[] arrayStr=fullName.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries); 
 
-		StringBuilder midleName=new StringBuilder();
-		//Lấy tên đệm
-		for(int i=1;i<arrayStr.Length-1;i++){
-			midleName.Append(arrayStr[i] + " ");
-		}
-		var vcard = new VCard
+        string ho=arrayStr[0];
+        string ten=arrayStr[arrayStr.Length-1];
+
+        StringBuilder midleName=new StringBuilder();
+        //Lấy tên đệm
+        for(int i=1;i<arrayStr.Length-1;i++){
+            midleName.Append(arrayStr[i] + " ");
+        }
+        var vcard = new VCard
 			{
 				Version = VCardVersion.V3,
 				FirstName = Utility.RemoveSign4VietnameseString(ho).ToUpper()+" "+Utility.RemoveSign4VietnameseString(midleName.ToString()).ToUpper(),
@@ -544,10 +550,17 @@
                     },
 					Url = new Uri("https://bhdstar.vn")
 		};
-		string serialized = vcard.Serialize();
-		var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/VCard/", _userData.employeeData.CardNumber+".vcf");
-		File.WriteAllText(path, serialized);
-		dialog = true;
+        string serialized = vcard.Serialize();
+        var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/VCard/", _userData.employeeData.CardNumber+".vcf");
+        File.WriteAllText(path, serialized);
+        var pathImageQR = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/avatar/bhd.png");
+		string imagePath = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/VCard/", _userData.employeeData.CardNumber+".png");
+        QRCodeGenerator qrGenerator = new QRCodeGenerator();
+        QRCodeData qrCodeData = qrGenerator.CreateQrCode(serialized, QRCodeGenerator.ECCLevel.Q);
+        QRCode qrCode = new QRCode(qrCodeData);
+        Bitmap qrCodeImage = qrCode.GetGraphic(5, System.DrawingCore.Color.Black, System.DrawingCore.Color.White, (Bitmap)Bitmap.FromFile(pathImageQR));
+		qrCodeImage.Save(imagePath, ImageFormat.Png);
+        dialog = true;
 	}
 	protected void SetDepartmentDdl()
 	{

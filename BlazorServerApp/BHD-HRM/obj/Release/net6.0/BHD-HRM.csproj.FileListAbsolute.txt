@@ -76,3 +76,5 @@ D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\Microsoft.JSInterop.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\System.IO.Pipelines.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\jsmodules\jsmodules.build.manifest.json
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\QRCoder.dll
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\bin\Release\net6.0\ZKWeb.System.Drawing.dll

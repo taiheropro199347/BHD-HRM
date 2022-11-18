@@ -42,6 +42,8 @@ D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\System.Net.WebSockets.WebSocketProtocol.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\Util.Reflection.dll
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\QRCoder.dll
+D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\ZKWeb.System.Drawing.dll
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\runtimes\linux-arm\native\libSkiaSharp.so
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\runtimes\linux-arm64\native\libSkiaSharp.so
 D:\BHD-HR\BHD-HR\BHD-HRM-git\BHD-HRM\BlazorServerApp\BHD-HRM\obj\Release\net6.0\PubTmp\Out\runtimes\linux-musl-x64\native\libSkiaSharp.so

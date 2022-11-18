@@ -12,7 +12,7 @@ namespace BHD_HRM.Services
             _mailConfig = mailConfig;
         }
 
-        public async Task SendEmailAsync(string ToEmail, string Subject, string HTMLBody ,string AttachmentFilename)
+        public async Task SendEmailAsync(string ToEmail, string Subject, string HTMLBody ,string AttachmentFilename, string attachmentImagename)
         {
             MailMessage message = new MailMessage();
             SmtpClient smtp = new SmtpClient();
@@ -20,13 +20,26 @@ namespace BHD_HRM.Services
             message.To.Add(new MailAddress(ToEmail));
             message.Subject = Subject;
             message.IsBodyHtml = true;
+
+            //create Alrternative HTML view
+            AlternateView htmlView = AlternateView.CreateAlternateViewFromString(HTMLBody, null, "text/html");
+
             System.Net.Mail.Attachment attachment;
-            if(!string.IsNullOrEmpty(AttachmentFilename))
+            if (!string.IsNullOrEmpty(AttachmentFilename))
             {
                 attachment = new System.Net.Mail.Attachment(AttachmentFilename);
                 message.Attachments.Add(attachment);
             }
-            message.Body = HTMLBody;
+            if (!string.IsNullOrEmpty(attachmentImagename))
+            {
+                LinkedResource theEmailImage = new LinkedResource(attachmentImagename);
+                theEmailImage.ContentId = "MyImage";
+                //Add the Image to the Alternate view
+                htmlView.LinkedResources.Add(theEmailImage);
+                //Add view to the Email Message
+                message.AlternateViews.Add(htmlView);
+            }
+            message.Body = HTMLBody;           
             smtp.Port = _mailConfig.Port;
             smtp.Host = _mailConfig.Host;
             smtp.EnableSsl = false;
