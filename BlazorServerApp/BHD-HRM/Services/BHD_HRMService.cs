@@ -174,6 +174,30 @@ namespace BHD_HRM.Services
 
             return await Task.FromResult(returnedObj);
         }
+
+        public async Task<T> UpdatebyidstringAsync(string requestUri, string Id, T obj)
+        {
+            string serializedUser = JsonConvert.SerializeObject(obj);
+
+            var requestMessage = new HttpRequestMessage(HttpMethod.Put, requestUri + Id);
+            var token = await _localStorageService.GetItemAsync<string>("accessToken");
+            requestMessage.Headers.Authorization
+                = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
+            requestMessage.Content = new StringContent(serializedUser);
+
+            requestMessage.Content.Headers.ContentType
+                = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+            var response = await _httpClient.SendAsync(requestMessage);
+
+            var responseStatusCode = response.StatusCode;
+            var responseBody = await response.Content.ReadAsStringAsync();
+
+            var returnedObj = JsonConvert.DeserializeObject<T>(responseBody);
+
+            return await Task.FromResult(returnedObj);
+        }
         #endregion
 
     }

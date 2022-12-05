@@ -11,5 +11,6 @@ namespace BHDHRMWebAPI.Models
         public int IdcongTy { get; set; }
         public string TenPhong { get; set; }
         public string GhiChu { get; set; }
+        public virtual TblCongTy TblCongTy { get; set; }
     }
 }

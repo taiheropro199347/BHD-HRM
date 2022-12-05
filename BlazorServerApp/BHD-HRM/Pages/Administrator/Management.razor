@@ -1,0 +1,716 @@
+﻿@page "/Administrator/Management"
+@attribute [Authorize(Policy = "IT")]
+@using BHD_HRM.Data.Employees
+@using BHD_HRM.Services
+@inherits ProCompontentBase
+@inject MasaBlazor MasaBlazor
+@inject GlobalConfig GlobalConfig
+@inject NavigationManager Nav
+@inject IWebHostEnvironment Environment
+@inject NavigationManager MyNavigationManager
+@inject BlazorSpinner.SpinnerService _spinnerService
+@inject IBHD_HRMService<AreaData> BHD_HRMAreaService
+@inject IBHD_HRMService<CompanyData> BHD_HRMCompService
+@inject IBHD_HRMService<DepartmentData> BHD_HRMDepmtService
+<MRow>
+	<MCol Md=3 Sm=12>
+		<MDataTable Headers="_headerareas"
+            Items="_areaData"
+            Class="elevation-1">
+            <TopContent>
+                <MToolbar Flat  Class="ml-2 mr-2">
+                    <MToolbarTitle>Khu vực</MToolbarTitle>
+                    <MDivider Class="mx-4"
+                              Inset
+                              Vertical></MDivider>
+                    <MSpacer></MSpacer>
+                    <MButton Color="primary"
+                             Dark
+                             Class="mb-2"
+                             OnClick="()=>{_dialogArea=true;_editedIndexArea=-1;}">
+                        Thêm mới
+                    </MButton>
+                    <MDialog @bind-Value="_dialogArea"
+                             MaxWidth="500">
+                        <MCard>
+                            <MCardTitle>
+                                <span class="text-h5">@FormTitleArea</span>
+                            </MCardTitle>
+
+                            <MCardText>
+                                <MContainer>
+                                    <MRow>
+                                        <MCol Cols="12"
+                                              Sm="6"
+                                              Md="8">
+                                            <MTextField @bind-Value="_editedItemArea.Name"
+                                                        Label="Tên khu vực"></MTextField>
+                                        </MCol>
+                                        <MCol Cols="12"
+                                              Sm="6"
+                                              Md="4">
+                                            <MCheckbox
+                                                @bind-Value="_editedItemArea.Isvisible"
+                                                Label="Hiển thị">
+                                            </MCheckbox>
+                                        </MCol>
+                                    </MRow>
+                                </MContainer>
+                            </MCardText>
+
+                            <MCardActions>
+                                <MSpacer></MSpacer>
+                                <MButton Color="blue darken-1"
+                                         Text
+                                         OnClick="CloseArea">
+                                    Cancel
+                                </MButton>
+                                <MButton Color="blue darken-1"
+                                         Text
+                                         OnClick="SaveArea">
+                                    Save
+                                </MButton>
+                            </MCardActions>
+                        </MCard>
+                    </MDialog>
+                    <MDialog @bind-Value="_dialogDeleteArea" MaxWidth="500">
+                        <MCard>
+                            <MCardTitle Class="text-h5">Xác nhận xóa khu vực.</MCardTitle>
+                            <MCardActions>
+                                <MSpacer></MSpacer>
+                                <MButton Color="blue darken-1" Text OnClick="CloseDeleteArea">Cancel</MButton>
+                                <MButton Color="blue darken-1" Text OnClick="DeleteItemAreaConfirm">OK</MButton>
+                                <MSpacer></MSpacer>
+                            </MCardActions>
+                        </MCard>
+                    </MDialog>
+                </MToolbar>
+            </TopContent>
+            <ItemColContent>
+                @if (context.Header.Value == "actions")
+                {
+                    <MIcon Small
+                       Class="mr-2"
+                       OnClick="()=>EditItemArea(context.Item)">mdi-pencil</MIcon>
+                    <MIcon Small
+                       OnClick="()=>DeleteItemArea(context.Item)">mdi-delete</MIcon>
+                }
+                else
+                {
+                    @context.Value
+                }
+            </ItemColContent>
+            <NoDataContent>
+                <MButton Color="primary"
+                         OnClick="OnInitializedAsync">
+                    Reset
+                </MButton>
+            </NoDataContent>
+        </MDataTable>
+    </MCol>
+	<MCol Md=9 Sm=12>
+        @if(_compData.Count>0)
+        {
+			
+		<MDataTable Headers="_headercomp"
+            Items="_compData"
+            Class="elevation-1">
+            <TopContent>
+                <MToolbar Flat  Class="ml-2 mr-2">
+                    <MToolbarTitle>Công ty</MToolbarTitle>
+                    <MDivider Class="mx-4"
+                              Inset
+                              Vertical></MDivider>
+                    <MSpacer></MSpacer>
+                    <MButton Color="primary"
+                             Dark
+                             Class="mb-2"
+                             OnClick="()=>{_dialogComp=true;_editedIndexComp=-1;}">
+                        Thêm mới
+                    </MButton>
+                    <MDialog @bind-Value="_dialogComp"
+                             MaxWidth="500">
+                        <MCard>
+                            <MCardTitle>
+                                <span class="text-h5">@FormTitleComp</span>
+                            </MCardTitle>
+
+                            <MCardText>
+                                <MContainer>
+                                    <MRow>
+                                        <MCol Cols="12"
+                                              Sm="6"
+                                              Md="2">
+                                            <MTextField Type="number" TValue="int" @bind-Value="_editedItemComp.Id"
+                                                        Label="Id"></MTextField>
+                                        </MCol>
+                                        <MCol Cols="12"
+                                              Sm="6"
+                                              Md="6">
+                                            <MTextField
+                                                @bind-Value="_editedItemComp.TenCongTy"
+                                                Label="Tên công ty">
+                                            </MTextField>
+                                        </MCol>
+										<MCol Cols="12"
+                                              Sm="6"
+                                              Md="3">
+                                            <MCheckbox
+                                                @bind-Value="_editedItemComp.HienThi"
+                                                Label="hiển thị">
+                                            </MCheckbox>
+                                        </MCol>
+										<MCol Cols="12"
+                                              Sm="6"
+                                              Md="12">
+                                            <MTextField
+                                                @bind-Value="_editedItemComp.DiaChi"
+                                                Label="Địa chỉ">
+                                            </MTextField>
+                                        </MCol>
+										<MCol Cols="12"
+                                              Sm="6"
+                                              Md="9">
+                                           @* <MTextField
+                                                @bind-Value="_editedItemComp.DiaChi"
+                                                Label="Khu vực">
+                                            </MTextField>*@
+                                            <MSelect TItem="AreaData"
+										         TItemValue="int"
+										         TValue="int?"
+										         @bind-Value="_editedItemComp.AreaId"
+										         Color="primary"
+										         HideDetails="@("auto")"
+										         Clearable
+										         Outlined
+										         Items="@_areaData"
+										         ItemText="u => u.Name"
+										         ItemValue="u => u.Id"
+										         Label="Khu vực">
+								        </MSelect>
+                                        </MCol>
+										<MCol Cols="12"
+                                              Sm="6"
+                                              Md="3">
+                                            <MTextField Type="number" TValue="int?"
+                                                @bind-Value="_editedItemComp.SapXep"
+                                                Label="Sắp xếp">
+                                            </MTextField>
+                                        </MCol>
+                                    </MRow>
+                                </MContainer>
+                            </MCardText>
+
+                            <MCardActions>
+                                <MSpacer></MSpacer>
+                                <MButton Color="blue darken-1"
+                                         Text
+                                         OnClick="CloseComp">
+                                    Cancel
+                                </MButton>
+                                <MButton Color="blue darken-1"
+                                         Text
+                                         OnClick="SaveComp">
+                                    Save
+                                </MButton>
+                            </MCardActions>
+                        </MCard>
+                    </MDialog>
+                    <MDialog @bind-Value="_dialogDeleteComp" MaxWidth="500">
+                        <MCard>
+                            <MCardTitle Class="text-h5">Xác nhận xóa chi nhánh.</MCardTitle>
+                            <MCardActions>
+                                <MSpacer></MSpacer>
+                                <MButton Color="blue darken-1" Text OnClick="CloseDeleteComp">Cancel</MButton>
+                                <MButton Color="blue darken-1" Text OnClick="DeleteItemCompConfirm">OK</MButton>
+                                <MSpacer></MSpacer>
+                            </MCardActions>
+                        </MCard>
+                    </MDialog>
+                </MToolbar>
+            </TopContent>
+            <ItemColContent>
+                @if (context.Header.Value == "actionscomp")
+                {
+                    <MIcon Small
+                       Class="mr-2"
+                       OnClick="()=>EditItemComp(context.Item)">mdi-pencil</MIcon>
+                    <MIcon Small
+                       OnClick="()=>DeleteItemComp(context.Item)">mdi-delete</MIcon>
+                }
+                else
+                {
+                    @context.Value
+                }
+            </ItemColContent>
+            <NoDataContent>
+                <MButton Color="primary"
+                         OnClick="OnInitializedAsync">
+                    Reset
+                </MButton>
+            </NoDataContent>
+        </MDataTable>
+        }
+ </MCol>
+</MRow>
+<MRow>
+	@if(_compData.Count>0)
+        {
+	<MCol Md=12 Sm=12>
+		<MDataTable Headers="_headers"
+            Items="_depmtData"
+            ItemKey="r=>r.TenPhong"
+            SortBy="nameof(DepartmentData.TenPhong)"
+            GroupBy="nameof(DepartmentData.CompanyName)"
+            Class="elevation-1"
+            ShowGroupBy>
+			 <TopContent>
+                <MToolbar Flat  Class="ml-2 mr-2">
+                    <MToolbarTitle>Công ty</MToolbarTitle>
+                    <MDivider Class="mx-4"
+                              Inset
+                              Vertical></MDivider>
+                    <MSpacer></MSpacer>
+                    <MButton Color="primary"
+                             Dark
+                             Class="mb-2"
+                             OnClick="()=>{_dialogDepmt=true;_editedIndexDepmt=-1;}">
+                        Thêm mới
+                    </MButton>
+                    <MDialog @bind-Value="_dialogDepmt"
+                             MaxWidth="500">
+                        <MCard>
+                            <MCardTitle>
+                                <span class="text-h5">@FormTitleDepmt</span>
+                            </MCardTitle>
+
+                            <MCardText>
+                                <MContainer>
+                                    <MRow>
+                                       @* <MCol Cols="12"
+                                              Sm="6"
+                                              Md="3">
+                                            <MTextField @bind-Value="_editedItemDepmt.Id"
+                                                        Label="Id"></MTextField>
+                                        </MCol>*@
+                                        <MCol Cols="12"
+                                              Sm="6"
+                                              Md="12">
+                                            <MSelect TItem="CompanyData"
+										         TItemValue="int"
+										         TValue="int"
+										         @bind-Value="_editedItemDepmt.IdcongTy"
+										         Color="primary"
+										         HideDetails="@("auto")"
+										         Clearable
+										         Outlined
+										         Items="@_compData"
+										         ItemText="u => u.TenCongTy"
+										         ItemValue="u => u.Id"
+										         Label="chi nhánh">
+												 </MSelect>
+                                        </MCol>
+										
+										<MCol Cols="12"
+                                              Sm="6"
+                                              Md="6">
+                                            <MTextField
+                                                @bind-Value="_editedItemDepmt.TenPhong"
+                                                Label="Tên phòng ban">
+                                            </MTextField>
+                                        </MCol>
+										<MCol Cols="12"
+                                              Sm="6"
+                                              Md="6">
+                                           <MTextField
+                                                @bind-Value="_editedItemDepmt.GhiChu"
+                                                Label="Ghi chú">
+                                            </MTextField>
+                                        </MCol>
+                                    </MRow>
+                                </MContainer>
+                            </MCardText>
+
+                            <MCardActions>
+                                <MSpacer></MSpacer>
+                                <MButton Color="blue darken-1"
+                                         Text
+                                         OnClick="CloseDepmt">
+                                    Cancel
+                                </MButton>
+                                <MButton Color="blue darken-1"
+                                         Text
+                                         OnClick="SaveDepmt">
+                                    Save
+                                </MButton>
+                            </MCardActions>
+                        </MCard>
+                    </MDialog>
+                    <MDialog @bind-Value="_dialogDeleteDepmt" MaxWidth="500">
+                        <MCard>
+                            <MCardTitle Class="text-h5">Xác nhận xóa phòng ban.</MCardTitle>
+                            <MCardActions>
+                                <MSpacer></MSpacer>
+                                <MButton Color="blue darken-1" Text OnClick="CloseDeleteDepmt">Cancel</MButton>
+                                <MButton Color="blue darken-1" Text OnClick="DeleteItemDepmtConfirm">OK</MButton>
+                                <MSpacer></MSpacer>
+                            </MCardActions>
+                        </MCard>
+                    </MDialog>
+                </MToolbar>
+            </TopContent>
+            <ItemColContent>
+                @if (context.Header.Value == "actionsdepmt")
+                {
+                    <MIcon Small
+                       Class="mr-2"
+                       OnClick="()=>EditItemDepmt(context.Item)">mdi-pencil</MIcon>
+                    <MIcon Small
+                       OnClick="()=>DeleteItemDepmt(context.Item)">mdi-delete</MIcon>
+                }
+                else
+                {
+                    @context.Value
+                }
+            </ItemColContent>
+            <NoDataContent>
+                <MButton Color="primary"
+                         OnClick="OnInitializedAsync">
+                    Reset
+                </MButton>
+            </NoDataContent>
+        </MDataTable>
+    </MCol>
+    }
+</MRow>
+
+@code {
+    public List<AreaData>? _areaData=new List<AreaData>();
+    public List<CompanyData>? _compData=new List<CompanyData>();
+    public List<DepartmentData>? _depmtData=new List<DepartmentData>();
+
+    private List<DataTableHeader<DepartmentData>> _headers = new List<DataTableHeader<DepartmentData>>
+        {
+           new ()
+           {
+            Text= "Id",
+            Align= "start",
+            Value= nameof(DepartmentData.Id),
+            Groupable=false
+          },
+		  new ()
+           {
+            Text= "Tên Phòng",
+            Align= "start",
+            Value= nameof(DepartmentData.TenPhong),
+            Groupable=false
+          },
+		  new ()
+           {
+            Text= "Tên công ty",
+            Align= "start",
+            Value= nameof(DepartmentData.CompanyName),
+            Groupable=false
+          },
+		  new ()
+           {
+            Text= "Ghi chú",
+            Align= "start",
+            Value= nameof(DepartmentData.GhiChu),
+            Groupable=false
+          },
+		  new (){ Text= "Actions", Value= "actionsdepmt",Sortable=false }
+          //new (){ Text= "Category", Value= nameof(Dessert.Category),Align="right"},
+          //new (){ Text= "Dairy", Value= nameof(Dessert.Dairy),Align="right"}
+        };
+
+    private List<DataTableHeader<AreaData>> _headerareas = new List<DataTableHeader<AreaData>>
+        {
+           new ()
+           {
+            Text= "Khu vực",
+            Align= "start",
+            Sortable= false,
+            Value= nameof(AreaData.Name)
+          },
+		   new ()
+           {
+            Text= "Hiển thị",
+            Align= "start",
+            Sortable= false,
+            Value= nameof(AreaData.Isvisible)
+          },
+          new (){ Text= "Actions", Value= "actions",Sortable=false }
+        };
+
+    private List<DataTableHeader<CompanyData>> _headercomp = new List<DataTableHeader<CompanyData>>
+        {
+           new ()
+           {
+            Text= "Id công ty",
+            Align= "start",
+            Sortable= false,
+            Value= nameof(CompanyData.Id)
+          },
+		   new ()
+           {
+            Text= "Tên công ty",
+            Align= "start",
+            Sortable= false,
+            Value= nameof(CompanyData.TenCongTy)
+          },
+		  new ()
+           {
+            Text= "Địa chỉ",
+            Align= "start",
+            Sortable= false,
+            Value= nameof(CompanyData.DiaChi)
+          },
+		  new ()
+           {
+            Text= "Khu vực",
+            Align= "start",
+            Sortable= false,
+            Value= nameof(CompanyData.AreaName)
+          },
+		   new ()
+           {
+            Text= "Hiển thị",
+            Align= "start",
+            Sortable= false,
+            Value= nameof(CompanyData.HienThi)
+          },
+		  new ()
+           {
+            Text= "Sắp xếp",
+            Align= "start",
+            Sortable= false,
+            Value= nameof(CompanyData.SapXep)
+          },
+          new (){ Text= "Actions", Value= "actionscomp",Sortable=false }
+        };
+    private bool _dialogArea;
+    private bool _dialogDeleteArea;
+    private AreaData _editedItemArea = new AreaData();
+    private int _editedIndexArea;
+
+
+    private bool _dialogComp;
+    private bool _dialogDeleteComp;
+    private CompanyData _editedItemComp = new CompanyData();
+    private int _editedIndexComp;
+
+
+    private bool _dialogDepmt;
+    private bool _dialogDeleteDepmt;
+    private DepartmentData _editedItemDepmt = new DepartmentData();
+    private int _editedIndexDepmt;
+
+    public string FormTitleArea
+    {
+        get
+        {
+            return _editedIndexArea == -1 ? "Thêm mới khu vực" : "Chỉnh sửa khu vực";
+        }
+    }
+    public string FormTitleComp
+    {
+        get
+        {
+            return _editedIndexComp == -1 ? "Thêm mới chi nhánh" : "Chỉnh sửa chi nhánh";
+        }
+    }
+
+    public string FormTitleDepmt
+    {
+        get
+        {
+            return _editedIndexDepmt == -1 ? "Thêm mới phòng ban" : "Chỉnh sửa phòng ban";
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _spinnerService.Show();
+
+        await Task.Delay(1000);
+
+        _spinnerService.Hide();
+
+        _areaData = await BHD_HRMAreaService.GetAllAsync("Areas/GetAreas");
+        _compData = await BHD_HRMCompService.GetAllAsync("TblCompanies/GetTblCongTies");
+        _depmtData = await BHD_HRMDepmtService.GetAllAsync("TblPhongs");
+    }
+
+    public void EditItemDepmt(DepartmentData item)
+    {
+        _editedIndexDepmt = _depmtData.IndexOf(item);
+        _editedItemDepmt = new DepartmentData()
+            {
+                GhiChu= item.GhiChu,
+                IdcongTy = item.IdcongTy,
+				TenPhong = item.TenPhong,
+                Id=item.Id
+
+            };
+        _dialogDepmt = true;
+    }
+
+    public void DeleteItemDepmt(DepartmentData item)
+    {
+        _editedItemDepmt = item;
+        _dialogDeleteDepmt = true;
+    }
+    public void CloseDepmt()
+    {
+        _dialogDepmt = false;
+        _editedItemDepmt = new DepartmentData();
+        _editedIndexDepmt = -1;
+    }
+
+    public async Task SaveDepmt()
+    {
+		_editedItemDepmt.Id = _editedItemDepmt.IdcongTy + "-" + _editedItemDepmt.TenPhong;
+        if(_editedIndexDepmt==-1)
+        {            
+            await BHD_HRMDepmtService.SaveAsync("TblPhongs", _editedItemDepmt);
+        }
+        else
+        {
+			await BHD_HRMDepmtService.UpdatebyidstringAsync("TblPhongs/", _editedItemDepmt.Id,_editedItemDepmt);
+        }        
+        _depmtData = await BHD_HRMDepmtService.GetAllAsync("TblPhongs");
+        CloseDepmt();
+    } public  async Task DeleteItemDepmtConfirm()
+    {
+		 await BHD_HRMDepmtService.DeleteAsync("TblPhongs/", _editedItemDepmt.Id.ToString());
+		_depmtData = await BHD_HRMDepmtService.GetAllAsync("TblPhongs");
+		 CloseDeleteDepmt();
+    }
+
+    public void CloseDeleteDepmt()
+    {
+		_dialogDeleteDepmt = false;
+        _editedItemDepmt = new();
+        _editedIndexDepmt = -1;
+    }
+
+
+
+
+
+
+
+
+	public void CloseComp()
+    {
+        _dialogComp = false;
+        _editedItemComp = new CompanyData();
+        _editedIndexComp = -1;
+    }
+
+    public async Task SaveComp()
+    {
+        if(_editedIndexComp==-1)
+        {
+			await BHD_HRMCompService.SaveAsync("TblCompanies", _editedItemComp);
+        }
+        else
+        {
+			await BHD_HRMCompService.UpdatebyidAsync("TblCompanies/", _editedItemComp.Id,_editedItemComp);
+        }        
+        _compData = await BHD_HRMCompService.GetAllAsync("TblCompanies/GetTblCongTies");
+        CloseComp();
+    }
+	public void EditItemComp(CompanyData item)
+    {
+        _editedIndexComp = _compData.IndexOf(item);
+        _editedItemComp = new CompanyData()
+            {
+                TenCongTy= item.TenCongTy,
+                DiaChi = item.DiaChi,
+				AreaId = item.AreaId,
+				HienThi = item.HienThi,
+				SapXep = item.SapXep,
+                Id=item.Id
+
+            };
+        _dialogComp = true;
+    }
+
+    public void DeleteItemComp(CompanyData item)
+    {
+        _editedItemComp = item;
+        _dialogDeleteComp = true;
+    }
+
+    public  async Task DeleteItemCompConfirm()
+    {
+		 await BHD_HRMCompService.DeleteAsync("TblCompanies/", _editedItemComp.Id.ToString());
+		_compData = await BHD_HRMCompService.GetAllAsync("TblCompanies/GetTblCongTies");
+		 CloseDeleteComp();
+    }
+
+    public void CloseDeleteComp()
+    {
+		_dialogDeleteComp = false;
+        _editedItemComp = new();
+        _editedIndexComp = -1;
+    }
+
+
+
+
+    public void CloseArea()
+    {
+        _dialogArea = false;
+        _editedItemArea = new AreaData();
+        _editedIndexArea = -1;
+    }
+
+    public async Task SaveArea()
+    {
+        if(_editedIndexArea==-1)
+        {
+			await BHD_HRMAreaService.SaveAsync("Areas/CreateArea", _editedItemArea);
+        }
+        else
+        {
+			await BHD_HRMAreaService.UpdatebyidAsync("Areas/UpdateArea/", _editedItemArea.Id,_editedItemArea);
+        }        
+        _areaData = await BHD_HRMAreaService.GetAllAsync("Areas/GetAreas");
+        CloseArea();
+    }
+    public void EditItemArea(AreaData item)
+    {
+        _editedIndexArea = _areaData.IndexOf(item);
+        _editedItemArea = new AreaData()
+            {
+                Name= item.Name,
+                Isvisible = item.Isvisible,
+                Id=item.Id
+
+            };
+        _dialogArea = true;
+    }
+
+    public void DeleteItemArea(AreaData item)
+    {
+        _editedItemArea = item;
+        _dialogDeleteArea = true;
+    }
+
+    public  async Task DeleteItemAreaConfirm()
+    {
+		 await BHD_HRMAreaService.DeleteAsync("Areas/DeleteArea/", _editedItemArea.Id.ToString());
+		 _areaData = await BHD_HRMAreaService.GetAllAsync("Areas/GetAreas");
+		 CloseDeleteArea();
+    }
+
+    public void CloseDeleteArea()
+    {
+		_dialogDeleteArea = false;
+        _editedItemArea = new();
+        _editedIndexArea = -1;
+    }
+}

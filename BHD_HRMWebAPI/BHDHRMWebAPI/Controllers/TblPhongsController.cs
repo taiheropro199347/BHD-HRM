@@ -24,7 +24,7 @@ namespace BHDHRMWebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TblPhong>>> GetTblPhong()
         {
-            return await _context.TblPhong.ToListAsync();
+            return await _context.TblPhong.Include(t=>t.TblCongTy).ToListAsync();
         }
 
         // GET: api/TblPhongs/5
@@ -118,7 +118,7 @@ namespace BHDHRMWebAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<TblPhong>> DeleteTblPhong(string id)
         {
-            var tblPhong = await _context.TblPhong.FindAsync(id);
+            var tblPhong = await _context.TblPhong.Where(t=>t.Id==id).FirstAsync();
             if (tblPhong == null)
             {
                 return NotFound();

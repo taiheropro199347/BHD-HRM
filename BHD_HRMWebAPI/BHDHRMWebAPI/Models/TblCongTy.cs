@@ -7,6 +7,10 @@ namespace BHDHRMWebAPI.Models
 {
     public partial class TblCongTy
     {
+        public TblCongTy()
+        {
+            TblPhong = new HashSet<TblPhong>();
+        }
         public int Id { get; set; }
         public string IdtapDoan { get; set; }
         public string TenCongTy { get; set; }
@@ -15,8 +19,9 @@ namespace BHDHRMWebAPI.Models
         public string TinhTrang { get; set; }
         public int? AreaId { get; set; }
         public int? SapXep { get; set; }
-        public bool? HienThi { get; set; }
+        public bool HienThi { get; set; }
 
         public virtual Area Area { get; set; }
+        public virtual ICollection<TblPhong> TblPhong { get; set; }
     }
 }

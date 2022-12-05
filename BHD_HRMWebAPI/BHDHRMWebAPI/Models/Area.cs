@@ -18,7 +18,7 @@ namespace BHDHRMWebAPI.Models
         public DateTime? CreateDate { get; set; }
         public DateTime? UpdateDate { get; set; }
         public string UpdateBy { get; set; }
-        public bool? Isvisible { get; set; }
+        public bool Isvisible { get; set; }
 
         public virtual ICollection<TblCongTy> TblCongTy { get; set; }
     }

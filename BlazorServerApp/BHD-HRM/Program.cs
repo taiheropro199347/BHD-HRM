@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -54,11 +54,29 @@ builder.Services.AddHttpClient<IBHD_HRMService<DepartmentData>, BHD_HRMService<D
                    .AddHttpMessageHandler<ValidateHeaderHandler>();
 builder.Services.AddHttpClient<IBHD_HRMService<UrlDto>, BHD_HRMService<UrlDto>>()
                    .AddHttpMessageHandler<ValidateHeaderHandler>();
+builder.Services.AddHttpClient<IBHD_HRMService<UrlDto>, BHD_HRMService<UrlDto>>()
+                   .AddHttpMessageHandler<ValidateHeaderHandler>();
+builder.Services.AddHttpClient<IBHD_HRMService<AreaData>, BHD_HRMService<AreaData>>()
+                   .AddHttpMessageHandler<ValidateHeaderHandler>();
 builder.Services.AddSingleton(builder.Configuration.GetSection("MailSettings").Get<MailSettings>());
 builder.Services.AddScoped<IMailService, MailService>();
 builder.Services.AddOptions();
 builder.Services.AddAuthorizationCore();
+builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("IT", policy =>
+                    policy.RequireClaim("Permission", "IT"));
+                options.AddPolicy("HR", policy =>
+                    policy.RequireClaim("Permission", "HR - Nhân sự"));
+                options.AddPolicy("BOD", policy =>
+                    policy.RequireClaim("Permission", "Ban giám đốc"));
+            });
 var app = builder.Build();
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/pages/others/500");
+    app.UseHsts();
+}
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();

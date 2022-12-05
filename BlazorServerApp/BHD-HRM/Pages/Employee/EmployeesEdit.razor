@@ -556,7 +556,7 @@
         var pathImageQR = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/avatar/bhd.png");
 		string imagePath = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/VCard/", _userData.employeeData.CardNumber+".png");
         QRCodeGenerator qrGenerator = new QRCodeGenerator();
-        QRCodeData qrCodeData = qrGenerator.CreateQrCode(serialized, QRCodeGenerator.ECCLevel.Q);
+        QRCodeData qrCodeData = qrGenerator.CreateQrCode("http://qr.bhdstar.vn/card-"+_userData.employeeData.CardNumber, QRCodeGenerator.ECCLevel.Q);
         QRCode qrCode = new QRCode(qrCodeData);
         Bitmap qrCodeImage = qrCode.GetGraphic(5, System.DrawingCore.Color.Black, System.DrawingCore.Color.White, (Bitmap)Bitmap.FromFile(pathImageQR));
 		qrCodeImage.Save(imagePath, ImageFormat.Png);

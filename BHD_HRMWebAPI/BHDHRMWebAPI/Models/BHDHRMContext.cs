@@ -1063,6 +1063,10 @@ namespace BHDHRMWebAPI.Models
                 entity.Property(e => e.GhiChu).HasMaxLength(500);
 
                 entity.Property(e => e.TenPhong).HasMaxLength(500);
+                entity.HasOne(d => d.TblCongTy)
+                   .WithMany(p => p.TblPhong)
+                   .HasForeignKey(d => d.IdcongTy)
+                   .HasConstraintName("FK_tblPhong_tblCongTy");
             });
 
             modelBuilder.Entity<TblPhucLoi>(entity =>

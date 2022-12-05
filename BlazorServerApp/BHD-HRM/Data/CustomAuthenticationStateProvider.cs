@@ -84,6 +84,7 @@ namespace BHD_HRM.Data
                                 {
                                     new Claim(ClaimTypes.Name, user.userAd),
                                     new Claim(ClaimTypes.Role, user.idGroup.ToString()),
+                                    new Claim("Permission", user.IdGroupNavigation.name),
                                 }, "apiauth_type");
             }
 

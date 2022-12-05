@@ -20,6 +20,7 @@ namespace BHDHRMWebAPI.Models
             this.Roles = user.Roles;
             this.CinemaId = user.CinemaId;
             this.Phone = user.Phone;
+            this.IdGroupNavigation = user.IdGroupNavigation;
         }
     }
 }

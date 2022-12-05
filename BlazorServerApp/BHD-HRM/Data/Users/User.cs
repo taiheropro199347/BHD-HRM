@@ -26,5 +26,6 @@ namespace BHD_HRM.Data.Users
         public string ConfirmPassword { get; set; }
         public string AccessToken { get; set; }
         public string RefreshToken { get; set; }
+        public virtual Group IdGroupNavigation { get; set; }
     }
 }
