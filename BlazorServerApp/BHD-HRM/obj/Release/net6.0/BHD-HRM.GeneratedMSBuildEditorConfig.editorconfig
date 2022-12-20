@@ -19,6 +19,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Administrator/Management.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5pc3RyYXRvclxNYW5hZ2VtZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/App/ECommerce/Order/Address.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwXEVDb21tZXJjZVxPcmRlclxBZGRyZXNzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -189,6 +193,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Employee/NewComer.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVcTmV3Q29tZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Employee/Updatelink.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVcVXBkYXRlbGluay5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/BHD-HR/BHD-HR/BHD-HRM-git/BHD-HRM/BlazorServerApp/BHD-HRM/Pages/Home/Index.razor]

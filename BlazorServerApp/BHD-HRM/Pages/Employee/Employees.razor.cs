@@ -173,11 +173,15 @@ namespace BHD_HRM.Pages.Employee
             var _emp = _employeeDto.Where(t => t.employeeData.Id == _id).FirstOrDefault();
             var path = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/VCard/", _emp.employeeData.CardNumber+".vcf");
             var pathQR = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/VCard/", _emp.employeeData.CardNumber+".png");
+            var signemail = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/chuki.gif");
             string _content = "Dear " + _emp.employeeData.HoTen +".<br/>"+"<br/>" +
                              "Phòng HCNS BHD Star gửi bạn file VCard và mã QR NameCard"+"<br/>" +
-                             "<img src=cid:MyImage  id='img' alt=''/>"
-                             ;
-            await MailService.SendEmailAsync(_emp.employeeData.Email, "Bhd Star gửi thông tin VCard", _content,path,pathQR);
+                             "<img src=cid:MyImage  id='img' alt=''/>"+
+
+                         "<p><strong>Thanks</strong></p><p><strong>With Best Regards</strong><strong>,</strong></p><p>-----------------------------------------------------------------------------------------------------</p><p><strong>BHD Star Head Office&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></p><p>5th Floor . Vincom Mega Mall Thao Dien</p><p>161 Ha Noi Highway, Dist 02 . HCMC&nbsp;</p>"+
+                         "<img src=cid:SignEmail  id='img' alt=''/>";
+            ;
+            await MailService.SendEmailAsync(_emp.employeeData.Email, "Bhd Star gửi thông tin VCard", _content,path,pathQR,signemail);
         }          
         private void NavigateToCreate()
         {
@@ -191,12 +195,16 @@ namespace BHD_HRM.Pages.Employee
                 await Task.Delay(1000);
                 urlDto.Url =MyNavigationManager.BaseUri+"employee/employeeaddbyusers/"+DateTime.Now.ToString("MMddyyHHmmssfff");
                 urlDto.Status = true;
+                urlDto.Email = urlDto.Email;
                 await BHD_HRMUrlService.SaveAsync("TblUrls", urlDto);
+                var signemail = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/chuki.gif");
                 string _content = "Dear Anh/Chị ứng viên" + "<br/>" +"<br/>" +
                              "Phòng HCNS BHD Star gửi bạn Link đăng ký thông tin cá nhân:"+"<br/>" +
-                             "<a href="+urlDto.Url+">Nhấp vào đây để đăng ký thông tin!</a>"+"<br/>" +"<br/>" +
-                             "Vui lòng bổ sung thông tin trong vòng 24h.";
-                await MailService.SendEmailAsync(urlDto.Email, "Bhd Star gửi Link đăng ký thông tin", _content, "","");
+                             "<a href=" + urlDto.Url + ">Nhấp vào đây để đăng ký thông tin!</a>" + "<br/>" + "<br/>" +
+                         "Vui lòng bổ sung thông tin trong vòng 48h thời gian được tính từ lúc nhận được mail này." +
+                         "<p><strong>Thanks</strong></p><p><strong>With Best Regards</strong><strong>,</strong></p><p>-----------------------------------------------------------------------------------------------------</p><p><strong>BHD Star Head Office&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></p><p>5th Floor . Vincom Mega Mall Thao Dien</p><p>161 Ha Noi Highway, Dist 02 . HCMC&nbsp;</p>" +
+                          "<img src=cid:SignEmail  id='img' alt=''/>";
+                await MailService.SendEmailAsync(urlDto.Email, "Bhd Star gửi Link đăng ký thông tin", _content, "","",signemail);
                 value = false;
             }
             catch (Exception e)

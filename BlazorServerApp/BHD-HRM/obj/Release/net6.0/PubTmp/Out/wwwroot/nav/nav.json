@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "Id": 1,
     "Title": "Dashboard",
@@ -58,8 +58,21 @@
       }
     ]
   },
-  {
+{
     "Id": 16,
+    "Title": "Administrator",
+    "Icon": "mdi-theater",
+    "Children": [
+      {
+        "Id": 17,
+        "Title": "Quản lý Thông tin Rạp",
+        "Icon": "fas fa-sitemap",
+        "Href": "/administrator/management"
+      }
+    ]
+  },
+  {
+    "Id": 18,
     "Title": "Logout",
     "Icon": "fas fa-sign-out-alt",
     "Href": "pages/authentication/Components/Logout",

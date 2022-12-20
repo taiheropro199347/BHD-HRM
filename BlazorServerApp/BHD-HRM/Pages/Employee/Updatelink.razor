@@ -1,0 +1,71 @@
+﻿@page "/employee/updatelink"
+@using BHD_HRM.Data.Employees
+@using BHD_HRM.Services
+@using Microsoft.Extensions.Options
+@inherits ProCompontentBase
+@inject MasaBlazor MasaBlazor
+@inject GlobalConfig GlobalConfig
+@inject NavigationManager Nav
+@inject IWebHostEnvironment Environment
+@inject NavigationManager MyNavigationManager
+@inject IBHD_HRMService<EmployeeData> BHD_HRMService
+@inject IBHD_HRMService<CompanyData> BHD_HRMComapyService
+@inject IBHD_HRMService<UrlDto> BHD_HRMUrlService
+@inject IAuthorizationService authorizationService
+@inject IMailService MailService
+@inject IOptions<AppSettings> _options
+@inject IJSRuntime JS
+
+@code {
+    UrlDto urlDto;
+    protected override async Task OnInitializedAsync()
+    {
+        //string emailstring = "Huỳnh Ngọc Sơn,js@bhdstar.vn;Ngô Thị Bích Hiền,bichhien.ngo@bhdvn.com;Lâm Tố Tâm ,totam.lam@bhdstar.vn;Nguyễn Hồng Vân,hongvan.nguyen@bhdstar.vn;Lê Hoàng Minh,hoangminh.le@bhdstar.vn;Nguyễn Vương Thảo Nhi,thaonhi.nguyen@bhdstar.vn;Nguyễn Phương Trang,phuongtrang.nguyen@bhdstar.vn;Nguyễn Thừa Hòa,thuahoa.nguyen@bhdstar.vn;Lê Hữu Thêm,huuthem.le@bhdstar.vn;Trần Tấn Hải ,tanhai.tran@bhdstar.vn;Trần Công Toàn,congtoan.tran@bhdstar.vn;Lê Văn Thanh,vanthanh.le@bhdstar.vn;Nguyễn Thị Bích Hà,bichha.nguyen@bhdstar.vn;Nguyễn Thị Mai Nhi,mainhi.nguyen@bhdstar.vn;Lê Thị Phượng,thiphuong.le@bhdstar.vn;Hoàng Thị Loan,thiloan.hoang@bhdstar.vn;Nguyễn Thị Hồng Nhung,hongnhung.nguyen@bhdstar.vn;Nguyễn Ngọc Tuyền,ngoctuyen.nguyen@bhdstar.vn;Lê Thị Trúc Mai,trucmai.le@bhdstar.vn;Nguyễn Thị Tứ,thitu.nguyen@bhdstar.vn;Trương Thị Mỹ Hiền,myhien.truong@bhdstar.vn;Nguyễn Thị Thu Hiền,thuhien.nguyen@bhdstar.vn;Phan Võ Minh Nhật,minhnhat.phan@bhdstar.vn;Thái Hoàng Anh,hoanganh.thai@bhdstar.vn;Nguyễn Thị Hồng Loan,hongloan.nguyen@bhdstar.vn;Đặng Thành Đạt,thanhdat.dang@bhdstar.vn;Hồ Hải Quân,haiquan.ho@bhdstar.vn;Âu Dương Sơn,duongson.au@bhdstar.vn;Nguyễn Tuấn Giàu,tuangiau.nguyen@bhdstar.vn;Nguyễn Ngọc Tài,ngoctai.nguyen@bhdstar.vn;Nguyễn Lê Phương Ngân,phuongngan1.nguyen@bhdstar.vn;Lý Yến Nhi,yennhi.ly@bhdstar.vn;Nguyễn Phương Tuấn,phuongtuan.nguyen@bhdstar.vn;Nguyễn Thị Ánh Linh,anhlinh.nguyen@bhdstar.vn;Nguyễn Thị Cẩm Hường,camhuong.nguyen@bhdstar.vn;Lý Thanh Hoàng,thanhhoang.ly@bhdstar.vn;Đặng Minh Thành,minhthanh.dang@bhdstar.vn;Lê Minh Mẫn,minhman.le@bhdstar.vn;Trần Kim Đức,kimduc.tran@bhdstar.vn;Lê Thị Ngọc Thúy,ngocthuy.le@bhdstar.vn;Bùi Minh Đức,minhduc.bui@bhdstar.vn;Nguyễn Nam Hòa,namhoa.nguyen@bhdstar.vn;Trần Hoài Bảo Trân,baotran.tran@bhdstar.vn;Nguyễn Thế Vinh,thevinh.nguyen@bhdstar.vn;Trần Tuấn Long,tuanlong.tran@bhdstar.vn;Nguyễn Quốc Tín,quoctin.nguyen@bhdstar.vn;Huỳnh Thị Bích Ngân ,bichngan.huynh@bhdstar.vn;Trần Minh Tú,minhtu.tran@bhdstar.vn;Nguyễn Đức Diện,ducdien.nguyen@bhdstar.vn;Trần Nguyễn Song Thương,songthuong.tran@bhdstar.vn;Nguyễn Thị Thùy An,thuyan.nguyen@bhdstar.vn;Lê Anh Giàu,anhgiau.le@bhdstar.vn;Nguyễn Nhật Vũ,nhatvu.nguyen@bhdstar.vn;Lê Minh Huy,minhhuy.le@bhdstar.vn;Trần Phi Loan,philoan.tran@bhdstar.vn;Nguyễn Hoàng Ý Nhi,ynhi.nguyen@bhdstar.vn;Ngô Minh Trí,minhtri.ngo@bhdstar.vn;Nguyễn Thị Thanh Duyên,thanhduyen.nguyen@bhdstar.vn;Lương Thanh Nhã,thanhnha.luong@bhdstar.vn;Nguyễn Công Hiếu,conghieu.nguyen@bhdstar.vn;Phạm Thanh Tuấn,thanhtuan.pham@bhdstar.vn;Võ Hoàng Minh Chiến ,minhchien.vo@bhdstar.vn;Quảng Ngọc Thanh,ngocthanh.quang@bhdstar.vn;Huỳnh Bảo Trân,baotran.huynh@bhdstar.vn;Nguyễn Thị Phương Ngân,phuongngan.nguyen@bhdstar.vn;Châu Tuấn Vũ,tuanvu.chau@bhdstar.vn;Phạm Trương Bảo Trâm,baotram.pham@bhdstar.vn;Văn Hoàng Bảo Anh,baoanh.van@bhdstar.vn;Đàm Trọng Thi,trongthi.dam@bhdstar.vn;Tô Hoàng Phúc,hoangphuc.to@bhdstar.vn;Tống Phước Duy ,phuocduy.tong@bhdstar.vn;Nguyễn Thanh Đạt ,thanhdat.nguyen1@bhdstar.vn;Hoàng Nữ Khánh Nhi,khanhnhi.hoang@bhdstar.vn;Phan Thị Như Tuyết,nhutuyet.phan@bhdstar.vn;Nguyễn Văn Lợi,vanloi.nguyen@bhdstar.vn;Trần Thị Anh Khuê ,anhkhue.tran@bhdstar.vn;Nguyễn Văn Hiếu ,vanhieu.nguyen@bhdstar.vn;Phạm Hữu Duy,huuduy.pham@bhdstar.vn;Hồ Trung Hiếu,trunghieu.ho@bhdstar.vn;Đào Đỗ Xuân Quyết,xuanquyet.dao@bhdstar.vn;Đinh Thị Thu Phương,thuphuong.dinhthi@bhdstar.vn;Lê Phương Dung,phuongdung.le@bhdstar.vn;Hoàng Thị Châm,thicham.hoang@bhdstar.vn;Nguyễn Minh Đức,minhduc.nguyen@bhdstar.vn;Nguyễn Hải Ly,haily.nguyen@bhdstar.vn;Đỗ Thành Trung,thanhtrung.do@bhdstar.vn;Nguyễn Hoàng Lân,hoanglan.nguyen@bhdstar.vn;Nguyễn Tiến Định,tiendinh.nguyen@bhdstar.vn;Lê Thị Thúy Hằng,thuyhang.le@bhdstar.vn;Trần Long Mai,longmai.tran@bhdstar.vn;Đinh Văn Thực,vanthuc.dinh@bhdstar.vn;Nguyễn Ngọc Anh,ngocanh.nguyen@bhdstar.vn;Vũ Thị Hoa,thihoa.vu@bhdstar.vn;Trần Anh Tuấn,tuan.tran@bhdstar.vn;Trương Quý Phúc,quyphuc.truong@bhdstar.vn;Đỗ Xuân Bách,xuanbach.do@bhdstar.vn;Trần Đức Thắng,ducthang.tran@bhdstar.vn;Trần Đức Tuyên,ductuyen.tran@bhdstar.vn;Lê Anh Đức,anhduc.le@bhdstar.vn;Trần Văn Nam,vannam.tran@bhdstar.vn;Mai Văn Chung,vanchung.mai@bhdstar.vn;Trần Anh Tuấn,anhtuan.tran@bhdstar.vn;Đỗ Hồng Quân,hongquan.do@bhdstar.vn;Nguyễn Thị Hồng Quỳnh,hongquynh.nguyen@bhdstar.vn;Chử Việt Phương,vietphuong.chu@bhdstar.vn;Bùi Trung Nam,trungnam.bui@bhdstar.vn;Tạ Bình Vân Quyên,vanquyen.tabinh@bhdstar.vn;Trần Anh Tài,anhtai.tran@bhdstar.vn;Nguyễn Trung Hiếu,trunghieu.nguyen@bhdstar.vn;Ngô Đăng An,dangan.ngo@bhdstar.vn;Lê Thị Hoàng Yến,hoangyen.lethi@bhdstar.vn;Lê Diệu Anh,dieuanh.le@bhdstar.vn;Nguyễn Hoàng Anh,hoanganh.nguyen2@bhdstar.vn;Nguyễn Hữu Huy,huuhuy.nguyen@bhdstar.vn;Phạm Thanh Sơn,thanhson.pham@bhdstar.vn;Bùi Đức Anh,ducanh.bui@bhdstar.vn;Lê Nguyễn Anh Minh,hoanganh.duong@bhdstar.vn;Dương Hoàng Anh,vanphuc.nguyen@bhdstar.vn;Hoàng Nhật,nhat.hoang@bhdstar.vn";
+        string emailstring = _options.Value.BHD_HRMEmailAddress;
+        //string emailstring = "Huỳnh Ngọc Sơn,taiheropro199347@gmail.com";
+        string[] tach_contact = emailstring.Split(new Char[] {';'});
+        int last =tach_contact.Count() - 1;
+        int index = 0;
+        foreach (string s in tach_contact)
+        {
+			
+            urlDto = new UrlDto();
+            string[] tach_email = s.Split(new Char[] {','});
+            string hoten = tach_email[0];
+            string email = tach_email[1];
+			var checkemail=await BHD_HRMUrlService.GetByIdAsync("TblUrls/GetEmail/", email);
+            if(checkemail==null)
+            {
+				 //logic in real world here
+            await Task.Delay(300);
+            //urlDto.Url =MyNavigationManager.BaseUri+"employee/employeeaddbyusers/"+DateTime.Now.ToString("MMddyyHHmmssfff");
+            urlDto.Url ="http://hrmsb.bhdstar.vn/"+"employee/employeeaddbyusers/"+DateTime.Now.ToString("MMddyyHHmmssfff");
+            urlDto.Status = true;
+            urlDto.Email = email;
+			await BHD_HRMUrlService.SaveAsync("TblUrls", urlDto);
+			var signemail = Path.Combine(Environment.ContentRootPath, "wwwroot", "usersupload/chuki.gif");
+            string _content = "Dear Anh/Chị "+hoten + "<br/>" +"<br/>" +
+                         "Phòng HCNS BHD Star gửi bạn Link đăng ký thông tin cá nhân:"+"<br/>" +
+                         "<a href="+urlDto.Url+">Nhấp vào đây để đăng ký thông tin!</a>"+"<br/>" +"<br/>" +
+                         "Vui lòng bổ sung thông tin trong vòng 48h thời gian được tính từ lúc nhận được mail này."+
+                         "<p><strong>Thanks</strong></p><p><strong>With Best Regards</strong><strong>,</strong></p><p>-----------------------------------------------------------------------------------------------------</p><p><strong>BHD Star Head Office&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></p><p>5th Floor . Vincom Mega Mall Thao Dien</p><p>161 Ha Noi Highway, Dist 02 . HCMC&nbsp;</p>"+
+                          "<img src=cid:SignEmail  id='img' alt=''/>";
+            try
+            {								 
+                await MailService.SendEmailAsync(email, "Bhd Star gửi Link đăng ký thông tin", _content, "","",signemail);
+            }
+            catch
+            {
+                Console.WriteLine(email);
+				await JS.InvokeVoidAsync("console.log",email);
+            }
+            if (index == last)
+            {
+                Console.WriteLine("Hoành thành");
+				await JS.InvokeVoidAsync("console.log","Hoàn thành");
+            }
+            index++;
+            }
+        }
+	}
+}

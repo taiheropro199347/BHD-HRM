@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "T3vuWJt0m4UNg9YkcsRMLSb84xpVLAosGDRMJKKQp2A=",
+  "Hash": "zL6RCYzdQ3yrBEGA9pVgRQosZ088zFC2feZHsKIzxaY=",
   "Source": "BHD-HRM",
   "BasePath": "_content/BHD-HRM",
   "Mode": "Default",
@@ -2293,6 +2293,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\usersupload\\avatar\\xu-huong-ung-dung-hr-tech-trong-quan-tri-nhan-su-1-removebg-preview.png"
+    },
+    {
+      "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\usersupload\\chuki.gif",
+      "SourceId": "BHD-HRM",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\",
+      "BasePath": "_content/BHD-HRM",
+      "RelativePath": "usersupload/chuki.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\usersupload\\chuki.gif"
     },
     {
       "Identity": "D:\\BHD-HR\\BHD-HR\\BHD-HRM-git\\BHD-HRM\\BlazorServerApp\\BHD-HRM\\wwwroot\\usersupload\\vcard\\10001.png",

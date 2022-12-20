@@ -12,7 +12,7 @@ namespace BHD_HRM.Services
             _mailConfig = mailConfig;
         }
 
-        public async Task SendEmailAsync(string ToEmail, string Subject, string HTMLBody ,string AttachmentFilename, string attachmentImagename)
+        public async Task SendEmailAsync(string ToEmail, string Subject, string HTMLBody ,string AttachmentFilename, string attachmentImagename, string signmail)
         {
             MailMessage message = new MailMessage();
             SmtpClient smtp = new SmtpClient();
@@ -39,6 +39,12 @@ namespace BHD_HRM.Services
                 //Add view to the Email Message
                 message.AlternateViews.Add(htmlView);
             }
+            LinkedResource theEmailImageSign = new LinkedResource(signmail);
+            theEmailImageSign.ContentId = "SignEmail";
+            //Add the Image to the Alternate view
+            htmlView.LinkedResources.Add(theEmailImageSign);
+            //Add view to the Email Message
+            message.AlternateViews.Add(htmlView);
             message.Body = HTMLBody;           
             smtp.Port = _mailConfig.Port;
             smtp.Host = _mailConfig.Host;

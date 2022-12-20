@@ -43,7 +43,7 @@
             cursor: pointer;
         } 
 </style>
-@if(_urlDto.Id!=0 && Id!="" && _urlDto.Status==true && Id.CompareTo(DateTime.Now.AddHours(24).ToString("MMddyyHHmmssfff"))<=0)
+@if(_urlDto.Id!=0 && Id!="" && _urlDto.Status==true && Id.CompareTo(DateTime.Now.AddHours(48).ToString("MMddyyHHmmssfff"))<=0)
 {
 <MForm Model="@UserData.employeeData" EnableValidation OnValidSubmit="SaveEmployee">
 	<MContainer>

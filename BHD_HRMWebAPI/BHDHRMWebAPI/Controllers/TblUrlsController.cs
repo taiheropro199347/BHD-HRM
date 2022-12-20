@@ -27,7 +27,19 @@ namespace BHDHRMWebAPI.Controllers
         {
             return await _context.TblUrl.ToListAsync();
         }
+        // GET: api/Users/5
+        [HttpGet("GetEmail/{id}")]
+        public async Task<ActionResult<TblUrl>> GetUser(string id)
+        {
+            var email = await _context.TblUrl.Where(t=>t.Email==id).FirstOrDefaultAsync();
 
+            if (email == null)
+            {
+                return null;
+            }
+
+            return email;
+        }
         // GET: api/TblUrls/5
         [HttpGet("{id}")]
         public async Task<ActionResult<TblUrl>> GetTblUrl(string id)
